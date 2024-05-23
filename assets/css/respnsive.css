@@ -1,0 +1,320 @@
+/* -------------------------------------------
+
+    16500px
+
+--------------------------------------------- */
+
+@media (max-width: 1650px) {
+  .content-width {
+    max-width: 800px;
+  }
+}
+/* -------------------------------------------
+
+    1500px
+
+--------------------------------------------- */
+
+@media (max-width: 1500px) {
+}
+
+/* -------------------------------------------
+
+    1450px
+
+--------------------------------------------- */
+
+@media (max-width: 1450px) {
+  .responsive-sidebar-menu .sidebar-menu-inner {
+    padding: 50px 0px;
+  }
+  .icon-menu {
+    right: 30px;
+  }
+  .myinfo-card {
+    left: 30px;
+    width: 350px;
+    padding: 30px 20px;
+  }
+  .sidebar-nav {
+    right: 30px;
+  }
+}
+
+/* -------------------------------------------
+
+    1400px
+
+--------------------------------------------- */
+
+@media (max-width: 1400px) {
+}
+/* -------------------------------------------
+
+    1350px
+
+--------------------------------------------- */
+@media (min-width: 1351px) {
+  .icon-menu:hover {
+    border-color: #313834;
+  }
+  .icon-menu:hover .bar {
+    background-color: #313834;
+  }
+}
+@media (max-width: 1350px) {
+  .custom-container {
+    max-width: 1000px;
+  }
+  .content-width {
+    max-width: 1000px;
+  }
+  .icon-menu {
+    position: fixed;
+  }
+  .myinfo-card {
+    display: none;
+  }
+  .sidebar-nav {
+    display: none;
+  }
+  main .myinfo-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .myinfo-card {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    max-width: 767px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 50px;
+  }
+}
+
+/* -------------------------------------------
+
+    1100px
+
+--------------------------------------------- */
+
+/* -------------------------------------------
+
+    900px
+
+--------------------------------------------- */
+
+/* -------------------------------------------
+
+    800px
+
+--------------------------------------------- */
+
+@media (max-width: 800px) {
+  main .myinfo-card {
+    max-width: 767px;
+    width: 95%;
+    padding: 30px;
+  }
+  .portfolio-section .portfolio-items .portfolio-item {
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------
+
+    767px
+
+--------------------------------------------- */
+
+@media (max-width: 767px) {
+  .icon-menu {
+    right: 30px;
+    top: 30px;
+  }
+  .custom-container {
+    max-width: 650px;
+  }
+
+  .home-section,
+  .about-section,
+  .resume-section,
+  .myskills-section {
+    padding: 90px 0;
+    height: 100%;
+  }
+  .home-section .section-header h1 {
+    font-size: 38px;
+    line-height: 65px;
+  }
+  .home-section .content-width p {
+    font-size: 18px;
+  }
+  .about-section .content-width p {
+    font-size: 18px;
+    max-width: 600px;
+  }
+  .resume-section .resume-timeline {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .resume-section .resume-timeline .resume-img {
+    order: -1;
+    width: 30%;
+    margin: 0 auto;
+  }
+  .myskills-section .skills .skill .skill-inner {
+    padding: 20px 0;
+  }
+  .myskills-section .skills {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .myskills-section .skills .skill .skill-inner img {
+    width: 70px;
+  }
+  .contact-section .form-box {
+    grid-template-columns: 1fr;
+  }
+  .contact-section .form-box img {
+    display: none;
+  }
+  .contact-section form {
+    gap: 30px;
+  }
+}
+
+/* -------------------------------------------
+
+    600px
+
+--------------------------------------------- */
+
+@media (max-width: 600px) {
+  .section-header h1 {
+    font-size: 38px;
+  }
+  .home-section {
+    padding: 70px 0 0;
+  }
+  .about-section,
+  .resume-section,
+  .myskills-section,
+  .portfolio-section,
+  .contact-section {
+    padding: 90px 0 0;
+  }
+  .home-section .section-header h1 {
+    font-size: 32px;
+  }
+  .home-section .content-width p {
+    font-size: 16px;
+  }
+  .about-section .content-width p {
+    font-size: 16px;
+  }
+  .resume-section .resume-timeline .resume-items .resume-item h2 {
+    font-size: 28px;
+  }
+  .portfolio-section .portfolio-items .portfolio-item.portfolio-full .portfolio-item-inner {
+    height: 300px;
+  }
+  .contact-section form {
+    gap: 10px;
+  }
+  .contact-section form .form-group-top {
+    flex-direction: column;
+  }
+  .contact-section form .form-group {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .contact-section form .form-group .btn-submit {
+    width: 80%;
+  }
+}
+
+/* -------------------------------------------
+
+    500px
+
+--------------------------------------------- */
+
+@media (max-width: 500px) {
+  .section-header h1 {
+    font-size: 32px;
+  }
+  .home-section .section-header h1 {
+    line-height: 50px;
+    font-size: 26px;
+  }
+  .myskills-section .skills .skill .skill-inner h2 {
+    font-size: 18px;
+  }
+  .resume-section .resume-timeline .resume-items .resume-item h2 {
+    font-size: 24px;
+  }
+}
+
+/* -------------------------------------------
+
+    450px
+
+--------------------------------------------- */
+
+@media (max-width: 450px) {
+  .contact-section form .form-group {
+    width: 70%;
+  }
+  .myskills-section .skills {
+    gap: 10px;
+  }
+  .myskills-section .skills .skill .skill-inner img {
+    width: 50px;
+  }
+}
+
+/* -------------------------------------------
+
+    400px
+
+--------------------------------------------- */
+
+@media (max-width: 400px) {
+  .section-header h1 {
+    font-size: 28px;
+  }
+  .myskills-section .skills .skill .skill-inner {
+    padding: 15px 0;
+  }
+  .myskills-section .skills .skill .skill-inner h2 {
+    font-size: 14px;
+  }
+}
+
+/* -------------------------------------------
+
+    360px
+
+--------------------------------------------- */
+
+@media (max-width: 360px) {
+  .myinfo-card .myinfo-header p {
+    font-size: 23px;
+  }
+  .myinfo-card .myinfo-header span {
+    font-size: 15px;
+  }
+  .myinfo-card .myphoto {
+    height: 250px;
+    width: 250px;
+  }
+  .myskills-section .skills .skill .skill-inner h2 {
+    font-size: 12px;
+  }
+}
