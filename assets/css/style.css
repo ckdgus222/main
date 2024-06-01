@@ -481,11 +481,11 @@ main .myinfo-card {
   transition: 0.3s;
 }
 .myskills-section .skills .skill .skill-inner.num {
-  height: 220px;
+  height: 100%;
 }
 
 .myskills-section .skills .skill .skill-inner.num > img {
-  height: 100px;
+  height: 70px;
 }
 .myskills-section .skills .skill:hover .skill-inner h2 {
   transition: all 0.3s;
@@ -782,8 +782,6 @@ main .myinfo-card {
 .contact-section form .form-group .btn-submit:hover {
   color: var(--black-color);
 }
-
-
 
 /* 
 body {
