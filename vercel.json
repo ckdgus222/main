@@ -1,7 +1,7 @@
 {
    "headers": [
      {
-       "source": "/assets/images/**/*.gif",
+       "source": "assets/images/**/*.gif",
        "headers": [
          {
            "key": "Cache-Control",
