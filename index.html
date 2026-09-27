@@ -1,669 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS CDN -->
-    <link rel="stylesheet" href="./assets/css/default.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/respnsive.css" />
-    <!-- FontAwesome CDN -->
-    <script src="https://kit.fontawesome.com/8d2950cec4.js" crossorigin="anonymous"></script>
-    <!-- Remix Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <title>changhyeon Portfolio</title>
-    <meta property="og:title" content="changhyeon portfolio" />
-    <meta property="og:description" content="portfolio" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101722" />
+    <meta name="description" content="개발자 최창현의 포트폴리오. 웹 서비스부터 서버·데이터 연동과 업무 자동화까지, 직접 구현한 경험을 소개합니다." />
+    <meta property="og:title" content="최창현 | 개발자 포트폴리오" />
+    <meta property="og:description" content="사용하기 편한 서비스를 만드는 개발자. 웹 서비스부터 서버·데이터 연동과 업무 자동화까지, 직접 구현한 경험을 소개합니다." />
     <meta property="og:image" content="/assets/images/my.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <title>최창현 | 개발자 포트폴리오</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <link rel="stylesheet" href="./assets/css/portfolio.css?v=202e099f5d" />
+    <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=cd3ccf5998" />
+    <script src="./assets/js/portfolio.js" defer></script>
   </head>
-
-  <body>
-    <span class="icon-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </span>
-    <div class="responsive-sidebar-menu">
-      <div class="sidebar-overlay"></div>
-      <div class="sidebar-menu-inner">
-        <div class="sidebar-menu-wrap">
-          <p>Menu</p>
-          <ul>
-            <li>
-              <a class="respon-nav-click active" href="#home"><img src="./assets/images/icon/home.svg" /><span>Home</span></a>
-            </li>
-            <li>
-              <a class="respon-nav-click" href="#about"><img src="./assets/images/icon/about.svg" /><span>About</span></a>
-            </li>
-            <li>
-              <a class="respon-nav-click" href="#myskills"><img src="./assets/images/icon/skill.svg" /><span>My Skills</span></a>
-            </li>
-            <li>
-              <a class="respon-nav-click" href="#portfolio"><img src="./assets/images/icon/portfolio.svg" /><span>Portfolio</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <body class="portfolio"><a class="skip-link" href="#main">본문으로 건너뛰기</a><main class="page-shell" id="main" tabindex="-1">
+<header class="profile" id="home"><div class="profile-inner"><p class="eyebrow name-en" lang="en">CHOI CHANGHYEON</p><h1>최창현<span class="hero-dot" aria-hidden="true">.</span></h1><p class="intro-copy">사용하기 편한 서비스를<br>만드는 개발자입니다.</p><p class="intro-detail">웹 서비스부터 서버·데이터 연동과 업무 자동화까지,<br>직접 구현한 경험을 소개합니다.</p><nav class="section-nav" aria-label="본문 메뉴"><a href="#home">소개</a><a href="#portfolio">메인 프로젝트</a><a href="#work">실무 경험 <span>04</span></a><a href="#contact">연락</a></nav><div class="profile-links"><a href="mailto:ckdgus1308@naver.com">이메일 ↗</a><a href="https://github.com/ckdgus222" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (새 탭)</span></a></div></div></header><div class="main-column">
+<section class="featured-project" id="portfolio" aria-labelledby="portfolio-heading">
+  <div class="section-heading">
+    <div><p class="eyebrow">MAIN PROJECT</p><h2 id="portfolio-heading">메인 프로젝트</h2></div>
+    <p>현재 개발하고 있는 대표 프로젝트입니다.</p>
+  </div>
+  <article class="featured-project-card" aria-labelledby="dog-walk-title">
+    <div class="featured-project-copy">
+      <span class="project-status">개발 중</span>
+      <h3 id="dog-walk-title">강아지 산책 커뮤니티</h3>
+      <p class="featured-project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
+      <p class="featured-project-stack">Next.js · TypeScript · NestJS · Prisma · PostgreSQL/PostGIS</p>
     </div>
-    <div class="myinfo-card">
-      <div class="myinfo-header">
-        <p>Changhyun Choi</p>
-        <span>Front-end developer & Web UI Developer </span>
-      </div>
-      <img class="myphoto" src="./assets/images/my.png" alt="my photo" />
-      <h2 class="email">ckdgus1308@naver.com</h2>
-      <ul class="social-profile">
-        <li>
-          <a href="https://github.com/ckdgus222" target="_blank"><i class="ri-github-line"></i></a>
-        </li>
-        <li>
-          <a href="mailto:ckdgus1308@naver.com" target="_blank"><i class="ri-mail-line"></i></a>
-        </li>
-      </ul>
-      <p class="copyright">@ Changhyun All Rights Reserved</p>
-    </div>
-    <ul class="sidebar-nav">
-      <li>
-        <a class="nav-click active" href="#home"><span>Home</span> <img src="./assets/images/icon/home.svg" alt="" /></a>
-      </li>
-      <li>
-        <a class="nav-click" href="#about"><span>About</span><img src="./assets/images/icon/about.svg" alt="" /></a>
-      </li>
-
-      <li>
-        <a class="nav-click" href="#myskills"><span>My Skills</span><img src="./assets/images/icon/skill.svg" alt="" /></a>
-      </li>
-      <li>
-        <a class="nav-click" href="#portfolio"><span>Portfolio</span><img src="./assets/images/icon/portfolio.svg" alt="" /></a>
-      </li>
-    </ul>
-    <main>
-      <div class="myinfo-box">
-        <div class="myinfo-card">
-          <img class="myphoto" src="./assets/images/my.png" alt="my photo" />
-          <h2 class="email">ckdgus1308@naver.com</h2>
-          <ul class="social-profile">
-            <li>
-              <a href="https://github.com/ckdgus222" target="_blank"><i class="ri-github-fill"></i></a>
-            </li>
-            <li>
-              <a href="mailto:ckdgus1308@naver.com" target="_blank"><i class="ri-mail-fill"></i></a>
-            </li>
-          </ul>
-          <p class="copyright">@ Changhyun All Rights Reserved</p>
-        </div>
-      </div>
-      <section id="home" class="home-section">
-        <div class="custom-container">
-          <div class="content-width">
-            <div class="section-header">
-              <h4>
-                <span>INTRODUCE</span>
-              </h4>
-              <h1>
-                안녕하세요 최창현입니다. <br />
-                저는 <span>Front-end developer && Web UI</span> 입니다.
-              </h1>
-            </div>
-            <p>
-              저는 코드를 작성하며 UI 제작과 사용자가 편리한 기능을 만드는 것을.<br />
-              단지 일로서만이 아닌 내가 직접 이용한다는 마음으로 제작합니다.
-            </p>
-            <a class="go-portfolio-btn" href="#portfolio"><span>my project</span></a>
-          </div>
-        </div>
-      </section>
-      <section id="about" class="about-section">
-        <div class="custom-container">
-          <div class="content-width">
-            <div class="section-header">
-              <h4>
-                <span>ABOUT</span>
-              </h4>
-            </div>
-            <p class="about-text">
-              안녕하세요, 웹 개발자 최창현입니다. CSS와 JavaScript를 활용해 애니메이션을 주며 동적인 화면을 만드는 것에 관심이 많으며, React 와 여러 프레임워크
-              라이브러리를 사용하여 개발 하는것을 좋아합니다 <br />
-              웹 개발자란 이용자에게 눈이 즐거운 사이트를 제공하고, 웹을 통해 사용자가 조금이라도 더 편리한 기능을 만드는것 이라고 생각합니다.
-            </p>
-            <p class="about-text">
-              저는 웹 개발자에게 필요한
-              <span>꾸준함, 목표달성적, 끈기력</span>이라는 장점을 가지고있고, 이를 활용하여 개인이 아닌 <span>팀원</span>으로서 주어진 임무를 완벽하게
-              달성하겠습니다. <br />그리고 또한 지금도 자기개발을 놓치지않고 새로운 기술 필요한 역량을 채워 나가기 위해 노력합니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="myskills" class="myskills-section">
-        <div class="custom-container">
-          <div class="content-width">
-            <div class="section-header">
-              <h4>
-                <span>MY SKILLS</span>
-              </h4>
-              <h1>My <span>Tech</span></h1>
-            </div>
-            <div class="skills">
-              <div class="skill">
-                <div class="skill-inner num">
-                  <img src="./assets/images/skills/HTML.png" alt="html5" />
-                  <h2>HTML5</h2>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/CSS33.png" alt="css3" />
-                  <!-- <h2 class="percent">00%</h2> -->
-                  <h2>CSS3</h2>
-                </div>
-                <!-- <p class="name">CSS3</p> -->
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/JS.png" alt="javascript" />
-                  <!-- <h2 class="percent">00%</h2> -->
-                  <h2>JavaScript</h2>
-                </div>
-                <!-- <p class="name">Javascript</p> -->
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/REACT1.png" alt="react" />
-                  <!-- <h2 class="percent">00%</h2> -->
-                  <h2>React</h2>
-                </div>
-                <!-- <p class="name">react</p> -->
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/react-query.png" alt="React Query" />
-                  <!-- <h2 class="percent">00%</h2> -->
-                  <h2>React Query</h2>
-                </div>
-                <!-- <p class="name">Figma</p> -->
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/github.png" alt="github" />
-                  <!-- <h2 class="percent">00%</h2> -->
-                  <h2>Github</h2>
-                </div>
-                <!-- <p class="name">Github</p> -->
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/redux.png" alt="Redux" />
-                  <h2>Redux</h2>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="skill-inner">
-                  <img src="./assets/images/skills/vite.png" alt="VITE" />
-                  <h2>Vite</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="portfolio" class="portfolio-section">
-        <div class="custom-container">
-          <div class="content-width">
-            <div class="section-header">
-              <h4>
-                <span>PORTFOLIO</span>
-              </h4>
-              <h1><span>Projects</span></h1>
-            </div>
-            <div class="portfolio-items">
-              <div class="portfolio-item portfolio-full fade" data-toggle="portfolio-item" data-target="#분당구 병원 찾기">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/hospital.gif" loading="lazy" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>분당구 병원 찾기</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>분당구 병원 찾기</h3>
-                    <div class="back-inner detail">
-                      <p>
-                        통증 부위를 알고있는데 어느 병원 찾아 가야할지 모를때
-                        <br />
-                        일상 생활에서 불편함을 겪고 있었던 아이디어를 가지고 구현 하였습니다.
-                        <br />
-                        Axios 를 사용해서 API를 통신하고 현재 위치 기준으로 검색, 증상에 맞는 병원 또한 유익한 영상을 기획 했습니다.
-                      </p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2024.05.08 ~ 2024.05.15</p>
-                    </div>
-                    <div class="btn-group">
-                      <a href="https://github.com/ckdgus222/hospital-project" target="_blank"><button>Source Code</button></a>
-                      <a href="https://hospital-project-sigma.vercel.app/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>분당구 병원 찾기</h2>
-                <ul class="portfolio-categories">
-                  <li>#React</li>
-                  <li>#React Router</li>
-                  <li>#Axios</li>
-                  <li>#Redux-toolkit</li>
+    <figure class="featured-project-visual">
+      <img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="네이비와 라벤더 색감의 공원에서 보호자와 강아지가 함께 산책하는 일러스트" loading="lazy" decoding="async" />
+      <figcaption>AI로 제작한 프로젝트 콘셉트 이미지</figcaption>
+    </figure>
+  </article>
+</section>
+<section class="works" id="work" aria-labelledby="work-heading"><span id="experience" class="anchor-alias" aria-hidden="true"></span><div class="section-heading"><div><p class="eyebrow">SELECTED EXPERIENCE / 01—04</p><h2 id="work-heading">실무에서 만든 경험</h2></div><p>회사와 외주에서 맡은 일들을 소개합니다.</p></div><div class="work-grid"><article class="work-card work-care" id="care" aria-labelledby="title-care">
+      <figure class="work-art experience-visual ev-care">
+      <div class="ev-heading"><p>REALTIME MONITORING</p><strong>하나의 흐름, 세 가지 화면</strong><span class="ev-number" aria-hidden="true">01</span></div>
+      <div class="ev-scene ev-care-scene" role="img" aria-label="WebSocket의 snapshot 전체 상태와 delta 변경 사항을 Dashboard, Actingboard, Tableboard에 반영하는 구조를 겹친 보드로 표현했습니다. 내부 격자는 장식이며 실제 데이터가 아닙니다.">
+    <div class="ev-care-source"><div class="ev-signal-orbit"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4m8.4-8.4a6 6 0 0 1 0 8.4M4.3 4.3a11 11 0 0 0 0 15.4m15.4-15.4a11 11 0 0 1 0 15.4"/></svg></div><strong>WebSocket</strong><div class="ev-update-types"><span>snapshot</span><span>delta</span></div></div>
+    <div class="ev-board-stack">
+      <div class="ev-board ev-board-back"><span>Tableboard</span></div>
+      <div class="ev-board ev-board-middle"><span>Actingboard</span></div>
+      <div class="ev-board ev-board-front"><div class="ev-board-title"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><strong>Dashboard</strong><i></i></div><div class="ev-ward-grid" aria-hidden="true"><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span></div><div class="ev-board-legend"><span>환자 · 병상</span><span>장치 · 알림</span></div></div>
+    </div></div>
+      <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 01</span></figcaption>
+    </figure><div class="work-copy"><div class="work-meta"><span>회사 경력</span><span>2024.08 — 2026.06 · 1년 11개월</span></div>
+      <h3 id="title-care">CARE 의료 병동 모니터링 시스템</h3>
+      <p class="work-client">모어다임 · 연구소 개발팀</p><p class="work-role">프론트엔드 개발</p>
+      <p class="highlight-label">실시간 데이터 갱신</p><p class="work-summary">WebSocket으로 받은 초기 전체 데이터(snapshot)를 관제 화면에 표시하고, 이후 변경 데이터(delta)를 반영해 화면을 갱신했습니다.</p>
+      <p class="tech-stack">React · TypeScript · WebSocket</p><details class="work-details">
+                <summary aria-label="CARE 의료 병동 모니터링 시스템 세부 담당 업무">세부 담당 업무<span class="detail-symbol" aria-hidden="true"></span></summary>
+                <ul class="work-list key-work">
+                <li>React·TypeScript 기반 의료 병동 모니터링 프론트엔드 개발 및 유지보수</li>
+                <li>React Query·Axios 기반 API 연동 및 의료 데이터 타입·예외 처리 개선</li>
+              </ul><ul class="work-list detail-list">
+                  <li>Dashboard, Actingboard, Tableboard 등 실시간 병동 관제 화면 개발</li>
+                  <li>환자·침상 배정, 환자 상세, 장치 연결 상태 및 알림 표시 기능 구현</li>
+                  <li>HBM, Fluid, Alert, I-Nurse, Surgery 리포트 화면 개발 및 개선</li>
+                  <li>장치 등록·관리, IoT 매핑, 병상 설정, 카메라 설정, EPD 설정 등 관리자 화면 개발</li>
                 </ul>
-              </div>
-              <div class="portfolio-item portfolio-full fade" data-toggle="portfolio-item" data-target="운동 기록 일지">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/workOut.gif" loading="lazy" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>운동 기록 일지</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>운동 기록 일지</h3>
-                    <div class="back-inner detail">
-                      <p>
-                        운동을 취미로 즐기고 있어 단순 메모장을 이용하는 방법 보단 나만의 기록을 할수있는 곳이 있으면
-                        <br />
-                        좋겠다 싶어 기획 하였습니다 로컬스토리지를 이용하여 매일 매일 나만의 루틴을 저장 할수 있도록 기획하였습니다.
-                        <br />
-                        그리고 그날에 루틴을 정하고 루틴에 부위에 맞게 데이터를 필터링 하여 영상을 업로드 합니다.
-                      </p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2024.04.15 ~ 2024.04.26</p>
-                    </div>
-                    <div class="btn-group">
-                      <a href="https://github.com/ckdgus222/Diary_react" target="_blank"><button>Source Code</button></a>
-                      <a href="https://diary-react-wine.vercel.app/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>운동 기록 일지</h2>
-                <ul class="portfolio-categories">
-                  <li>#React</li>
-                  <li>#React Router</li>
-                  <li>#Context API</li>
-                  <li>#local storage</li>
+              </details></div></article>
+
+<article class="work-card work-support" id="support" aria-labelledby="title-support">
+      <figure class="work-art experience-visual ev-support">
+      <div class="ev-heading"><p>CUSTOMER RESOURCES</p><strong>필요한 자료를 한곳에서</strong><span class="ev-number" aria-hidden="true">02</span></div>
+      <div class="ev-scene ev-support-scene" role="img" aria-label="모델별 드라이버와 영상 안내를 자료 폴더로 표현했습니다. 하단은 관리자용 자료 관리와 다운로드 통계 기능입니다.">
+    <div class="ev-folder"><div class="ev-folder-tab"></div><div class="ev-folder-back"></div><div class="ev-resource-doc ev-resource-driver"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg><strong>드라이버</strong><span>DOWNLOAD</span><div class="ev-paper-lines"><i></i><i></i></div></div><div class="ev-resource-doc ev-resource-video"><div class="ev-video-symbol"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg></div><strong>영상 안내</strong><span>VIDEO GUIDE</span></div><div class="ev-folder-front"><span>RESOURCE LIBRARY</span><strong>모델별 지원 자료</strong><div class="ev-folder-mark"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/></svg></div></div></div>
+    <div class="ev-admin-note"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 18h16M8 3v6m8 6v6"/></svg><span><strong>관리자</strong>자료 관리 · 다운로드 통계</span></div></div>
+      <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 02</span></figcaption>
+    </figure><div class="work-copy"><div class="work-meta"><span>외주 개발</span><span>2026.06 — 2026.07</span></div>
+      <h3 id="title-support">고객지원 서비스</h3><p class="project-name">복합기 고객지원 웹페이지 및 관리자 페이지 개발</p>
+      <p class="work-client">고객사 (주)제이에이 솔루션</p><p class="work-role">단독 개발 · 배포</p>
+      <p class="work-summary">복합기 모델별 드라이버·영상 안내와 관리자용 자료·통계 기능을 단독 개발·배포했습니다.</p>
+      <p class="tech-stack">Next.js · Supabase · PostgreSQL</p><details class="work-details">
+                <summary aria-label="고객지원 서비스 구현 내용">구현 내용<span class="detail-symbol" aria-hidden="true"></span></summary>
+                <ul class="work-list detail-list">
+                  <li>Next.js 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
+                  <li>자료·영상 관리 및 다운로드 통계 조회를 위한 관리자 페이지 개발</li>
+                  <li>Supabase Storage·PostgreSQL 활용 및 Netlify 배포</li>
                 </ul>
-              </div>
-              <div class="portfolio-item portfolio-full fade" data-toggle="portfolio-item" data-target="#Exchange Project">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/Exchange.gif" loading="lazy" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>Exchange Project</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>Exchange Project</h3>
-                    <div class="back-inner detail">
-                      <p>
-                        React를 학습후 가장 먼저 시작한 개인 프로젝트 입니다.
-                        <br />
-                        학습 과정에서 여러 아이디어를 떠올리다 여행을 즐겨하기 때문에
-                        <br />
-                        각 나라에 환율을 구해주고 그 나라에 추천 관광지 데이터를 필터링 해서 보여주고 댓글 기능을 구현 하였습니다.
-                      </p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2024.04.02 ~ 2024.04.07</p>
-                    </div>
-                    <div class="btn-group">
-                      <a href="https://github.com/ckdgus222/exchange_project" target="_blank"><button>Source Code</button></a>
-                      <a href="https://exchange-project-mauve.vercel.app/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>Exchange Project</h2>
-                <ul class="portfolio-categories">
-                  <li>#React</li>
-                  <li>#HTML</li>
-                  <li>#CSS</li>
-                  <li>#Vite</li>
+              </details></div></article>
+
+<article class="work-card work-automation" id="automation" aria-labelledby="title-automation">
+      <figure class="work-art experience-visual ev-automation">
+      <div class="ev-heading"><p>CONNECTED WORKFLOWS</p><strong>반복되는 일을 연결하다</strong><span class="ev-number" aria-hidden="true">03</span></div>
+      <div class="ev-scene ev-automation-scene" role="img" aria-label="서로 독립된 두 자동화입니다. monday.com 상태 변경은 Webhook으로 문자·카카오톡 알림에 연결되고, Apps Script는 Google Sheets의 A/S·서비스 고객 명단 정리에 사용됩니다. 별도로 Node.js·Express 서버를 구축했습니다.">
+    <div class="ev-route ev-route-message"><div class="ev-route-source"><span class="ev-app-symbol ev-monday-mark"><i></i><i></i><i></i></span><span><strong>monday.com</strong><small>상태 변경</small></span></div><div class="ev-route-wire"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-6-6 6 6-6 6"/></svg><span>Webhook</span></div><div class="ev-route-destination"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16v12H9l-5 4Z"/><path d="M8 8h8m-8 4h5"/></svg><strong>문자 · 카카오톡</strong><small>고객 알림</small></div></div>
+    <div class="ev-route ev-route-sheet"><div class="ev-route-source"><span class="ev-app-symbol"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg></span><span><strong>Apps Script</strong><small>명단 자동화</small></span></div><div class="ev-route-wire"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></div><div class="ev-route-destination"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 9v12"/></svg><strong>Google Sheets</strong><small>A/S · 서비스 고객</small></div></div>
+    <div class="ev-server-note"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg><span>Node.js · Express</span><small>서버 구축</small></div></div>
+      <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 03</span></figcaption>
+    </figure><div class="work-copy"><div class="work-meta"><span>외주 개발</span><span>2025.08</span></div>
+      <h3 id="title-automation">알림·업무 자동화</h3><p class="project-name">고객 알림 및 A/S 고객 명단 자동화 구축</p>
+      <p class="work-client">고객사 (주)제이에이 솔루션</p><p class="work-role">단독 개발 · 서버 구축</p>
+      <p class="work-summary">고객 알림·명단 정리를 자동화하고 Node.js·Express 서버를 구축했습니다.</p>
+      <p class="tech-stack">Node.js · Express · Apps Script</p><details class="work-details">
+                <summary aria-label="알림·업무 자동화 구현 내용">구현 내용<span class="detail-symbol" aria-hidden="true"></span></summary>
+                <ul class="work-list detail-list">
+                  <li>monday.com 상태 변경 웹훅을 활용한 고객 문자·카카오톡 발송 자동화</li>
+                  <li>Google Apps Script를 활용한 A/S·서비스 고객 명단의 Google Sheets 정리 자동화</li>
+                  <li>카페24 호스팅에 Node.js·Express 서버 구축</li>
                 </ul>
-              </div>
-              <div class="portfolio-item portfolio-full fade" data-toggle="portfolio-item" data-target="#2023 포트폴리오">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/portfolio2023.gif" loading="lazy" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>2023 포트폴리오</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>2023 포트폴리오</h3>
-                    <div class="back-inner detail">
-                      <p>
-                        국비지원 수료후 만들었던 포트폴리오 입니다.
-                        <br />
-                        바닐라 자바스크립트를 통해 다양한 이벤트를 사용하고 반응형 퍼블리싱을 완성했습니다.
-                      </p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2024.05.08 ~ 2024.05.15</p>
-                    </div>
-                    <div class="btn-group">
-                      <a href="https://github.com/ckdgus222/pb-portfolio" target="_blank"><button>Source Code</button></a>
-                      <a href="https://ckdgus222.github.io/pb-portfolio/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>2023 포트폴리오</h2>
-                <ul class="portfolio-categories">
-                  <li>#HTML</li>
-                  <li>#CSS</li>
-                  <li>#Javascript</li>
+              </details></div></article>
+
+<article class="work-card work-repair" id="repair" aria-labelledby="title-repair">
+      <figure class="work-art experience-visual ev-repair">
+      <div class="ev-heading"><p>SHARED KNOWLEDGE</p><strong>기록에 맥락을 더하다</strong><span class="ev-number" aria-hidden="true">04</span></div>
+      <div class="ev-scene ev-repair-scene" role="img" aria-label="수리 이력 문서에 사진, 영상과 직원 댓글이 연결되는 기능을 표현했습니다. 문서의 선은 장식이며 실제 기록이나 댓글 내용은 아닙니다.">
+    <div class="ev-record-stack"><div class="ev-record-back"></div><div class="ev-record-paper"><span class="ev-paper-eyebrow">REPAIR ARCHIVE</span><strong>수리 이력</strong><div class="ev-record-lines"><i></i><i></i><i></i></div><div class="ev-record-divider"></div><div class="ev-record-lines ev-record-lines-short"><i></i><i></i></div><span class="ev-paper-bottom">RECORD &amp; SHARE</span></div><div class="ev-media-card ev-photo-card"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/></svg><span>사진</span></div><div class="ev-media-card ev-clip-card"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span>영상</span></div><div class="ev-comment-card"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16v12H9l-5 4Z"/><path d="M8 8h8m-8 4h5"/></svg><div><strong>직원 댓글</strong><span class="ev-comment-lines"><i></i><i></i></span></div></div></div></div>
+      <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 04</span></figcaption>
+    </figure><div class="work-copy"><div class="work-meta"><span>외주 개발</span><span>2025.03</span></div>
+      <h3 id="title-repair">사내 수리 이력 공유</h3><p class="project-name">CS 부서 수리 이력 공유 웹페이지 개발</p>
+      <p class="work-client">고객사 (주)제이에이 솔루션</p><p class="work-role">단독 개발 · 배포</p>
+      <p class="work-summary">장비 수리 내역·사진·영상 공유와 직원 댓글 기능을 갖춘 사내 웹페이지를 개발·배포했습니다.</p>
+      <p class="tech-stack">React · Cloudflare</p><details class="work-details">
+                <summary aria-label="사내 수리 이력 공유 구현 내용">구현 내용<span class="detail-symbol" aria-hidden="true"></span></summary>
+                <ul class="work-list detail-list">
+                  <li>React 기반 장비 수리 내역·사진·영상 공유 및 직원 댓글 기능 구현</li>
+                  <li>Cloudflare를 활용한 웹페이지 배포</li>
                 </ul>
-              </div>
-              <div class="portfolio-item left fade" data-toggle="portfolio-item" data-target="#todolist">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/todo.png" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>Todo List</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>Todo List</h3>
-                    <div class="back-inner detail">
-                      <p>
-                        자바스크립트를 학습 하고 나서 만든 프로젝트입니다.
-                        <br />
-                        기본적인 자바스
-                      </p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2023.06.08 ~ 2024.06.15</p>
-                    </div>
-                    <div class="btn-group">
-                      <a href="https://github.com/ckdgus222/pb-portfolio/tree/main/todo" target="_blank"><button>Source Code</button></a>
-                      <a href="https://ckdgus222.github.io/pb-portfolio/todo/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>Todo List</h2>
-                <ul class="portfolio-categories">
-                  <li>#HTML</li>
-                  <li>#CSS</li>
-                  <li>#Javascript</li>
-                </ul>
-              </div>
-              <div class="portfolio-item right fade" data-toggle="portfolio-item" data-target="#hansol">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/netflix.png" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>NETFLIX</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>NETFLIX</h3>
-                    <div class="back-inner detail">
-                      <p>
-                        HTML CSS jquery 를 학습하며 만든 사이트 입니다.
-                        <br />
-                        jquery 사용법을 학습 했습니다.
-                      </p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2023.05.10 ~ 2023.05.16</p>
-                    </div>
-                    <div class="btn-group">
-                      <a href="https://github.com/ckdgus222/pb-portfolio/tree/main/netflix" target="_blank"><button>Source Code</button></a>
-                      <a href="https://ckdgus222.github.io/pb-portfolio/netflix/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>NETFLIX</h2>
-                <ul class="portfolio-categories">
-                  <li>#HTML</li>
-                  <li>#CSS</li>
-                  <li>#jQuery</li>
-                </ul>
-              </div>
-              <div class="portfolio-item left fade" data-toggle="portfolio-item" data-target="#ruco">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/ruco.png" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>Ruco</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>Ruco</h3>
-                    <div class="back-inner detail">
-                      <p>국비 지원을 수료후 스터디를 통해서 만든 사이트입니다.</p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2023.03.05 ~ 2024.03.08</p>
-                    </div>
-                    <div class="btn-group">
-                      <a><button>Source Code</button></a>
-                      <a href="https://ckdgus222.github.io/pb-portfolio/week2-basic/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>Ruco</h2>
-                <ul class="portfolio-categories">
-                  <li>#HTML</li>
-                  <li>#CSS</li>
-                  <li>#Javascript</li>
-                </ul>
-              </div>
-              <div class="portfolio-item right fade" data-toggle="portfolio-item" data-target="#rism">
-                <div class="portfolio-item-inner">
-                  <div class="portfolio-front">
-                    <img src="./assets/images/2rism.png" alt="portfolio" />
-                    <div class="hover-text">
-                      <p>2rism</p>
-                      <p class="two-text">click</p>
-                    </div>
-                  </div>
-                  <div class="portfolio-back">
-                    <h3>2rism</h3>
-                    <div class="back-inner detail">
-                      <p>국비 지원을 수료후 스터디를 통해서 만든 사이트입니다.</p>
-                    </div>
-                    <div class="back-inner time">
-                      <h4># project period</h4>
-                      <p>2023.03.10 ~ 2023.03.15</p>
-                    </div>
-                    <div class="btn-group">
-                      <a><button>Source Code</button></a>
-                      <a href="https://ckdgus222.github.io/pb-portfolio/week1-basic/" target="_blank"><button>Demo</button></a>
-                    </div>
-                  </div>
-                </div>
-                <h2>2rims</h2>
-                <ul class="portfolio-categories">
-                  <li>#HTML</li>
-                  <li>#CSS</li>
-                  <li>#Javascript</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="contact-section">
-        <div class="custom-container">
-          <div class="content-width">
-            <div class="section-header">
-              <h4>
-                <span>CONTACT</span>
-              </h4>
-              <h1>Let's Work <span>Thank you</span></h1>
-            </div>
-            <div class="form-box">
-              <form
-                id="gform"
-                class="gform"
-                method="POST"
-                data-email="ckdgus1308@naver.com"
-                action="https://script.google.com/macros/s/AKfycby36Ii-jQStjdkoR8Q0JQgas0eXPqM9L2mEBmZEA2Jjdtvgqa6x0rESyurZAnZmrUX3/exec"
-              >
-                <div class="form-group-top">
-                  <div class="form-group">
-                    <label for="#senderEmail">Email</label>
-                    <input type="text" class="form-control" id="senderEmail" name="senderEmail" placeholder="Your Email" required />
-                  </div>
-                  <div class="form-group">
-                    <label for="#senderNAme">Name</label>
-                    <input type="text" class="form-control" id="senderName" name="senderName" placeholder="Your Name" required />
-                  </div>
-                </div>
-                <div class="form-group message-area">
-                  <label for="#message">message</label>
-                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message"></textarea>
-                </div>
-                <div style="display: none" class="thankyou_message">
-                  <p>감사합니다.</p>
-                </div>
-                <script type="text/javascript">
-                  (function () {
-                    // get all data in form and return object
-                    function getFormData(form) {
-                      var elements = form.elements;
-                      var honeypot;
+              </details></div></article>
 
-                      var fields = Object.keys(elements)
-                        .filter(function (k) {
-                          if (elements[k].name === "honeypot") {
-                            honeypot = elements[k].value;
-                            return false;
-                          }
-                          return true;
-                        })
-                        .map(function (k) {
-                          if (elements[k].name !== undefined) {
-                            return elements[k].name;
-                            // special case for Edge's html collection
-                          } else if (elements[k].length > 0) {
-                            return elements[k].item(0).name;
-                          }
-                        })
-                        .filter(function (item, pos, self) {
-                          return self.indexOf(item) == pos && item;
-                        });
-
-                      var formData = {};
-                      fields.forEach(function (name) {
-                        var element = elements[name];
-
-                        // singular form elements just have one value
-                        formData[name] = element.value;
-
-                        // when our element has multiple items, get their values
-                        if (element.length) {
-                          var data = [];
-                          for (var i = 0; i < element.length; i++) {
-                            var item = element.item(i);
-                            if (item.checked || item.selected) {
-                              data.push(item.value);
-                            }
-                          }
-                          formData[name] = data.join(", ");
-                        }
-                      });
-
-                      // add form-specific values into the data
-                      formData.formDataNameOrder = JSON.stringify(fields);
-                      formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-                      formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
-
-                      return { data: formData, honeypot: honeypot };
-                    }
-
-                    function handleFormSubmit(event) {
-                      // handles form submit without any jquery
-                      event.preventDefault(); // we are submitting via xhr below
-                      var form = event.target;
-                      var formData = getFormData(form);
-                      var data = formData.data;
-
-                      // If a honeypot field is filled, assume it was done so by a spam bot.
-                      if (formData.honeypot) {
-                        return false;
-                      }
-
-                      disableAllButtons(form);
-                      var url = form.action;
-                      var xhr = new XMLHttpRequest();
-                      xhr.open("POST", url);
-                      // xhr.withCredentials = true;
-                      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                      xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4 && xhr.status === 200) {
-                          form.reset();
-                          var formElements = form.querySelector(".form-elements");
-                          if (formElements) {
-                            formElements.style.display = "none"; // hide form
-                          }
-                          var thankYouMessage = form.querySelector(".thankyou_message");
-                          if (thankYouMessage) {
-                            thankYouMessage.style.display = "block";
-                            alert("감사합니다.");
-                          }
-                        }
-                      };
-                      // url encode form data for sending as post data
-                      var encoded = Object.keys(data)
-                        .map(function (k) {
-                          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-                        })
-                        .join("&");
-                      xhr.send(encoded);
-                    }
-
-                    function loaded() {
-                      // bind to the submit event of our form
-                      var forms = document.querySelectorAll("form.gform");
-                      for (var i = 0; i < forms.length; i++) {
-                        forms[i].addEventListener("submit", handleFormSubmit, false);
-                      }
-                    }
-                    document.addEventListener("DOMContentLoaded", loaded, false);
-
-                    function disableAllButtons(form) {
-                      var buttons = form.querySelectorAll("button");
-                      for (var i = 0; i < buttons.length; i++) {
-                        buttons[i].disabled = true;
-                      }
-                    }
-                  })();
-                </script>
-                <div class="form-group">
-                  <button id="btnSubmit" class="btn-submit">Send Message</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="./assets/js/main.js"></script>
-
-    <script
-      data-cfasync="false"
-      type="text/javascript"
-      src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"
-    ></script>
-  </body>
+</div></section>
+<footer class="contact" id="contact"><p class="eyebrow">LET’S TALK</p><h2>이야기를 나누고 싶다면</h2><a class="contact-email" href="mailto:ckdgus1308@naver.com">ckdgus1308@naver.com <span aria-hidden="true">↗</span></a><div class="footer-bottom"><span>CHOI CHANGHYEON</span><a href="https://github.com/ckdgus222" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (새 탭)</span></a><a href="#home">처음으로 ↑</a></div></footer></div></main></body>
 </html>
