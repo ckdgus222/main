@@ -38,12 +38,19 @@
   if (motionPreference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
 
   const animations = new Map();
+  const visibleElements = new Set();
   const skillCards = [...document.querySelectorAll('.skill-card')];
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
       const element = entry.target;
-      observer.unobserve(element);
+      if (!entry.isIntersecting) {
+        visibleElements.delete(element);
+        animations.get(element)?.cancel();
+        continue;
+      }
+      // Replay only after a full exit, not while hovering around the threshold.
+      if (entry.intersectionRatio < 0.08 || visibleElements.has(element)) continue;
+      visibleElements.add(element);
       if (motionPreference.matches || element.contains(document.activeElement)) continue;
 
       const index = skillCards.indexOf(element);
@@ -53,9 +60,11 @@
         { duration: 520, delay, easing: 'cubic-bezier(.2,.65,.3,1)', fill: 'backwards' }
       );
       animations.set(element, animation);
-      animation.onfinish = animation.oncancel = () => animations.delete(element);
+      animation.onfinish = animation.oncancel = () => {
+        if (animations.get(element) === animation) animations.delete(element);
+      };
     }
-  }, { threshold: 0.08 });
+  }, { threshold: [0, 0.08] });
 
   document.querySelectorAll('.intro-copy, .intro-detail, .section-heading, .skill-card, .featured-project-card, .work-card, .contact')
     .forEach(element => observer.observe(element));
