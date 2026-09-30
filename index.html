@@ -1,146 +1,117 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#101722" />
-    <meta name="description" content="개발자 최창현의 포트폴리오. 웹 서비스부터 서버·데이터 연동과 업무 자동화까지, 직접 구현한 경험을 소개합니다." />
-    <meta property="og:title" content="최창현 | 개발자 포트폴리오" />
-    <meta property="og:description" content="사용하기 편한 서비스를 만드는 개발자. 웹 서비스부터 서버·데이터 연동과 업무 자동화까지, 직접 구현한 경험을 소개합니다." />
-    <meta property="og:image" content="/assets/images/my.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ko_KR" />
-    <title>최창현 | 개발자 포트폴리오</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="./assets/css/font.css" />
-    <link rel="stylesheet" href="./assets/css/portfolio.css?v=57074352c3" />
-    <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=cd3ccf5998" />
-    <script src="./assets/js/portfolio.js?v=a11796d7af" defer></script>
-  </head>
-  <body class="portfolio"><a class="skip-link" href="#main">본문으로 건너뛰기</a><main class="page-shell" id="main" tabindex="-1">
-<header class="profile" id="home">
-  <div class="profile-inner">
-    <p class="eyebrow name-en" lang="en">CHOI CHANGHYEON</p>
-    <h1>최창현<span class="hero-dot" aria-hidden="true">.</span></h1>
-    <p class="intro-copy">사용하기 편한 서비스를<br><span>만드는 개발자입니다.</span></p>
-    <p class="intro-detail">웹 서비스부터 서버·데이터 연동과 업무 자동화까지,<br>직접 구현한 경험을 소개합니다.</p>
-    <nav class="section-nav" aria-label="본문 메뉴">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="개발자 최창현의 포트폴리오. 웹 서비스부터 서버·데이터 연동과 업무 자동화까지, 직접 구현한 경험을 소개합니다.">
+  <meta property="og:title" content="최창현 | 개발자 포트폴리오">
+  <meta property="og:description" content="사용하기 편한 서비스를 만드는 개발자. 웹 서비스부터 서버·데이터 연동과 업무 자동화까지, 직접 구현한 경험을 소개합니다.">
+  <meta property="og:image" content="/assets/images/my.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <title>최창현 | 개발자 포트폴리오</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
+  <link rel="stylesheet" href="./assets/css/tokens.css?v=d487904bb6">
+  <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=c7ffbc84b4">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="./assets/js/portfolio.js?v=db18ec6af3" defer></script>
+</head>
+<body class="portfolio">
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="shell site-header-inner">
+    <a class="brand" href="#home" aria-label="최창현 처음으로">C<span aria-hidden="true">.</span></a>
+    <nav class="site-nav" aria-label="본문 메뉴" data-nav>
       <a href="#home">소개</a>
+      <a href="#work">실무 경험 <small>04</small></a>
       <a href="#skills">기술 스택</a>
       <a href="#portfolio">메인 프로젝트</a>
-      <a href="#work">실무 경험 <span>04</span></a>
       <a href="#contact">연락</a>
     </nav>
-    <div class="profile-links">
-      <a href="mailto:ckdgus1308@naver.com">이메일 <span class="link-arrow" aria-hidden="true">↗</span></a>
-      <a href="https://github.com/ckdgus222" target="_blank" rel="noopener noreferrer">GitHub <span class="link-arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
-    </div>
+    <a class="btn btn-ghost btn-sm" href="https://github.com/ckdgus222" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
   </div>
 </header>
-<div class="main-column">
-<section class="skills" id="skills" aria-labelledby="skills-heading">
-  <div class="section-heading">
-    <div><p class="eyebrow">TECH STACK</p><h2 id="skills-heading">사용하는 기술</h2></div>
-    <p>웹 개발에 사용하는 기술과 도구입니다.</p>
-  </div>
-  <div class="skills-grid">
-    <article class="skill-card" aria-labelledby="skill-frontend">
-      <div class="skill-card-heading">
-        <div><p class="eyebrow">FRONTEND</p><h3 id="skill-frontend">프론트엔드</h3></div>
-        <span class="skill-number" aria-hidden="true">01</span>
+
+<main id="main" tabindex="-1">
+<section class="hero" id="home" aria-labelledby="hero-name">
+  <div class="shell hero-inner">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="eyebrow" lang="en" data-hero-part>CHOI CHANGHYEON</p>
+      <h1 class="hero-name" id="hero-name" data-hero-part>최창현<span class="hero-dot" aria-hidden="true">.</span></h1>
+      <p class="hero-intro"><span class="hero-word" data-hero-part>사용하기</span> <span class="hero-word" data-hero-part>편한</span> <span class="hero-word" data-hero-part>서비스를</span><br><span class="hero-accent"><span class="hero-word" data-hero-part>만드는</span> <span class="hero-word" data-hero-part>개발자입니다.</span></span></p>
+      <p class="hero-detail" data-hero-part>웹 서비스부터 서버·데이터 연동과 업무 자동화까지,<br>직접 구현한 경험을 소개합니다.</p>
+      <div class="hero-actions" data-hero-part>
+        <a class="btn btn-primary" href="#work">실무 경험 보기 <span class="arrow" aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="mailto:ckdgus1308@naver.com">이메일 <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
-      <ul class="skill-tags" role="list">
-        <li>React</li>
-        <li>TypeScript</li>
-        <li>Next.js</li>
-        <li>Axios</li>
-        <li>WebSocket</li>
-      </ul>
-    </article>
-    <article class="skill-card" aria-labelledby="skill-backend">
-      <div class="skill-card-heading">
-        <div><p class="eyebrow">BACKEND &amp; AUTOMATION</p><h3 id="skill-backend">백엔드·자동화</h3></div>
-        <span class="skill-number" aria-hidden="true">02</span>
-      </div>
-      <ul class="skill-tags" role="list">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>NestJS</li>
-      </ul>
-    </article>
-    <article class="skill-card" aria-labelledby="skill-data">
-      <div class="skill-card-heading">
-        <div><p class="eyebrow">DATA &amp; STORAGE</p><h3 id="skill-data">데이터·스토리지</h3></div>
-        <span class="skill-number" aria-hidden="true">03</span>
-      </div>
-      <ul class="skill-tags" role="list">
-        <li>Supabase</li>
-        <li>PostgreSQL</li>
-        <li>Prisma</li>
-        <li>PostGIS</li>
-        <li>MongoDB</li>
-        <li>TypeORM</li>
-      </ul>
-    </article>
-    <article class="skill-card" aria-labelledby="skill-delivery">
-      <div class="skill-card-heading">
-        <div><p class="eyebrow">BUILD &amp; DEPLOYMENT</p><h3 id="skill-delivery">빌드·배포</h3></div>
-        <span class="skill-number" aria-hidden="true">04</span>
-      </div>
-      <ul class="skill-tags" role="list">
-        <li>Vite</li>
-        <li>Vercel</li>
-        <li>Netlify</li>
-        <li>Cloudflare</li>
-        <li>Docker Compose</li>
-        <li>Nginx</li>
-        <li>GitHub Actions</li>
-      </ul>
-    </article>
-    <article class="skill-card" aria-labelledby="skill-styling">
-      <div class="skill-card-heading">
-        <div><p class="eyebrow">STYLING</p><h3 id="skill-styling">스타일링</h3></div>
-        <span class="skill-number" aria-hidden="true">05</span>
-      </div>
-      <ul class="skill-tags" role="list">
-        <li>CSS</li>
-        <li>styled-components</li>
-        <li>MUI</li>
-      </ul>
-    </article>
-    <article class="skill-card" aria-labelledby="skill-state">
-      <div class="skill-card-heading">
-        <div><p class="eyebrow">STATE MANAGEMENT</p><h3 id="skill-state">상태 관리</h3></div>
-        <span class="skill-number" aria-hidden="true">06</span>
-      </div>
-      <ul class="skill-tags" role="list">
-        <li>TanStack Query</li>
-        <li>Zustand</li>
-        <li>Redux</li>
-      </ul>
-    </article>
-  </div>
-</section>
-<section class="featured-project" id="portfolio" aria-labelledby="portfolio-heading">
-  <div class="section-heading">
-    <div><p class="eyebrow">MAIN PROJECT</p><h2 id="portfolio-heading">메인 프로젝트</h2></div>
-    <p>현재 개발하고 있는 대표 프로젝트입니다.</p>
-  </div>
-  <article class="featured-project-card" aria-labelledby="dog-walk-title">
-    <div class="featured-project-copy">
-      <span class="project-status">개발 중</span>
-      <h3 id="dog-walk-title">강아지 산책 커뮤니티</h3>
-      <p class="featured-project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
-      <p class="featured-project-stack">Next.js · TypeScript · NestJS · Prisma · PostgreSQL/PostGIS</p>
     </div>
-    <figure class="featured-project-visual">
-      <img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="네이비와 라벤더 색감의 공원에서 보호자와 강아지가 함께 산책하는 일러스트" loading="lazy" decoding="async" />
-    </figure>
-  </article>
+    <aside class="hero-card glass" aria-label="한눈에 보기" data-hero-part>
+      <p class="eyebrow" lang="en">AT A GLANCE</p>
+      <dl class="facts">
+        <div><dt>회사 경력</dt><dd>1년 11개월<small>모어다임 · 프론트엔드 개발</small></dd></div>
+        <div><dt>외주 개발</dt><dd>3건<small>고객지원 · 자동화 · 수리 이력</small></dd></div>
+        <div><dt>개발 중</dt><dd>강아지 산책 커뮤니티<small>Next.js · NestJS · PostGIS</small></dd></div>
+      </dl>
+    </aside>
+  </div>
 </section>
-<section class="works" id="work" aria-labelledby="work-heading"><span id="experience" class="anchor-alias" aria-hidden="true"></span><div class="section-heading"><div><p class="eyebrow">SELECTED EXPERIENCE / 01—04</p><h2 id="work-heading">실무에서 만든 경험</h2></div><p>회사와 외주에서 맡은 일들을 소개합니다.</p></div><div class="work-grid"><article class="work-card work-care" id="care" aria-labelledby="title-care">
-      <figure class="work-art experience-visual ev-care">
+
+<section class="section" id="work" aria-labelledby="work-heading">
+  <span id="experience" class="anchor-alias" aria-hidden="true"></span>
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow" lang="en">SELECTED EXPERIENCE / 01—04</p>
+      <h2 id="work-heading">실무에서 만든 경험</h2>
+      <p>회사와 외주에서 맡은 일들을 소개합니다.</p>
+    </div>
+    <nav class="rail" aria-label="경력 한눈에 보기" data-reveal>
+      <a class="rail-item" href="#care"><span class="rail-index">01</span><span class="rail-title">CARE 의료 병동 모니터링 시스템</span><span class="rail-period">회사 경력 · 2024.08 — 2026.06</span></a>
+      <a class="rail-item" href="#support"><span class="rail-index">02</span><span class="rail-title">고객지원 서비스</span><span class="rail-period">외주 개발 · 2026.06 — 2026.07</span></a>
+      <a class="rail-item" href="#automation"><span class="rail-index">03</span><span class="rail-title">알림·업무 자동화</span><span class="rail-period">외주 개발 · 2025.08</span></a>
+      <a class="rail-item" href="#repair"><span class="rail-index">04</span><span class="rail-title">사내 수리 이력 공유</span><span class="rail-period">외주 개발 · 2025.03</span></a>
+    </nav>
+
+    <div class="timeline" data-timeline>
+      <div class="timeline-track" aria-hidden="true"><span class="timeline-progress"></span></div>
+
+      <p class="timeline-group" lang="en" aria-hidden="true" data-reveal>COMPANY<span>01</span></p>
+      <ol class="timeline-list" role="list" aria-label="회사 경력">
+        <li>
+          <article class="timeline-node" id="care" aria-labelledby="title-care">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta" data-reveal>
+              <span class="badge badge-accent">회사 경력</span>
+              <p class="case-period"><span class="nowrap">2024.08 — 2026.06</span><span class="case-period-sep" aria-hidden="true"> · </span><span class="nowrap case-duration">1년 11개월</span></p>
+              <p class="case-client">모어다임 · 연구소 개발팀</p>
+              <p class="case-role">프론트엔드 개발</p>
+            </div>
+            <div class="case-card glass" data-reveal>
+              <div class="case-inner">
+                <div class="case-copy">
+                  <h3 id="title-care">CARE 의료 병동 모니터링 시스템</h3>
+                  <p class="case-highlight">실시간 데이터 갱신</p>
+                  <p class="case-summary">WebSocket으로 받은 초기 전체 데이터(snapshot)를 관제 화면에 표시하고, 이후 변경 데이터(delta)를 반영해 화면을 갱신했습니다.</p>
+                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>React</li><li>TypeScript</li><li>WebSocket</li></ul>
+                  <details class="case-details">
+                    <summary aria-label="CARE 의료 병동 모니터링 시스템 세부 담당 업무">세부 담당 업무<span class="details-toggle" aria-hidden="true"></span></summary>
+                    <ul class="detail-list" role="list">
+                      <li>React·TypeScript 기반 의료 병동 모니터링 프론트엔드 개발 및 유지보수</li>
+                      <li>React Query·Axios 기반 API 연동 및 의료 데이터 타입·예외 처리 개선</li>
+                    </ul>
+                    <ul class="detail-list" role="list">
+                      <li>Dashboard, Actingboard, Tableboard 등 실시간 병동 관제 화면 개발</li>
+                      <li>환자·침상 배정, 환자 상세, 장치 연결 상태 및 알림 표시 기능 구현</li>
+                      <li>HBM, Fluid, Alert, I-Nurse, Surgery 리포트 화면 개발 및 개선</li>
+                      <li>장치 등록·관리, IoT 매핑, 병상 설정, 카메라 설정, EPD 설정 등 관리자 화면 개발</li>
+                    </ul>
+                  </details>
+                </div>
+                <figure class="case-visual experience-visual ev-care">
       <div class="ev-heading"><p>REALTIME MONITORING</p><strong>하나의 흐름, 세 가지 화면</strong><span class="ev-number" aria-hidden="true">01</span></div>
       <div class="ev-scene ev-care-scene" role="img" aria-label="WebSocket의 snapshot 전체 상태와 delta 변경 사항을 Dashboard, Actingboard, Tableboard에 반영하는 구조를 겹친 보드로 표현했습니다. 내부 격자는 장식이며 실제 데이터가 아닙니다.">
     <div class="ev-care-source"><div class="ev-signal-orbit"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4m8.4-8.4a6 6 0 0 1 0 8.4M4.3 4.3a11 11 0 0 0 0 15.4m15.4-15.4a11 11 0 0 1 0 15.4"/></svg></div><strong>WebSocket</strong><div class="ev-update-types"><span>snapshot</span><span>delta</span></div></div>
@@ -150,82 +121,211 @@
       <div class="ev-board ev-board-front"><div class="ev-board-title"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><strong>Dashboard</strong><i></i></div><div class="ev-ward-grid" aria-hidden="true"><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span><span class="ev-ward-cell"><i></i><b></b><b></b></span></div><div class="ev-board-legend"><span>환자 · 병상</span><span>장치 · 알림</span></div></div>
     </div></div>
       <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 01</span></figcaption>
-    </figure><div class="work-copy"><div class="work-meta"><span>회사 경력</span><span>2024.08 — 2026.06 · 1년 11개월</span></div>
-      <h3 id="title-care">CARE 의료 병동 모니터링 시스템</h3>
-      <p class="work-client">모어다임 · 연구소 개발팀</p><p class="work-role">프론트엔드 개발</p>
-      <p class="highlight-label">실시간 데이터 갱신</p><p class="work-summary">WebSocket으로 받은 초기 전체 데이터(snapshot)를 관제 화면에 표시하고, 이후 변경 데이터(delta)를 반영해 화면을 갱신했습니다.</p>
-      <p class="tech-stack">React · TypeScript · WebSocket</p><details class="work-details">
-                <summary aria-label="CARE 의료 병동 모니터링 시스템 세부 담당 업무">세부 담당 업무<span class="detail-symbol" aria-hidden="true"></span></summary>
-                <ul class="work-list key-work">
-                <li>React·TypeScript 기반 의료 병동 모니터링 프론트엔드 개발 및 유지보수</li>
-                <li>React Query·Axios 기반 API 연동 및 의료 데이터 타입·예외 처리 개선</li>
-              </ul><ul class="work-list detail-list">
-                  <li>Dashboard, Actingboard, Tableboard 등 실시간 병동 관제 화면 개발</li>
-                  <li>환자·침상 배정, 환자 상세, 장치 연결 상태 및 알림 표시 기능 구현</li>
-                  <li>HBM, Fluid, Alert, I-Nurse, Surgery 리포트 화면 개발 및 개선</li>
-                  <li>장치 등록·관리, IoT 매핑, 병상 설정, 카메라 설정, EPD 설정 등 관리자 화면 개발</li>
-                </ul>
-              </details></div></article>
+    </figure>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ol>
 
-<article class="work-card work-support" id="support" aria-labelledby="title-support">
-      <figure class="work-art experience-visual ev-support">
+      <p class="timeline-group" lang="en" aria-hidden="true" data-reveal>FREELANCE<span>02—04</span></p>
+      <ol class="timeline-list" role="list" aria-label="외주 개발">
+        <li>
+          <article class="timeline-node" id="support" aria-labelledby="title-support">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta" data-reveal>
+              <span class="badge">외주 개발</span>
+              <p class="case-period"><span class="nowrap">2026.06 — 2026.07</span></p>
+              <p class="case-client">고객사 (주)제이에이 솔루션</p>
+              <p class="case-role">단독 개발 · 배포</p>
+            </div>
+            <div class="case-card glass" data-reveal>
+              <div class="case-inner">
+                <div class="case-copy">
+                  <h3 id="title-support">고객지원 서비스</h3>
+                  <p class="case-subtitle">복합기 고객지원 웹페이지 및 관리자 페이지 개발</p>
+                  <p class="case-summary">복합기 모델별 드라이버·영상 안내와 관리자용 자료·통계 기능을 단독 개발·배포했습니다.</p>
+                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li></ul>
+                  <details class="case-details">
+                    <summary aria-label="고객지원 서비스 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
+                    <ul class="detail-list" role="list">
+                      <li>Next.js 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
+                      <li>자료·영상 관리 및 다운로드 통계 조회를 위한 관리자 페이지 개발</li>
+                      <li>Supabase Storage·PostgreSQL 활용 및 Netlify 배포</li>
+                    </ul>
+                  </details>
+                </div>
+                <figure class="case-visual experience-visual ev-support">
       <div class="ev-heading"><p>CUSTOMER RESOURCES</p><strong>필요한 자료를 한곳에서</strong><span class="ev-number" aria-hidden="true">02</span></div>
       <div class="ev-scene ev-support-scene" role="img" aria-label="모델별 드라이버와 영상 안내를 자료 폴더로 표현했습니다. 하단은 관리자용 자료 관리와 다운로드 통계 기능입니다.">
     <div class="ev-folder"><div class="ev-folder-tab"></div><div class="ev-folder-back"></div><div class="ev-resource-doc ev-resource-driver"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg><strong>드라이버</strong><span>DOWNLOAD</span><div class="ev-paper-lines"><i></i><i></i></div></div><div class="ev-resource-doc ev-resource-video"><div class="ev-video-symbol"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg></div><strong>영상 안내</strong><span>VIDEO GUIDE</span></div><div class="ev-folder-front"><span>RESOURCE LIBRARY</span><strong>모델별 지원 자료</strong><div class="ev-folder-mark"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/></svg></div></div></div>
     <div class="ev-admin-note"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 18h16M8 3v6m8 6v6"/></svg><span><strong>관리자</strong>자료 관리 · 다운로드 통계</span></div></div>
       <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 02</span></figcaption>
-    </figure><div class="work-copy"><div class="work-meta"><span>외주 개발</span><span>2026.06 — 2026.07</span></div>
-      <h3 id="title-support">고객지원 서비스</h3><p class="project-name">복합기 고객지원 웹페이지 및 관리자 페이지 개발</p>
-      <p class="work-client">고객사 (주)제이에이 솔루션</p><p class="work-role">단독 개발 · 배포</p>
-      <p class="work-summary">복합기 모델별 드라이버·영상 안내와 관리자용 자료·통계 기능을 단독 개발·배포했습니다.</p>
-      <p class="tech-stack">Next.js · Supabase · PostgreSQL</p><details class="work-details">
-                <summary aria-label="고객지원 서비스 구현 내용">구현 내용<span class="detail-symbol" aria-hidden="true"></span></summary>
-                <ul class="work-list detail-list">
-                  <li>Next.js 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
-                  <li>자료·영상 관리 및 다운로드 통계 조회를 위한 관리자 페이지 개발</li>
-                  <li>Supabase Storage·PostgreSQL 활용 및 Netlify 배포</li>
-                </ul>
-              </details></div></article>
-
-<article class="work-card work-automation" id="automation" aria-labelledby="title-automation">
-      <figure class="work-art experience-visual ev-automation">
+    </figure>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="timeline-node" id="automation" aria-labelledby="title-automation">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta" data-reveal>
+              <span class="badge">외주 개발</span>
+              <p class="case-period"><span class="nowrap">2025.08</span></p>
+              <p class="case-client">고객사 (주)제이에이 솔루션</p>
+              <p class="case-role">단독 개발 · 서버 구축</p>
+            </div>
+            <div class="case-card glass" data-reveal>
+              <div class="case-inner">
+                <div class="case-copy">
+                  <h3 id="title-automation">알림·업무 자동화</h3>
+                  <p class="case-subtitle">고객 알림 및 A/S 고객 명단 자동화 구축</p>
+                  <p class="case-summary">고객 알림·명단 정리를 자동화하고 Node.js·Express 서버를 구축했습니다.</p>
+                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>Node.js</li><li>Express</li><li>Apps Script</li></ul>
+                  <details class="case-details">
+                    <summary aria-label="알림·업무 자동화 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
+                    <ul class="detail-list" role="list">
+                      <li>monday.com 상태 변경 웹훅을 활용한 고객 문자·카카오톡 발송 자동화</li>
+                      <li>Google Apps Script를 활용한 A/S·서비스 고객 명단의 Google Sheets 정리 자동화</li>
+                      <li>카페24 호스팅에 Node.js·Express 서버 구축</li>
+                    </ul>
+                  </details>
+                </div>
+                <figure class="case-visual experience-visual ev-automation">
       <div class="ev-heading"><p>CONNECTED WORKFLOWS</p><strong>반복되는 일을 연결하다</strong><span class="ev-number" aria-hidden="true">03</span></div>
       <div class="ev-scene ev-automation-scene" role="img" aria-label="서로 독립된 두 자동화입니다. monday.com 상태 변경은 Webhook으로 문자·카카오톡 알림에 연결되고, Apps Script는 Google Sheets의 A/S·서비스 고객 명단 정리에 사용됩니다. 별도로 Node.js·Express 서버를 구축했습니다.">
     <div class="ev-route ev-route-message"><div class="ev-route-source"><span class="ev-app-symbol ev-monday-mark"><i></i><i></i><i></i></span><span><strong>monday.com</strong><small>상태 변경</small></span></div><div class="ev-route-wire"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-6-6 6 6-6 6"/></svg><span>Webhook</span></div><div class="ev-route-destination"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16v12H9l-5 4Z"/><path d="M8 8h8m-8 4h5"/></svg><strong>문자 · 카카오톡</strong><small>고객 알림</small></div></div>
     <div class="ev-route ev-route-sheet"><div class="ev-route-source"><span class="ev-app-symbol"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg></span><span><strong>Apps Script</strong><small>명단 자동화</small></span></div><div class="ev-route-wire"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></div><div class="ev-route-destination"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 9v12"/></svg><strong>Google Sheets</strong><small>A/S · 서비스 고객</small></div></div>
     <div class="ev-server-note"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg><span>Node.js · Express</span><small>서버 구축</small></div></div>
       <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 03</span></figcaption>
-    </figure><div class="work-copy"><div class="work-meta"><span>외주 개발</span><span>2025.08</span></div>
-      <h3 id="title-automation">알림·업무 자동화</h3><p class="project-name">고객 알림 및 A/S 고객 명단 자동화 구축</p>
-      <p class="work-client">고객사 (주)제이에이 솔루션</p><p class="work-role">단독 개발 · 서버 구축</p>
-      <p class="work-summary">고객 알림·명단 정리를 자동화하고 Node.js·Express 서버를 구축했습니다.</p>
-      <p class="tech-stack">Node.js · Express · Apps Script</p><details class="work-details">
-                <summary aria-label="알림·업무 자동화 구현 내용">구현 내용<span class="detail-symbol" aria-hidden="true"></span></summary>
-                <ul class="work-list detail-list">
-                  <li>monday.com 상태 변경 웹훅을 활용한 고객 문자·카카오톡 발송 자동화</li>
-                  <li>Google Apps Script를 활용한 A/S·서비스 고객 명단의 Google Sheets 정리 자동화</li>
-                  <li>카페24 호스팅에 Node.js·Express 서버 구축</li>
-                </ul>
-              </details></div></article>
-
-<article class="work-card work-repair" id="repair" aria-labelledby="title-repair">
-      <figure class="work-art experience-visual ev-repair">
+    </figure>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="timeline-node" id="repair" aria-labelledby="title-repair">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta" data-reveal>
+              <span class="badge">외주 개발</span>
+              <p class="case-period"><span class="nowrap">2025.03</span></p>
+              <p class="case-client">고객사 (주)제이에이 솔루션</p>
+              <p class="case-role">단독 개발 · 배포</p>
+            </div>
+            <div class="case-card glass" data-reveal>
+              <div class="case-inner">
+                <div class="case-copy">
+                  <h3 id="title-repair">사내 수리 이력 공유</h3>
+                  <p class="case-subtitle">CS 부서 수리 이력 공유 웹페이지 개발</p>
+                  <p class="case-summary">장비 수리 내역·사진·영상 공유와 직원 댓글 기능을 갖춘 사내 웹페이지를 개발·배포했습니다.</p>
+                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>React</li><li>Cloudflare</li></ul>
+                  <details class="case-details">
+                    <summary aria-label="사내 수리 이력 공유 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
+                    <ul class="detail-list" role="list">
+                      <li>React 기반 장비 수리 내역·사진·영상 공유 및 직원 댓글 기능 구현</li>
+                      <li>Cloudflare를 활용한 웹페이지 배포</li>
+                    </ul>
+                  </details>
+                </div>
+                <figure class="case-visual experience-visual ev-repair">
       <div class="ev-heading"><p>SHARED KNOWLEDGE</p><strong>기록에 맥락을 더하다</strong><span class="ev-number" aria-hidden="true">04</span></div>
       <div class="ev-scene ev-repair-scene" role="img" aria-label="수리 이력 문서에 사진, 영상과 직원 댓글이 연결되는 기능을 표현했습니다. 문서의 선은 장식이며 실제 기록이나 댓글 내용은 아닙니다.">
     <div class="ev-record-stack"><div class="ev-record-back"></div><div class="ev-record-paper"><span class="ev-paper-eyebrow">REPAIR ARCHIVE</span><strong>수리 이력</strong><div class="ev-record-lines"><i></i><i></i><i></i></div><div class="ev-record-divider"></div><div class="ev-record-lines ev-record-lines-short"><i></i><i></i></div><span class="ev-paper-bottom">RECORD &amp; SHARE</span></div><div class="ev-media-card ev-photo-card"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/></svg><span>사진</span></div><div class="ev-media-card ev-clip-card"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span>영상</span></div><div class="ev-comment-card"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16v12H9l-5 4Z"/><path d="M8 8h8m-8 4h5"/></svg><div><strong>직원 댓글</strong><span class="ev-comment-lines"><i></i><i></i></span></div></div></div></div>
       <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 04</span></figcaption>
-    </figure><div class="work-copy"><div class="work-meta"><span>외주 개발</span><span>2025.03</span></div>
-      <h3 id="title-repair">사내 수리 이력 공유</h3><p class="project-name">CS 부서 수리 이력 공유 웹페이지 개발</p>
-      <p class="work-client">고객사 (주)제이에이 솔루션</p><p class="work-role">단독 개발 · 배포</p>
-      <p class="work-summary">장비 수리 내역·사진·영상 공유와 직원 댓글 기능을 갖춘 사내 웹페이지를 개발·배포했습니다.</p>
-      <p class="tech-stack">React · Cloudflare</p><details class="work-details">
-                <summary aria-label="사내 수리 이력 공유 구현 내용">구현 내용<span class="detail-symbol" aria-hidden="true"></span></summary>
-                <ul class="work-list detail-list">
-                  <li>React 기반 장비 수리 내역·사진·영상 공유 및 직원 댓글 기능 구현</li>
-                  <li>Cloudflare를 활용한 웹페이지 배포</li>
-                </ul>
-              </details></div></article>
+    </figure>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-</div></section>
-<footer class="contact" id="contact"><p class="eyebrow">LET’S TALK</p><h2>이야기를 나누고 싶다면</h2><a class="contact-email" href="mailto:ckdgus1308@naver.com">ckdgus1308@naver.com <span aria-hidden="true">↗</span></a><div class="footer-bottom"><span>CHOI CHANGHYEON</span><a href="https://github.com/ckdgus222" target="_blank" rel="noopener noreferrer">GitHub <span class="link-arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><a href="#home">처음으로 ↑</a></div></footer></div></main></body>
+<section class="section" id="skills" aria-labelledby="skills-heading">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow" lang="en">TECH STACK</p>
+      <h2 id="skills-heading">사용하는 기술</h2>
+      <p>웹 개발에 사용하는 기술과 도구입니다.</p>
+    </div>
+    <div class="skills-grid">
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-frontend" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">FRONTEND</p><h3 id="skill-frontend">프론트엔드</h3></div><span class="skill-number" aria-hidden="true">01</span></div>
+        <ul class="chips" role="list"><li>React</li><li>TypeScript</li><li>Next.js</li><li>Axios</li><li>WebSocket</li></ul>
+      </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-backend" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">BACKEND &amp; AUTOMATION</p><h3 id="skill-backend">백엔드·자동화</h3></div><span class="skill-number" aria-hidden="true">02</span></div>
+        <ul class="chips" role="list"><li>Node.js</li><li>Express</li><li>NestJS</li></ul>
+      </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-data" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">DATA &amp; STORAGE</p><h3 id="skill-data">데이터·스토리지</h3></div><span class="skill-number" aria-hidden="true">03</span></div>
+        <ul class="chips" role="list"><li>Supabase</li><li>PostgreSQL</li><li>Prisma</li><li>PostGIS</li><li>MongoDB</li><li>TypeORM</li></ul>
+      </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-delivery" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">BUILD &amp; DEPLOYMENT</p><h3 id="skill-delivery">빌드·배포</h3></div><span class="skill-number" aria-hidden="true">04</span></div>
+        <ul class="chips" role="list"><li>Vite</li><li>Vercel</li><li>Netlify</li><li>Cloudflare</li><li>Docker Compose</li><li>Nginx</li><li>GitHub Actions</li></ul>
+      </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-styling" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">STYLING</p><h3 id="skill-styling">스타일링</h3></div><span class="skill-number" aria-hidden="true">05</span></div>
+        <ul class="chips" role="list"><li>CSS</li><li>styled-components</li><li>MUI</li></ul>
+      </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-state" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">STATE MANAGEMENT</p><h3 id="skill-state">상태 관리</h3></div><span class="skill-number" aria-hidden="true">06</span></div>
+        <ul class="chips" role="list"><li>TanStack Query</li><li>Zustand</li><li>Redux</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portfolio" aria-labelledby="portfolio-heading">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow" lang="en">MAIN PROJECT</p>
+      <h2 id="portfolio-heading">메인 프로젝트</h2>
+      <p>현재 개발하고 있는 대표 프로젝트입니다.</p>
+    </div>
+    <article class="project-card glass glass-interactive" aria-labelledby="dog-walk-title" data-reveal>
+      <div class="project-copy">
+        <span class="project-status">개발 중</span>
+        <h3 id="dog-walk-title">강아지 산책 커뮤니티</h3>
+        <p class="project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
+        <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL/PostGIS</li></ul>
+      </div>
+      <figure class="project-visual">
+        <img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="네이비와 라벤더 색감의 공원에서 보호자와 강아지가 함께 산책하는 일러스트" loading="lazy" decoding="async">
+      </figure>
+    </article>
+  </div>
+</section>
+
+<section class="section contact" id="contact" aria-labelledby="contact-heading">
+  <div class="shell">
+    <div class="contact-panel glass" data-reveal>
+      <p class="eyebrow" lang="en">LET’S TALK</p>
+      <h2 id="contact-heading">이야기를 나누고 싶다면</h2>
+      <a class="contact-email" href="mailto:ckdgus1308@naver.com"><span class="contact-address">ckdgus1308@naver.com</span> <span class="arrow" aria-hidden="true">↗</span></a>
+      <div class="contact-actions">
+        <a class="btn btn-ghost" href="https://github.com/ckdgus222" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer-inner">
+    <span class="site-footer-name" lang="en">CHOI CHANGHYEON</span>
+    <a href="#home">처음으로 <span aria-hidden="true">↑</span></a>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="본문 메뉴" data-nav>
+  <a href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/></svg>소개</a>
+  <a href="#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12.5h18"/></svg>경험</a>
+  <a href="#skills"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg>기술</a>
+  <a href="#portfolio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5 14 9l5.5 2-5.5 2-2 5.5-2-5.5-5.5-2L10 9Z"/></svg>프로젝트</a>
+  <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>연락</a>
+</nav>
+</body>
 </html>

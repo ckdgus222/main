@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0b1020">
+  <title>디자인 시스템 | 최창현 포트폴리오</title>
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
+  <link rel="stylesheet" href="./assets/css/tokens.css?v=d487904bb6">
+  <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=c7ffbc84b4">
+  <link rel="stylesheet" href="./assets/css/design-system.css?v=5449c240a0">
+  <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
+</head>
+<body class="portfolio design-system">
+<a class="skip-link" href="#ds-main">본문으로 건너뛰기</a>
+<div class="ds-shell" id="ds-top">
+  <header class="ds-header"><a class="ds-brand" href="./index.html" aria-label="최창현 포트폴리오 홈">C<span aria-hidden="true">.</span></a><p lang="en">CHOI CHANGHYEON / DESIGN SYSTEM</p><a class="ds-text-link" href="./index.html">포트폴리오로 돌아가기 <span aria-hidden="true">↗</span></a></header>
+  <div class="ds-layout">
+    <aside class="ds-sidebar"><nav class="ds-nav" aria-label="디자인 시스템 목차"><p class="eyebrow" lang="en">CONTENTS</p>
+      <a href="#principles"><span>01</span>원칙</a><a href="#colors"><span>02</span>컬러</a><a href="#typography"><span>03</span>타이포그래피</a><a href="#spacing"><span>04</span>간격·모서리</a><a href="#layout"><span>05</span>레이아웃·반응형</a><a href="#components"><span>06</span>컴포넌트</a><a href="#motion"><span>07</span>모션·접근성</a><a href="#usage"><span>08</span>적용 코드·관리</a>
+    </nav><p class="ds-sidebar-note">현재 포트폴리오의<br>스타일과 사용 기준</p></aside>
+    <main id="ds-main" tabindex="-1">
+      <div class="ds-intro">
+        <p class="eyebrow" lang="en">PORTFOLIO DESIGN GUIDE · NIGHT GLASS</p>
+        <h1>밤의 유리 위에,<br><span>경험을 선명하게.</span></h1>
+        <p>깊은 남색 바탕에 연보라 빛이 번지고, 경력은 반투명 유리 카드와 세로 타임라인으로 읽힙니다. 이 페이지는 현재 홈페이지가 쓰는 토큰·컴포넌트·동작 기준을 실제 CSS로 보여줍니다.</p>
+        <ul class="chips" role="list" aria-label="특징" lang="en"><li>Semantic tokens</li><li>Glass surfaces</li><li>Native HTML</li><li>Responsive</li><li>Reduced motion</li></ul>
+      </div>
+
+      <section class="ds-section" id="principles" aria-labelledby="principles-title">
+        <div class="section-head"><p class="eyebrow" lang="en">01 / PRINCIPLES</p><h2 id="principles-title">원칙</h2><p>내용의 우선순위가 시각적 위계를 결정합니다. 빛과 유리는 분위기를 만들 뿐, 읽기를 방해하지 않습니다.</p></div>
+        <div class="ds-principles">
+          <article class="glass"><span class="ds-index">01</span><h3>경력 우선</h3><p>회사 경력과 외주 개발을 타임라인의 두 묶음으로 나누고, 기간·소속·고객사·역할을 함께 표시합니다.</p></article>
+          <article class="glass"><span class="ds-index">02</span><h3>텍스트 우선</h3><p>카드에서 제목과 핵심 업무를 먼저 읽고, 개념도는 옆(넓은 카드)이나 아래(좁은 카드)에 둡니다. 개념도는 실제 화면이 아님을 표시합니다.</p></article>
+          <article class="glass"><span class="ds-index">03</span><h3>빛은 배경에, 글자는 선명하게</h3><p>빛 번짐과 유리 표면 위에서도 모든 글자는 실제 렌더링 기준 4.5:1 이상의 대비를 유지합니다.</p></article>
+          <article class="glass"><span class="ds-index">04</span><h3>절제된 동작</h3><p>작은 이동과 색으로 반응을 알립니다. 동작 줄이기 설정이나 JavaScript가 없어도 같은 내용을 제공합니다.</p></article>
+        </div>
+      </section>
+
+      <section class="ds-section" id="colors" aria-labelledby="colors-title">
+        <div class="section-head"><p class="eyebrow" lang="en">02 / COLOR</p><h2 id="colors-title">컬러</h2><p>색 이름보다 사용 목적으로 고릅니다. 투명도 변형은 <code>color-mix()</code>로 기본색에서 만들어, 강조색 하나를 바꾸면 틴트·선·빛 번짐이 함께 바뀝니다.</p></div>
+        <h3 class="ds-subtitle">배경</h3>
+        <div class="ds-color-grid">
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--bg-deep)" aria-hidden="true"></div><div><code>--bg-deep</code><span data-token-value="--bg-deep">#0b1020</span><p>페이지 기본 배경·버튼 글자 대비 기준</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--bg-mid)" aria-hidden="true"></div><div><code>--bg-mid</code><span data-token-value="--bg-mid">#111a2e</span><p>배경 그라데이션 중간</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--bg-end)" aria-hidden="true"></div><div><code>--bg-end</code><span data-token-value="--bg-end">#0d1424</span><p>배경 그라데이션 끝</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glow-a)" aria-hidden="true"></div><div><code>--glow-a</code><span data-token-value="--glow-a">color-mix(in srgb, var(--accent) 20%, transparent)</span><p>왼쪽 위 연보라 빛 번짐</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glow-b)" aria-hidden="true"></div><div><code>--glow-b</code><span data-token-value="--glow-b">color-mix(in srgb, var(--accent-2) 16%, transparent)</span><p>오른쪽 위 블루 빛 번짐</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glow-c)" aria-hidden="true"></div><div><code>--glow-c</code><span data-token-value="--glow-c">color-mix(in srgb, #3b2f6b 35%, transparent)</span><p>아래쪽 인디고 빛 번짐</p></div></div>
+        </div>
+        <h3 class="ds-subtitle">텍스트</h3>
+        <div class="ds-color-grid">
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--text)" aria-hidden="true"></div><div><code>--text</code><span data-token-value="--text">#eef1f8</span><p>제목·본문 · 배경 대비 16.7:1</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--text-soft)" aria-hidden="true"></div><div><code>--text-soft</code><span data-token-value="--text-soft">#b4bccd</span><p>설명·목록·칩 · 9.9:1</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--text-muted)" aria-hidden="true"></div><div><code>--text-muted</code><span data-token-value="--text-muted">#9aa3b8</span><p>보조 정보·고객사 · 7.4:1</p></div></div>
+        </div>
+        <h3 class="ds-subtitle">강조</h3>
+        <div class="ds-color-grid">
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent)" aria-hidden="true"></div><div><code>--accent</code><span data-token-value="--accent">#b9aaf4</span><p>링크·라벨·포커스·주요 버튼 · 9.1:1</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent-strong)" aria-hidden="true"></div><div><code>--accent-strong</code><span data-token-value="--accent-strong">#cfc3ff</span><p>현재 메뉴·강조 문구·이메일</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent-2)" aria-hidden="true"></div><div><code>--accent-2</code><span data-token-value="--accent-2">#5b7cfa</span><p>보조 빛 번짐(블루)</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent-fg)" aria-hidden="true"></div><div><code>--accent-fg</code><span data-token-value="--accent-fg">#17112e</span><p>주요 버튼 글자 · 강조색 위 8.8:1</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent-soft)" aria-hidden="true"></div><div><code>--accent-soft</code><span data-token-value="--accent-soft">color-mix(in srgb, var(--accent) 16%, transparent)</span><p>현재 상태·배지·요약 카드 틴트</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent-line)" aria-hidden="true"></div><div><code>--accent-line</code><span data-token-value="--accent-line">color-mix(in srgb, var(--accent) 42%, transparent)</span><p>강조 테두리·진행선 끝·불릿</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--accent-glow)" aria-hidden="true"></div><div><code>--accent-glow</code><span data-token-value="--accent-glow">color-mix(in srgb, var(--accent) 55%, transparent)</span><p>타임라인 점·상태 점의 빛</p></div></div>
+        </div>
+        <h3 class="ds-subtitle">유리·선</h3>
+        <div class="ds-color-grid">
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glass)" aria-hidden="true"></div><div><code>--glass</code><span data-token-value="--glass">#ffffff0d</span><p>유리 기본 표면(흰색 5%)</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-strong)" aria-hidden="true"></div><div><code>--glass-strong</code><span data-token-value="--glass-strong">#ffffff17</span><p>유리 윗면·호버 표면(흰색 9%)</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-border)" aria-hidden="true"></div><div><code>--glass-border</code><span data-token-value="--glass-border">#ffffff1f</span><p>유리·칩 테두리</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-highlight)" aria-hidden="true"></div><div><code>--glass-highlight</code><span data-token-value="--glass-highlight">#ffffff33</span><p>유리 윗면 반사선</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-sheen)" aria-hidden="true"></div><div><code>--glass-sheen</code><span data-token-value="--glass-sheen">#ffffff14</span><p>포인터를 따라가는 반사광</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-tint)" aria-hidden="true"></div><div><code>--glass-tint</code><span data-token-value="--glass-tint">color-mix(in srgb, var(--bg-deep) 40%, transparent)</span><p>유리 아래 남색 틴트 · 대비 보호</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--chip-bg)" aria-hidden="true"></div><div><code>--chip-bg</code><span data-token-value="--chip-bg">#ffffff08</span><p>칩·토글 배경</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--line)" aria-hidden="true"></div><div><code>--line</code><span data-token-value="--line">#ffffff1a</span><p>구분선·타임라인 기본선</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--bar-bg)" aria-hidden="true"></div><div><code>--bar-bg</code><span data-token-value="--bar-bg">color-mix(in srgb, var(--bg-deep) 78%, transparent)</span><p>헤더·하단 탭바 배경</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--surface-fallback)" aria-hidden="true"></div><div><code>--surface-fallback</code><span data-token-value="--surface-fallback">#161d31eb</span><p>backdrop-filter 미지원 시 카드 표면</p></div></div>
+        </div>
+        <h3 class="ds-subtitle">개념도</h3>
+        <div class="ds-color-grid">
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--color-illustration-text)" aria-hidden="true"></div><div><code>--color-illustration-text</code><span data-token-value="--color-illustration-text">#e5e2f2</span><p>개념도 주요 텍스트</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--color-illustration-accent)" aria-hidden="true"></div><div><code>--color-illustration-accent</code><span data-token-value="--color-illustration-accent">#c8b9ff</span><p>개념도 강조색</p></div></div>
+        </div>
+        <p class="ds-note">반투명 색상은 현재 배경 위의 결과로 보입니다. <code>color-mix()</code> 토큰은 계산값 대신 식을 그대로 표시합니다. 대비 수치는 <code>--bg-deep</code> 기준이며, 1440px·390px 화면의 실제 렌더링에서 텍스트 223개가 모두 WCAG AA를 통과했습니다(최저 4.72:1). 개념도 내부의 고유 색은 <code>experience-visuals.css</code>에 둡니다.</p>
+      </section>
+
+      <section class="ds-section" id="typography" aria-labelledby="typography-title">
+        <div class="section-head"><p class="eyebrow" lang="en">03 / TYPOGRAPHY</p><h2 id="typography-title">타이포그래피</h2><p>Pretendard Variable. 이름과 제목은 굵고 촘촘하게, 업무 설명은 넉넉한 행간으로 읽힙니다.</p></div>
+        <div class="ds-type-list">
+          <div class="ds-type-row"><div><code>--text-display</code><span data-token-value="--text-display">clamp(60px, 10vw + 24px, 144px)</span><span>소개 이름 · 800</span></div><p style="font-size:var(--text-display);font-weight:var(--weight-heavy)">최창현.</p></div>
+          <div class="ds-type-row"><div><code>--text-h2</code><span data-token-value="--text-h2">clamp(30px, 3vw + 8px, 44px)</span><span>섹션 제목 · 700</span></div><p style="font-size:var(--text-h2);font-weight:var(--weight-bold)">실무에서 만든 경험</p></div>
+          <div class="ds-type-row"><div><code>--text-lead</code><span data-token-value="--text-lead">clamp(20px, 1.2vw + 12px, 30px)</span><span>소개 문구 · 600</span></div><p style="font-size:var(--text-lead);font-weight:var(--weight-semibold)">사용하기 편한 서비스를</p></div>
+          <div class="ds-type-row"><div><code>--text-title</code><span data-token-value="--text-title">clamp(22px, 1vw + 12px, 26px)</span><span>경력 카드 제목 · 700</span></div><p style="font-size:var(--text-title);font-weight:var(--weight-bold)">CARE 의료 병동 모니터링 시스템</p></div>
+          <div class="ds-type-row"><div><code>--text-h3</code><span data-token-value="--text-h3">20px</span><span>기술 카드 제목 · 700</span></div><p style="font-size:var(--text-h3);font-weight:var(--weight-bold)">프론트엔드</p></div>
+          <div class="ds-type-row"><div><code>--text-lg</code><span data-token-value="--text-lg">18px</span><span>가이드 소제목 · 700</span></div><p style="font-size:var(--text-lg);font-weight:var(--weight-bold)">가이드 소제목</p></div>
+          <div class="ds-type-row"><div><code>--text-body</code><span data-token-value="--text-body">16px</span><span>본문·요약·세부 업무 · 400</span></div><p style="font-size:var(--text-body);font-weight:var(--weight-regular)">웹 서비스부터 서버·데이터 연동과 업무 자동화까지.</p></div>
+          <div class="ds-type-row"><div><code>--text-sm</code><span data-token-value="--text-sm">14px</span><span>메뉴·버튼·칩 · 500~600</span></div><p style="font-size:var(--text-sm);font-weight:var(--weight-medium)">실무 경험 · 기술 스택 · 메인 프로젝트</p></div>
+          <div class="ds-type-row"><div><code>--text-xs</code><span data-token-value="--text-xs">12px</span><span>기간·배지·보조 정보 · 400~600</span></div><p style="font-size:var(--text-xs);font-weight:var(--weight-regular)">2024.08 — 2026.06 · 1년 11개월</p></div>
+          <div class="ds-type-row"><div><code>--text-label</code><span data-token-value="--text-label">11px</span><span>라벨(eyebrow) · 600 · 자간 .18em</span></div><p style="font-size:var(--text-label);font-weight:var(--weight-semibold)">SELECTED EXPERIENCE</p></div>
+        </div>
+        <dl class="ds-facts">
+          <div><dt>행간</dt><dd><code>--leading-tight</code> <span data-token-value="--leading-tight">1.05</span> 이름, <code>--leading-heading</code> <span data-token-value="--leading-heading">1.3</span> 제목, <code>--leading-body</code> <span data-token-value="--leading-body">1.7</span> 본문, <code>--leading-relaxed</code> <span data-token-value="--leading-relaxed">1.8</span> 설명·목록</dd></div>
+          <div><dt>자간</dt><dd><code>--tracking-display</code> <span data-token-value="--tracking-display">-.055em</span> 이름, <code>--tracking-heading</code> <span data-token-value="--tracking-heading">-.035em</span> 제목, <code>--tracking-label</code> <span data-token-value="--tracking-label">.18em</span> 영문 라벨</dd></div>
+          <div><dt>줄바꿈</dt><dd>한글 제목과 설명은 <code>word-break: keep-all</code>로 단어를 지키고, 긴 기술명·주소는 <code>overflow-wrap: anywhere</code>로 컨테이너 안에서 줄바꿈합니다. CDN 로딩 실패 시 시스템 글꼴로 표시합니다.</dd></div>
+        </dl>
+        <p class="ds-note"><code>clamp()</code> 토큰은 화면 너비에 따라 값이 달라지므로 범위 식을 그대로 표시합니다.</p>
+      </section>
+
+      <section class="ds-section" id="spacing" aria-labelledby="spacing-title">
+        <div class="section-head"><p class="eyebrow" lang="en">04 / SPACE, RADIUS &amp; SHADOW</p><h2 id="spacing-title">간격·모서리</h2><p>4px 단위 한 가지 스케일만 씁니다. 이름의 숫자는 4의 배수이며, <code>--space-6</code>은 24px입니다.</p></div>
+        <h3 class="ds-subtitle">간격 스케일</h3>
+        <div class="ds-space-list">
+          <div class="ds-space-row"><code>--space-1</code><span class="ds-space-track"><span style="width:var(--space-1)" aria-hidden="true"></span></span><span data-token-value="--space-1">4px</span></div>
+          <div class="ds-space-row"><code>--space-2</code><span class="ds-space-track"><span style="width:var(--space-2)" aria-hidden="true"></span></span><span data-token-value="--space-2">8px</span></div>
+          <div class="ds-space-row"><code>--space-3</code><span class="ds-space-track"><span style="width:var(--space-3)" aria-hidden="true"></span></span><span data-token-value="--space-3">12px</span></div>
+          <div class="ds-space-row"><code>--space-4</code><span class="ds-space-track"><span style="width:var(--space-4)" aria-hidden="true"></span></span><span data-token-value="--space-4">16px</span></div>
+          <div class="ds-space-row"><code>--space-5</code><span class="ds-space-track"><span style="width:var(--space-5)" aria-hidden="true"></span></span><span data-token-value="--space-5">20px</span></div>
+          <div class="ds-space-row"><code>--space-6</code><span class="ds-space-track"><span style="width:var(--space-6)" aria-hidden="true"></span></span><span data-token-value="--space-6">24px</span></div>
+          <div class="ds-space-row"><code>--space-8</code><span class="ds-space-track"><span style="width:var(--space-8)" aria-hidden="true"></span></span><span data-token-value="--space-8">32px</span></div>
+          <div class="ds-space-row"><code>--space-10</code><span class="ds-space-track"><span style="width:var(--space-10)" aria-hidden="true"></span></span><span data-token-value="--space-10">40px</span></div>
+          <div class="ds-space-row"><code>--space-12</code><span class="ds-space-track"><span style="width:var(--space-12)" aria-hidden="true"></span></span><span data-token-value="--space-12">48px</span></div>
+          <div class="ds-space-row"><code>--space-16</code><span class="ds-space-track"><span style="width:var(--space-16)" aria-hidden="true"></span></span><span data-token-value="--space-16">64px</span></div>
+          <div class="ds-space-row"><code>--space-24</code><span class="ds-space-track"><span style="width:var(--space-24)" aria-hidden="true"></span></span><span data-token-value="--space-24">96px</span></div>
+          <div class="ds-space-row"><code>--space-32</code><span class="ds-space-track"><span style="width:var(--space-32)" aria-hidden="true"></span></span><span data-token-value="--space-32">128px</span></div>
+        </div>
+        <h3 class="ds-subtitle">모서리</h3>
+        <div class="ds-radius-grid">
+          <div class="ds-radius-item"><span class="ds-radius-preview" style="border-radius:var(--radius-card)" aria-hidden="true"></span><p>유리 카드 (767px 이하 20px)</p><code>--radius-card</code> <span data-token-value="--radius-card">24px</span></div>
+          <div class="ds-radius-item"><span class="ds-radius-preview" style="border-radius:var(--radius-inner)" aria-hidden="true"></span><p>레일·개념도·이미지·스와치</p><code>--radius-inner</code> <span data-token-value="--radius-inner">16px</span></div>
+          <div class="ds-radius-item"><span class="ds-radius-preview" style="border-radius:var(--radius-pill)" aria-hidden="true"></span><p>버튼·칩·배지·상태</p><code>--radius-pill</code> <span data-token-value="--radius-pill">999px</span></div>
+        </div>
+        <h3 class="ds-subtitle">그림자</h3>
+        <div class="ds-radius-grid">
+          <div class="ds-radius-item"><span class="ds-shadow-preview" style="box-shadow:var(--shadow-glass)" aria-hidden="true"></span><p>유리 카드 기본</p><code>--shadow-glass</code></div>
+          <div class="ds-radius-item"><span class="ds-shadow-preview" style="box-shadow:var(--shadow-lift)" aria-hidden="true"></span><p>카드 호버</p><code>--shadow-lift</code></div>
+        </div>
+      </section>
+
+      <section class="ds-section" id="layout" aria-labelledby="layout-title">
+        <div class="section-head"><p class="eyebrow" lang="en">05 / LAYOUT &amp; RESPONSIVE</p><h2 id="layout-title">레이아웃·반응형</h2><p>홈페이지는 소개 → 실무 경험 → 기술 스택 → 메인 프로젝트 → 연락 순서입니다. 경력 카드는 화면 너비가 아니라 카드 너비에 반응합니다.</p></div>
+        <div class="ds-layout-preview" aria-hidden="true">
+          <div><p class="eyebrow" lang="en">DESKTOP · 1200px 이상</p><div class="ds-wire ds-wire-desktop"><span>유리 헤더 · 메뉴</span><span class="ds-wire-row"><span>소개 · 이름</span><span class="ds-wire-accent">요약 카드</span></span><span class="ds-wire-row"><span>기간 · 구분</span><span>본문 | 개념도</span></span></div></div>
+          <div><p class="eyebrow" lang="en">MOBILE · 767px 이하</p><div class="ds-wire"><span>헤더 · GitHub</span><span>소개 → 요약 카드</span><span>기간 · 구분 → 본문 → 개념도</span><span class="ds-wire-accent">하단 탭바</span></div></div>
+        </div>
+        <dl class="ds-facts">
+          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 [본문 | 요약 카드], 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [본문 | 이미지]입니다.</dd></div>
+          <div><dt>1199px 이하</dt><dd>타임라인 기간 열 160px, 선 간격 56px.</dd></div>
+          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 1열, 섹션 간격 64px.</dd></div>
+          <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열.</dd></div>
+          <div><dt>359px 이하</dt><dd>좌우 여백 16px. 개념도가 좁아지지 않도록 타임라인 선과 점을 숨기고 카드를 전체 너비로 씁니다.</dd></div>
+          <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다.</dd></div>
+        </dl>
+        <p class="ds-note">미디어 쿼리 경계에는 CSS 변수를 쓸 수 없습니다. 1199 / 1023 / 767 / 359px를 <code>tokens.css</code>, <code>portfolio.css</code>, <code>design-system.css</code>와 이 설명에서 함께 관리합니다. 개념도 내부는 자체 컨테이너 쿼리를 사용합니다.</p>
+      </section>
+
+      <section class="ds-section" id="components" aria-labelledby="components-title">
+        <div class="section-head"><p class="eyebrow" lang="en">06 / COMPONENTS</p><h2 id="components-title">컴포넌트</h2><p>홈페이지와 같은 CSS를 그대로 쓰는 예시입니다. 이 섹션 제목도 <code>.section-head</code> 컴포넌트입니다.</p></div>
+
+        <p class="ds-example-label">버튼 · <code>.btn .btn-primary</code> / <code>.btn-ghost</code> / <code>.btn-sm</code></p>
+        <div class="ds-demo-row"><a class="btn btn-primary" href="#usage">적용 코드 보기 <span class="arrow" aria-hidden="true">↓</span></a><a class="btn btn-ghost" href="#motion">모션 기준 보기 <span class="arrow" aria-hidden="true">↓</span></a><a class="btn btn-ghost btn-sm" href="./index.html">홈페이지 <span class="arrow" aria-hidden="true">↗</span></a></div>
+
+        <p class="ds-example-label">칩·배지·상태 · <code>.chips</code> / <code>.chips-sm</code> / <code>.badge</code> / <code>.badge-accent</code> / <code>.project-status</code></p>
+        <div class="ds-demo-row"><ul class="chips" role="list" aria-label="기술 예시"><li>React</li><li>TypeScript</li><li>Next.js</li></ul><ul class="chips chips-sm" role="list" aria-label="작은 기술 예시"><li>Node.js</li><li>Express</li></ul></div>
+        <div class="ds-demo-row"><span class="badge badge-accent">회사 경력</span><span class="badge">외주 개발</span><span class="project-status">개발 중</span></div>
+
+        <p class="ds-example-label">유리 표면 · <code>.glass</code> / <code>.glass-interactive</code></p>
+        <div class="ds-demo-grid">
+          <div class="glass ds-glass-demo"><p class="eyebrow" lang="en">GLASS</p><p class="ds-demo-title">기본 유리 표면</p><p class="ds-note">흰색 반투명 그라데이션 아래 남색 틴트를 깔고, 배경을 흐리게 비춥니다.</p></div>
+          <div class="glass glass-interactive ds-glass-demo"><p class="eyebrow" lang="en">INTERACTIVE</p><p class="ds-demo-title">호버하는 유리 카드</p><p class="ds-note">정밀 포인터에서 테두리·그림자가 바뀌고 2px 떠오릅니다. 기술 카드와 메인 프로젝트에 씁니다.</p></div>
+        </div>
+
+        <p class="ds-example-label">요약 카드 · <code>.hero-card</code> / <code>.facts</code></p>
+        <aside class="hero-card glass ds-hero-card-demo" aria-label="요약 카드 예시">
+          <p class="eyebrow" lang="en">AT A GLANCE</p>
+          <dl class="facts">
+            <div><dt>회사 경력</dt><dd>1년 11개월<small>모어다임 · 프론트엔드 개발</small></dd></div>
+            <div><dt>외주 개발</dt><dd>3건<small>고객지원 · 자동화 · 수리 이력</small></dd></div>
+          </dl>
+        </aside>
+
+        <p class="ds-example-label">경력 레일 · <code>.rail</code> / <code>.rail-item</code> (현재 사례는 <code>.is-active</code>)</p>
+        <div class="rail ds-rail-demo">
+          <a class="rail-item is-active" href="./index.html#care"><span class="rail-index">01</span><span class="rail-title">CARE 의료 병동 모니터링 시스템</span><span class="rail-period">회사 경력 · 2024.08 — 2026.06</span></a>
+          <a class="rail-item" href="./index.html#support"><span class="rail-index">02</span><span class="rail-title">고객지원 서비스</span><span class="rail-period">외주 개발 · 2026.06 — 2026.07</span></a>
+        </div>
+
+        <p class="ds-example-label">타임라인과 경력 카드 · <code>.timeline</code> / <code>.timeline-node</code> / <code>.case-card</code> / <code>.case-details</code> (열린 상태)</p>
+        <div class="timeline">
+          <div class="timeline-track" aria-hidden="true"><span class="timeline-progress"></span></div>
+          <ol class="timeline-list" role="list" aria-label="경력 카드 예시">
+            <li>
+              <article class="timeline-node" aria-labelledby="example-support">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-meta">
+                  <span class="badge">외주 개발</span>
+                  <p class="case-period"><span class="nowrap">2026.06 — 2026.07</span></p>
+                  <p class="case-client">고객사 (주)제이에이 솔루션</p>
+                  <p class="case-role">단독 개발 · 배포</p>
+                </div>
+                <div class="case-card glass">
+                  <div class="case-inner">
+                    <div class="case-copy">
+                      <h3 id="example-support">고객지원 서비스</h3>
+                      <p class="case-subtitle">복합기 고객지원 웹페이지 및 관리자 페이지 개발</p>
+                      <p class="case-summary">복합기 모델별 드라이버·영상 안내와 관리자용 자료·통계 기능을 단독 개발·배포했습니다.</p>
+                      <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li></ul>
+                      <details class="case-details" open>
+                        <summary aria-label="고객지원 서비스 구현 내용 예시">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
+                        <ul class="detail-list" role="list">
+                          <li>Next.js 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
+                          <li>Supabase Storage·PostgreSQL 활용 및 Netlify 배포</li>
+                        </ul>
+                      </details>
+                    </div>
+                    <figure class="case-visual experience-visual ev-support">
+      <div class="ev-heading"><p>CUSTOMER RESOURCES</p><strong>필요한 자료를 한곳에서</strong><span class="ev-number" aria-hidden="true">02</span></div>
+      <div class="ev-scene ev-support-scene" role="img" aria-label="모델별 드라이버와 영상 안내를 자료 폴더로 표현했습니다. 하단은 관리자용 자료 관리와 다운로드 통계 기능입니다.">
+    <div class="ev-folder"><div class="ev-folder-tab"></div><div class="ev-folder-back"></div><div class="ev-resource-doc ev-resource-driver"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg><strong>드라이버</strong><span>DOWNLOAD</span><div class="ev-paper-lines"><i></i><i></i></div></div><div class="ev-resource-doc ev-resource-video"><div class="ev-video-symbol"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg></div><strong>영상 안내</strong><span>VIDEO GUIDE</span></div><div class="ev-folder-front"><span>RESOURCE LIBRARY</span><strong>모델별 지원 자료</strong><div class="ev-folder-mark"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/></svg></div></div></div>
+    <div class="ev-admin-note"><svg class="ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 18h16M8 3v6m8 6v6"/></svg><span><strong>관리자</strong>자료 관리 · 다운로드 통계</span></div></div>
+      <figcaption><span class="ev-caption-mark" aria-hidden="true"></span>담당 기능을 설명한 개념도<span class="ev-caption-type" aria-hidden="true">CONCEPT / 02</span></figcaption>
+    </figure>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+        <p class="ds-note">가이드에서는 portfolio.js를 실행하지 않으므로 타임라인 선이 모두 채워진 정적 상태로 보입니다. 홈페이지에서는 스크롤에 따라 선이 채워지고, 지나간 점이 켜집니다.</p>
+
+        <p class="ds-example-label">기술 카드 · <code>.skill-card</code></p>
+        <div class="ds-demo-grid">
+          <article class="skill-card glass glass-interactive" aria-labelledby="example-frontend">
+            <div class="skill-card-heading"><div><p class="eyebrow" lang="en">FRONTEND</p><h3 id="example-frontend">프론트엔드</h3></div><span class="skill-number" aria-hidden="true">01</span></div>
+            <ul class="chips" role="list"><li>React</li><li>TypeScript</li><li>Next.js</li><li>Axios</li><li>WebSocket</li></ul>
+          </article>
+        </div>
+
+        <p class="ds-example-label">메인 프로젝트 · <code>.project-card</code></p>
+        <article class="project-card glass glass-interactive" aria-labelledby="example-dog-walk">
+          <div class="project-copy">
+            <span class="project-status">개발 중</span>
+            <h3 id="example-dog-walk">강아지 산책 커뮤니티</h3>
+            <p class="project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
+            <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL/PostGIS</li></ul>
+          </div>
+          <figure class="project-visual"><img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="보호자와 강아지가 함께 산책하는 AI 콘셉트 일러스트" loading="lazy" decoding="async"></figure>
+        </article>
+
+        <p class="ds-example-label">하단 탭바 · <code>.tabbar</code> (홈페이지에서는 767px 이하에서 화면 아래에 고정)</p>
+        <div class="ds-tabbar-demo">
+          <div class="tabbar">
+            <a href="./index.html#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/></svg>소개</a>
+            <a href="./index.html#work" aria-current="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12.5h18"/></svg>경험</a>
+            <a href="./index.html#skills"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg>기술</a>
+            <a href="./index.html#portfolio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5 14 9l5.5 2-5.5 2-2 5.5-2-5.5-5.5-2L10 9Z"/></svg>프로젝트</a>
+            <a href="./index.html#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>연락</a>
+          </div>
+        </div>
+        <p class="ds-note">Tab 키로 링크에 들어가면 실제 <code>:focus-visible</code> 테두리를 확인할 수 있습니다. 상태는 점과 텍스트를 함께 표시하고, 현재 위치는 <code>aria-current</code>로 전달합니다.</p>
+
+        <h3 class="ds-subtitle">컴포넌트 계약</h3>
+        <dl class="ds-catalog">
+          <div><dt><code>.site-header / .site-nav</code></dt><dd><strong>역할·구성</strong> 화면 위에 고정된 유리 헤더 / 브랜드, 섹션 메뉴, GitHub.<br><strong>상태·작성 기준</strong> 스크롤 위치의 섹션에 <code>aria-current="location"</code>과 밑줄. 767px 이하에서는 메뉴를 숨기고 <code>.tabbar</code>로 대체.<br><strong>접근성</strong> nav 이름 제공, 앵커 이동은 헤더 높이만큼 여백(<code>scroll-padding-top</code>).</dd></div>
+          <div><dt><code>.hero / .hero-card / .facts</code></dt><dd><strong>역할·구성</strong> 소개 / 이름, 소개 문구, 버튼 2개, 요약 카드.<br><strong>상태·작성 기준</strong> 요약에는 페이지에 있는 사실만 씁니다. JS가 있으면 단어 단위로 나타나고, 3초 안에 실행되지 않으면 CSS가 그대로 보여 줍니다.<br><strong>접근성</strong> 이름은 h1, 요약 카드는 이름 있는 aside.</dd></div>
+          <div><dt><code>.section-head</code></dt><dd><strong>역할·구성</strong> 섹션 시작 / eyebrow, h2, 설명.<br><strong>상태·작성 기준</strong> 정적. 제목·고유 ID 필수.<br><strong>접근성</strong> section의 aria-labelledby로 연결, h1 다음 h2 유지.</dd></div>
+          <div><dt><code>.btn</code></dt><dd><strong>역할·구성</strong> 이동 / <code>.btn-primary</code>(채움), <code>.btn-ghost</code>(유리), <code>.btn-sm</code>(헤더).<br><strong>상태·작성 기준</strong> 기본·호버·포커스. 한 영역에 주요 버튼은 하나.<br><strong>접근성</strong> 44px 높이, 작은 버튼도 터치 기기에서는 44px. 새 탭은 화면 낭독용 안내 포함.</dd></div>
+          <div><dt><code>.chips / .badge / .project-status</code></dt><dd><strong>역할·구성</strong> 기술 목록 / 경력 구분 / 진행 상태.<br><strong>상태·작성 기준</strong> 정적. 실제 기술·상태만 쓰고 빈 칩은 두지 않습니다. 회사 경력 배지만 강조색.<br><strong>접근성</strong> 칩은 버튼이 아닌 목록. 색과 점만으로 상태를 전달하지 않습니다.</dd></div>
+          <div><dt><code>.glass / .glass-interactive</code></dt><dd><strong>역할·구성</strong> 카드 표면 / 반투명 그라데이션, 남색 틴트, 흐림, 윗면 반사선.<br><strong>상태·작성 기준</strong> 기본·호버. 반사광은 portfolio.js가 포인터 위치로 옮깁니다.<br><strong>접근성</strong> 글자 대비 4.5:1 이상. backdrop-filter가 없으면 불투명 표면으로 대체.</dd></div>
+          <div><dt><code>.rail / .rail-item</code></dt><dd><strong>역할·구성</strong> 경력 바로가기 / 번호, 제목, 구분·기간.<br><strong>상태·작성 기준</strong> 화면 45% 지점을 지난 사례에 <code>.is-active</code>. 767px 이하에서 가로 스크롤.<br><strong>접근성</strong> 사례 article의 id로 이동하는 일반 링크.</dd></div>
+          <div><dt><code>.timeline / .timeline-node</code></dt><dd><strong>역할·구성</strong> 경력 순서 / 회사 경력·외주 개발 묶음, 점, 기간·구분(<code>.timeline-meta</code>), 카드.<br><strong>상태·작성 기준</strong> JS가 <code>.is-live</code>를 붙이면 선이 스크롤만큼 채워지고 지나간 사례에 <code>.is-passed</code>.<br><strong>접근성</strong> 묶음마다 이름 있는 목록. 동작 줄이기·JS 없음에서는 선 전체와 점을 모두 표시.</dd></div>
+          <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 기술, 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 닫힘·열림. 카드 760px 이상 2열(개념도 sticky), 미만 1열. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
+          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(상태, 제목, 설명, 기술, 이미지).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
+          <div><dt><code>.tabbar</code></dt><dd><strong>역할·구성</strong> 767px 이하 하단 메뉴 / 아이콘과 이름 5개.<br><strong>상태·작성 기준</strong> 현재 섹션에 <code>aria-current</code>. 기기 하단 안전 영역만큼 띄우고, 푸터 아래에 같은 높이의 여백을 둡니다.<br><strong>접근성</strong> 헤더 메뉴와 같은 이름의 nav, 아이콘은 장식.</dd></div>
+          <div><dt>링크·복사 버튼(가이드)</dt><dd><strong>역할·구성</strong> 이동 / href, 링크명. 복사 / 대상 ID.<br><strong>상태·작성 기준</strong> 기본·호버·포커스, 복사 성공·실패.<br><strong>접근성</strong> 보이는 포커스와 명확한 이름. 복사 결과는 하나의 polite 상태 영역으로 안내.</dd></div>
+        </dl>
+        <p class="ds-note">정적 페이지에는 별도 로딩·오류 화면이 없습니다. 빈 데이터는 빈 카드를 남기지 않고 생략합니다.</p>
+      </section>
+
+      <section class="ds-section" id="motion" aria-labelledby="motion-title">
+        <div class="section-head"><p class="eyebrow" lang="en">07 / MOTION &amp; ACCESSIBILITY</p><h2 id="motion-title">모션·접근성</h2><p>키보드, 터치, 동작 줄이기 설정, JavaScript가 없는 환경에서도 같은 내용을 전달합니다.</p></div>
+        <dl class="ds-facts">
+          <div><dt><code>--dur-fast</code> <span data-token-value="--dur-fast">180ms</span></dt><dd>링크·메뉴·버튼의 색과 배경</dd></div>
+          <div><dt><code>--dur-base</code> <span data-token-value="--dur-base">320ms</span></dt><dd>카드 이동·테두리·그림자, 메뉴 밑줄, 화살표, 타임라인 점. 호버 이동량 <code>--hover-lift</code> <span data-token-value="--hover-lift">-2px</span></dd></div>
+          <div><dt><code>--dur-reveal</code> <span data-token-value="--dur-reveal">600ms</span></dt><dd>등장 효과. 이동량 <code>--reveal-distance</code> <span data-token-value="--reveal-distance">24px</span>, 순차 간격 <code>--stagger</code> <span data-token-value="--stagger">70ms</span></dd></div>
+          <div><dt><code>--ease-out</code> <span data-token-value="--ease-out">cubic-bezier(.2, .65, .3, 1)</span></dt><dd>등장·이동. 색·배경 전환은 <code>--ease-standard</code> <span data-token-value="--ease-standard">cubic-bezier(.4, 0, .2, 1)</span></dd></div>
+        </dl>
+        <div class="ds-motion-sample glass" id="motion-example"><p class="eyebrow" lang="en">MOTION SAMPLE</p><p>텍스트가 먼저, 움직임은 가볍게.</p></div>
+        <button class="btn btn-ghost btn-sm ds-replay" type="button" data-replay="motion-example" hidden>모션 다시 보기</button>
+        <p class="ds-note">JS가 활성화되면 데모를 다시 재생할 수 있습니다. 시간·거리·가속 곡선은 root 토큰을 따르며 홈페이지의 portfolio.js도 같은 토큰을 읽습니다. 가이드에서는 portfolio.js를 실행하지 않습니다.</p>
+        <ul class="ds-checklist">
+          <li>본문은 JS 없이 읽고, details/summary로 세부 내용을 펼칩니다.</li>
+          <li>소개는 단어 단위로 나타나고, 섹션과 카드는 화면 밖으로 완전히 나갔다가 다시 들어오면 다시 나타납니다. 포커스가 들어온 요소와 인쇄 시에는 즉시 표시합니다.</li>
+          <li>타임라인 선은 화면 45% 지점까지 채워지고, 그 지점을 지난 사례의 점이 켜집니다.</li>
+          <li><code>prefers-reduced-motion: reduce</code>에서는 애니메이션·전환·부드러운 스크롤을 끄고, 타임라인을 처음부터 모두 표시합니다.</li>
+          <li>포커스는 2px 테두리·4px 바깥 여백. 조작 영역은 최소 44px, 상세 펼침은 52px입니다.</li>
+          <li>호버 이동·반사광은 정밀 포인터에서만 적용하고, 터치에서 필요한 정보를 숨기지 않습니다.</li>
+          <li>글자 대비는 실제 렌더링 픽셀로 측정합니다. 유리에는 <code>--glass-tint</code>를 깔아 빛 번짐 위에서도 4.5:1 이상을 유지합니다.</li>
+          <li>의미 있는 개념도에는 대체 설명을, 장식에는 <code>aria-hidden</code>을 적용합니다. 강제 색상 모드에서는 테두리를 시스템 색으로 표시합니다.</li>
+        </ul>
+      </section>
+
+      <section class="ds-section" id="usage" aria-labelledby="usage-title">
+        <div class="section-head"><p class="eyebrow" lang="en">08 / IMPLEMENTATION</p><h2 id="usage-title">적용 코드·관리</h2><p>공유 토큰 → 개념도 → 공유 컴포넌트 → 페이지 동작 순서로 연결합니다. 코드는 직접 선택해서 복사할 수도 있습니다.</p></div>
+        <div class="ds-code-block glass"><div class="ds-code-heading"><h3>스타일과 스크립트 연결</h3><button class="btn btn-ghost btn-sm" type="button" data-copy-target="code-styles" hidden>연결 코드 복사</button></div><pre id="code-styles"><code>&lt;link rel="stylesheet" href="./assets/css/font.css"&gt;
+&lt;link rel="stylesheet" href="./assets/css/tokens.css"&gt;
+&lt;link rel="stylesheet" href="./assets/css/experience-visuals.css"&gt;
+&lt;link rel="stylesheet" href="./assets/css/portfolio.css"&gt;
+&lt;script&gt;document.documentElement.classList.add('js');&lt;/script&gt;
+&lt;script src="./assets/js/portfolio.js" defer&gt;&lt;/script&gt;</code></pre></div>
+        <div class="ds-code-block glass"><div class="ds-code-heading"><h3>공유 토큰 사용</h3><button class="btn btn-ghost btn-sm" type="button" data-copy-target="code-css" hidden>CSS 코드 복사</button></div><pre id="code-css"><code>.example-note {
+  padding: var(--space-6);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-inner);
+  background: var(--chip-bg);
+  color: var(--text-soft);
+  font-size: var(--text-sm);
+}</code></pre></div>
+        <div class="ds-code-block glass"><div class="ds-code-heading"><h3>타임라인에 사례 추가</h3><button class="btn btn-ghost btn-sm" type="button" data-copy-target="code-case" hidden>HTML 코드 복사</button></div><pre id="code-case"><code>&lt;li&gt;
+  &lt;article class="timeline-node" id="new-case" aria-labelledby="title-new-case"&gt;
+    &lt;span class="timeline-dot" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;div class="timeline-meta" data-reveal&gt;
+      &lt;span class="badge"&gt;외주 개발&lt;/span&gt;
+      &lt;p class="case-period"&gt;&lt;span class="nowrap"&gt;2026.01 — 2026.02&lt;/span&gt;&lt;/p&gt;
+      &lt;p class="case-client"&gt;고객사 이름&lt;/p&gt;
+      &lt;p class="case-role"&gt;역할&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="case-card glass" data-reveal&gt;
+      &lt;div class="case-inner"&gt;
+        &lt;div class="case-copy"&gt;
+          &lt;h3 id="title-new-case"&gt;프로젝트 제목&lt;/h3&gt;
+          &lt;p class="case-summary"&gt;한두 문장 요약&lt;/p&gt;
+          &lt;ul class="chips chips-sm" role="list" aria-label="사용 기술"&gt;&lt;li&gt;기술&lt;/li&gt;&lt;/ul&gt;
+          &lt;details class="case-details"&gt;
+            &lt;summary aria-label="프로젝트 제목 구현 내용"&gt;구현 내용&lt;span class="details-toggle" aria-hidden="true"&gt;&lt;/span&gt;&lt;/summary&gt;
+            &lt;ul class="detail-list" role="list"&gt;&lt;li&gt;구현 항목&lt;/li&gt;&lt;/ul&gt;
+          &lt;/details&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/li&gt;</code></pre></div>
+        <p class="ds-note">사례를 추가하면 레일(<code>.rail</code>)에도 같은 id로 링크를 추가합니다. 개념도가 있다면 <code>.case-copy</code> 다음에 <code>figure.case-visual.experience-visual</code>을 둡니다.</p>
+        <div class="ds-demo-row"><code>var(--accent)</code><button class="btn btn-ghost btn-sm" type="button" data-copy-text="var(--accent)" hidden>강조색 토큰 복사</button></div><p id="copy-status" role="status" aria-live="polite" aria-atomic="true" class="ds-note">복사 버튼이 보이지 않으면 코드를 직접 선택해 복사하세요.</p>
+        <h3 class="ds-subtitle">관리 기준</h3>
+        <dl class="ds-facts">
+          <div><dt>tokens.css</dt><dd>색·타입·간격·모서리·그림자·레이아웃·모션 값의 기준. 이름은 사용 목적을 표현하고, 투명도 변형은 <code>color-mix()</code>로 만듭니다.</dd></div>
+          <div><dt>experience-visuals.css</dt><dd>담당 기능을 표현하는 개념도. 실제 화면과 구분하며 <code>--line</code>과 <code>--color-illustration-*</code>만 공유합니다.</dd></div>
+          <div><dt>portfolio.css</dt><dd>홈페이지와 가이드가 함께 쓰는 컴포넌트와 반응형 규칙. 개념도 스타일 다음에 불러와 카드 안 개념도의 테두리·위치를 정합니다.</dd></div>
+          <div><dt>portfolio.js</dt><dd>현재 메뉴·레일 표시, 소개·섹션 등장, 타임라인 진행선, 유리 반사광. 없어도 모든 내용이 보입니다.</dd></div>
+          <div><dt>design-system.css / .js</dt><dd>가이드 배치와 목차·토큰 값 표시·코드 복사·모션 데모.</dd></div>
+          <div><dt>?v= 버전</dt><dd>공유 CSS·JS를 수정하면 두 HTML의 <code>?v=</code> 값을 해당 파일 SHA-256 앞 10자리로 갱신합니다.</dd></div>
+        </dl>
+        <h3 class="ds-subtitle">UI 적용 체크리스트</h3>
+        <ul class="ds-checklist">
+          <li>새 값을 선언하기 전에 기존 토큰과 컴포넌트를 먼저 확인합니다.</li>
+          <li>회사 경력·외주 구분, 기간·고객사·역할, 실제 기술 문구를 확인합니다.</li>
+          <li>320px와 각 반응형 경계 전후에서 긴 문구·칩·코드의 넘침과 개념도 글자 경계를 확인합니다.</li>
+          <li>Tab 순서, Enter·Space 펼침, 링크 목적지, 200% 확대를 확인합니다.</li>
+          <li>JS 비활성화·동작 줄이기·폰트 로딩 실패에서 모든 내용이 보이는지 확인합니다.</li>
+          <li>빛 번짐 위 작은 글자를 포함해 실제 화면에서 대비를 측정합니다.</li>
+          <li>변경 시 홈페이지와 가이드를 함께 검토하고 CSS·JS 버전 값을 갱신합니다.</li>
+        </ul>
+      </section>
+      <footer class="ds-footer"><span lang="en">CHOI CHANGHYEON / DESIGN SYSTEM</span><a class="ds-text-link" href="#ds-top">처음으로 <span aria-hidden="true">↑</span></a><a class="ds-text-link" href="./index.html">포트폴리오로 돌아가기</a></footer>
+    </main>
+  </div>
+</div>
+</body>
+</html>

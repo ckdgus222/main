@@ -1,7 +1,7 @@
 /* Portfolio concept art: symbolic objects, not screenshots or sample customer data. */
 .portfolio .experience-visual {
-  --ev-ink: #e5e2f2;
-  --ev-lavender: #c8b9ff;
+  --ev-ink: var(--color-illustration-text);
+  --ev-lavender: var(--color-illustration-accent);
   position: relative;
   isolation: isolate;
   container-type: inline-size;
