@@ -9,9 +9,9 @@
   <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
-  <link rel="stylesheet" href="./assets/css/tokens.css?v=d487904bb6">
+  <link rel="stylesheet" href="./assets/css/tokens.css?v=6353ec7f68">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ffd79bfee7">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=0654ce34cc">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=5449c240a0">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -148,9 +148,9 @@
           <div><p class="eyebrow" lang="en">MOBILE · 767px 이하</p><div class="ds-wire"><span>헤더 · GitHub</span><span>소개 → 요약 카드</span><span>기간 · 구분 → 본문 → 개념도</span><span class="ds-wire-accent">하단 탭바</span></div></div>
         </div>
         <dl class="ds-facts">
-          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 [본문 | 요약 카드], 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [본문 | 이미지]입니다.</dd></div>
+          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 헤더 아래 화면 높이를 채우고 [본문 | 요약 카드]를 세로 가운데에 둡니다. 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [본문 | 이미지]입니다.</dd></div>
           <div><dt>1199px 이하</dt><dd>타임라인 기간 열 160px, 선 간격 56px.</dd></div>
-          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 1열, 섹션 간격 64px.</dd></div>
+          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 1열, 섹션 간격 64px.</dd></div>
           <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열.</dd></div>
           <div><dt>359px 이하</dt><dd>좌우 여백 16px. 개념도가 좁아지지 않도록 타임라인 선과 점을 숨기고 카드를 전체 너비로 씁니다.</dd></div>
           <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다. 480px보다 좁으면 기술 분야 이름을 태그 위에 둡니다.</dd></div>
@@ -291,7 +291,8 @@
         <dl class="ds-facts">
           <div><dt><code>--dur-fast</code> <span data-token-value="--dur-fast">180ms</span></dt><dd>링크·메뉴·버튼의 색과 배경</dd></div>
           <div><dt><code>--dur-base</code> <span data-token-value="--dur-base">320ms</span></dt><dd>카드 이동·테두리·그림자, 메뉴 밑줄, 화살표, 타임라인 점. 호버 이동량 <code>--hover-lift</code> <span data-token-value="--hover-lift">-2px</span></dd></div>
-          <div><dt><code>--dur-reveal</code> <span data-token-value="--dur-reveal">600ms</span></dt><dd>등장 효과. 이동량 <code>--reveal-distance</code> <span data-token-value="--reveal-distance">24px</span>, 순차 간격 <code>--stagger</code> <span data-token-value="--stagger">70ms</span></dd></div>
+          <div><dt><code>--dur-reveal</code> <span data-token-value="--dur-reveal">600ms</span></dt><dd>소개 등장 효과. 이동량 <code>--reveal-distance</code> <span data-token-value="--reveal-distance">24px</span>, 순차 간격 <code>--stagger</code> <span data-token-value="--stagger">70ms</span></dd></div>
+          <div><dt><code>--dur-reveal-scroll</code> <span data-token-value="--dur-reveal-scroll">1000ms</span></dt><dd>스크롤로 들어오는 섹션·카드의 등장 효과. 이동량은 같고, 기술 카드 열 간격은 <code>--stagger-scroll</code> <span data-token-value="--stagger-scroll">120ms</span></dd></div>
           <div><dt><code>--ease-out</code> <span data-token-value="--ease-out">cubic-bezier(.2, .65, .3, 1)</span></dt><dd>등장·이동. 색·배경 전환은 <code>--ease-standard</code> <span data-token-value="--ease-standard">cubic-bezier(.4, 0, .2, 1)</span></dd></div>
         </dl>
         <div class="ds-motion-sample glass" id="motion-example"><p class="eyebrow" lang="en">MOTION SAMPLE</p><p>텍스트가 먼저, 움직임은 가볍게.</p></div>
@@ -299,7 +300,7 @@
         <p class="ds-note">JS가 활성화되면 데모를 다시 재생할 수 있습니다. 시간·거리·가속 곡선은 root 토큰을 따르며 홈페이지의 portfolio.js도 같은 토큰을 읽습니다. 가이드에서는 portfolio.js를 실행하지 않습니다.</p>
         <ul class="ds-checklist">
           <li>본문은 JS 없이 읽고, details/summary로 세부 내용을 펼칩니다.</li>
-          <li>소개는 단어 단위로 나타나고, 섹션과 카드는 화면 밖으로 완전히 나갔다가 다시 들어오면 다시 나타납니다. 포커스가 들어온 요소와 인쇄 시에는 즉시 표시합니다.</li>
+          <li>소개는 단어 단위로 나타나고, 섹션과 카드는 화면 밖으로 완전히 나갔다가 다시 들어오면 다시 나타납니다. 화면 밖에서는 등장 첫 장면으로 기다려, 들어오는 순간 보이던 내용이 사라졌다 나타나지 않습니다. 포커스가 들어온 요소와 인쇄 시에는 즉시 표시합니다.</li>
           <li>타임라인 선은 화면 45% 지점까지 채워지고, 그 지점을 지난 사례의 점이 켜집니다.</li>
           <li><code>prefers-reduced-motion: reduce</code>에서는 애니메이션·전환·부드러운 스크롤을 끄고, 타임라인을 처음부터 모두 표시합니다.</li>
           <li>포커스는 2px 테두리·4px 바깥 여백. 조작 영역은 최소 44px, 상세 펼침은 52px입니다.</li>

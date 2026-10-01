@@ -16,30 +16,43 @@
   }
   const duration = numberToken('--dur-reveal', 'ms');
   const stagger = numberToken('--stagger', 'ms');
+  const scrollDuration = numberToken('--dur-reveal-scroll', 'ms');
+  const scrollStagger = numberToken('--stagger-scroll', 'ms');
   const distance = numberToken('--reveal-distance', 'px');
   const easing = tokens.getPropertyValue('--ease-out').trim();
   const motionReady = 'IntersectionObserver' in window
     && typeof Element.prototype.animate === 'function'
-    && [duration, stagger, distance].every(Number.isFinite)
+    && [duration, stagger, scrollDuration, scrollStagger, distance].every(Number.isFinite)
     && duration > 0
+    && scrollDuration > 0
     && CSS.supports('animation-timing-function', easing);
 
   const animations = new Map();
-  function reveal(element, delay = 0) {
+  function reveal(element, time, delay = 0) {
     animations.get(element)?.cancel();
     let animation;
     try {
       animation = element.animate(
         [{ opacity: 0, transform: `translateY(${distance}px)` }, { opacity: 1, transform: 'none' }],
-        { duration, delay, easing, fill: 'backwards' }
+        { duration: time, delay, easing, fill: 'backwards' }
       );
     } catch {
-      return; // A timing value the browser rejects leaves the content visible.
+      return null; // A timing value the browser rejects leaves the content visible.
     }
     animations.set(element, animation);
     animation.onfinish = animation.oncancel = () => {
       if (animations.get(element) === animation) animations.delete(element);
     };
+    return animation;
+  }
+  // Out of view, an element waits on the entrance's first frame,
+  // so the entrance never starts by hiding something already on screen.
+  function hold(element) {
+    if (!motionReady || reducedMotion.matches) {
+      animations.get(element)?.cancel();
+      return;
+    }
+    if (animations.get(element)?.playState !== 'paused') reveal(element, scrollDuration)?.pause();
   }
   function cancelAll() {
     for (const animation of animations.values()) animation.cancel();
@@ -49,7 +62,7 @@
   // never shows the text before it animates. Both happen in this same task.
   const heroParts = [...document.querySelectorAll('[data-hero-part]')];
   if (motionReady && !reducedMotion.matches && window.scrollY < window.innerHeight / 2) {
-    heroParts.forEach((part, index) => reveal(part, index * stagger));
+    heroParts.forEach((part, index) => reveal(part, duration, index * stagger));
   }
   root.classList.add('hero-ready');
 
@@ -131,13 +144,17 @@
     const enter = new IntersectionObserver(entries => {
       for (const entry of entries) {
         const element = entry.target;
-        if (entry.intersectionRatio < 0.08 || visible.has(element)) continue;
+        if (visible.has(element)) continue;
+        if (entry.intersectionRatio < 0.08) {
+          if (!entry.isIntersecting) hold(element);
+          continue;
+        }
         visible.add(element);
         element.classList.add('is-inview');
         if (!motionReady || reducedMotion.matches || element.contains(document.activeElement)) continue;
         const index = skillCards.indexOf(element);
         const columns = wide.matches ? 3 : medium.matches ? 2 : 1;
-        reveal(element, index >= 0 ? (index % columns) * stagger : 0);
+        reveal(element, scrollDuration, index >= 0 ? (index % columns) * scrollStagger : 0);
       }
     }, { threshold: [0.08] });
     const leave = new IntersectionObserver(entries => {
@@ -146,7 +163,7 @@
         const element = entry.target;
         visible.delete(element);
         element.classList.remove('is-inview');
-        animations.get(element)?.cancel();
+        hold(element);
       }
     }, { rootMargin: `${margin}px 0px` });
     document.querySelectorAll('[data-reveal]').forEach(element => {

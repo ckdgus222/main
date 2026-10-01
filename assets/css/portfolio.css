@@ -205,24 +205,27 @@ body::after {
 }
 .site-nav a[aria-current]::after { transform: scaleX(1); }
 
-/* Hero */
+/* Hero: fills the screen below the header with the content centered vertically;
+   the summary card's bottom stays aligned with the buttons. */
 .hero-inner {
   position: relative;
   isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-content: center;
   align-items: end;
   gap: var(--space-12);
-  min-height: max(560px, calc(88svh - var(--header-h)));
-  padding-block: var(--space-24) var(--space-16);
+  min-height: max(560px, calc(100svh - var(--header-h)));
+  padding-block: var(--space-16);
 }
 .hero-orb {
   position: absolute;
   z-index: -1;
+  top: 50%;
   right: 0;
-  bottom: 0;
   width: min(680px, 100%);
   aspect-ratio: 1;
+  transform: translateY(-50%);
   background: radial-gradient(closest-side,
     color-mix(in srgb, var(--accent-strong) 24%, transparent) 0%,
     color-mix(in srgb, var(--accent) 14%, transparent) 38%,
@@ -598,7 +601,7 @@ body::after {
 @media (max-width: 1023px) {
   .site-nav a { padding-inline: 10px; }
   .hero-inner { grid-template-columns: minmax(0, 1fr); align-items: start; min-height: 0; padding-block: var(--space-16) var(--space-12); }
-  .hero-orb { top: 18%; bottom: auto; width: min(560px, 90%); }
+  .hero-orb { top: 18%; width: min(560px, 90%); transform: none; }
   .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
   .facts > div { padding-block: var(--space-2) 0; border-top: 0; }
   .facts > div + div { padding-left: var(--space-6); border-left: 1px solid var(--line); }

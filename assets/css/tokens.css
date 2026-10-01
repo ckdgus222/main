@@ -85,14 +85,17 @@
   --radius-inner: 16px;
   --radius-pill: 999px;
 
-  /* Motion. JavaScript reads times in ms and distances in px. */
+  /* Motion. JavaScript reads times in ms and distances in px.
+     The intro plays once on load; sections and cards revealed by scrolling move more slowly. */
   --ease-out: cubic-bezier(.2, .65, .3, 1);
   --ease-standard: cubic-bezier(.4, 0, .2, 1);
   --dur-fast: 180ms;
   --dur-base: 320ms;
   --dur-reveal: 600ms;
+  --dur-reveal-scroll: 1000ms;
   --reveal-distance: 24px;
   --stagger: 70ms;
+  --stagger-scroll: 120ms;
   --hover-lift: -2px;
 
   /* Layout and interaction */
