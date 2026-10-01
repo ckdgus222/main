@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=d487904bb6">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=c7ffbc84b4">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ffd79bfee7">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=5449c240a0">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -153,7 +153,7 @@
           <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 1열, 섹션 간격 64px.</dd></div>
           <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열.</dd></div>
           <div><dt>359px 이하</dt><dd>좌우 여백 16px. 개념도가 좁아지지 않도록 타임라인 선과 점을 숨기고 카드를 전체 너비로 씁니다.</dd></div>
-          <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다.</dd></div>
+          <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다. 480px보다 좁으면 기술 분야 이름을 태그 위에 둡니다.</dd></div>
         </dl>
         <p class="ds-note">미디어 쿼리 경계에는 CSS 변수를 쓸 수 없습니다. 1199 / 1023 / 767 / 359px를 <code>tokens.css</code>, <code>portfolio.css</code>, <code>design-system.css</code>와 이 설명에서 함께 관리합니다. 개념도 내부는 자체 컨테이너 쿼리를 사용합니다.</p>
       </section>
@@ -208,12 +208,17 @@
                       <h3 id="example-support">고객지원 서비스</h3>
                       <p class="case-subtitle">복합기 고객지원 웹페이지 및 관리자 페이지 개발</p>
                       <p class="case-summary">복합기 모델별 드라이버·영상 안내와 관리자용 자료·통계 기능을 단독 개발·배포했습니다.</p>
-                      <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li></ul>
+                      <dl class="stack-list">
+                        <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>Next.js</li><li>TypeScript</li></ul></dd></div>
+                        <div><dt>스타일링</dt><dd><ul class="chips chips-sm" role="list"><li>Tailwind CSS</li><li>shadcn/ui</li></ul></dd></div>
+                        <div><dt>데이터·스토리지</dt><dd><ul class="chips chips-sm" role="list"><li>Supabase</li><li>Supabase Storage</li><li>PostgreSQL</li></ul></dd></div>
+                        <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Netlify</li></ul></dd></div>
+                      </dl>
                       <details class="case-details" open>
                         <summary aria-label="고객지원 서비스 구현 내용 예시">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                         <ul class="detail-list" role="list">
-                          <li>Next.js 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
-                          <li>Supabase Storage·PostgreSQL 활용 및 Netlify 배포</li>
+                          <li>Next.js·TypeScript 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
+                          <li>Supabase Auth 기반 관리자 로그인, Supabase Storage·PostgreSQL 자료 관리 및 Netlify 배포</li>
                         </ul>
                       </details>
                     </div>
@@ -246,7 +251,7 @@
             <span class="project-status">개발 중</span>
             <h3 id="example-dog-walk">강아지 산책 커뮤니티</h3>
             <p class="project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
-            <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL/PostGIS</li></ul>
+            <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>PostGIS</li></ul>
           </div>
           <figure class="project-visual"><img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="보호자와 강아지가 함께 산책하는 AI 콘셉트 일러스트" loading="lazy" decoding="async"></figure>
         </article>
@@ -273,7 +278,7 @@
           <div><dt><code>.glass / .glass-interactive</code></dt><dd><strong>역할·구성</strong> 카드 표면 / 반투명 그라데이션, 남색 틴트, 흐림, 윗면 반사선.<br><strong>상태·작성 기준</strong> 기본·호버. 반사광은 portfolio.js가 포인터 위치로 옮깁니다.<br><strong>접근성</strong> 글자 대비 4.5:1 이상. backdrop-filter가 없으면 불투명 표면으로 대체.</dd></div>
           <div><dt><code>.rail / .rail-item</code></dt><dd><strong>역할·구성</strong> 경력 바로가기 / 번호, 제목, 구분·기간.<br><strong>상태·작성 기준</strong> 화면 45% 지점을 지난 사례에 <code>.is-active</code>. 767px 이하에서 가로 스크롤.<br><strong>접근성</strong> 사례 article의 id로 이동하는 일반 링크.</dd></div>
           <div><dt><code>.timeline / .timeline-node</code></dt><dd><strong>역할·구성</strong> 경력 순서 / 회사 경력·외주 개발 묶음, 점, 기간·구분(<code>.timeline-meta</code>), 카드.<br><strong>상태·작성 기준</strong> JS가 <code>.is-live</code>를 붙이면 선이 스크롤만큼 채워지고 지나간 사례에 <code>.is-passed</code>.<br><strong>접근성</strong> 묶음마다 이름 있는 목록. 동작 줄이기·JS 없음에서는 선 전체와 점을 모두 표시.</dd></div>
-          <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 기술, 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 닫힘·열림. 카드 760px 이상 2열(개념도 sticky), 미만 1열. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
+          <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 분야별 기술(<code>.stack-list</code>), 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 닫힘·열림. 카드 760px 이상 2열(개념도 sticky), 미만 1열. 기술 분야 이름과 순서는 기술 스택 섹션과 같게 쓰고, 쓰지 않은 분야는 생략. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
           <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(상태, 제목, 설명, 기술, 이미지).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
           <div><dt><code>.tabbar</code></dt><dd><strong>역할·구성</strong> 767px 이하 하단 메뉴 / 아이콘과 이름 5개.<br><strong>상태·작성 기준</strong> 현재 섹션에 <code>aria-current</code>. 기기 하단 안전 영역만큼 띄우고, 푸터 아래에 같은 높이의 여백을 둡니다.<br><strong>접근성</strong> 헤더 메뉴와 같은 이름의 nav, 아이콘은 장식.</dd></div>
           <div><dt>링크·복사 버튼(가이드)</dt><dd><strong>역할·구성</strong> 이동 / href, 링크명. 복사 / 대상 ID.<br><strong>상태·작성 기준</strong> 기본·호버·포커스, 복사 성공·실패.<br><strong>접근성</strong> 보이는 포커스와 명확한 이름. 복사 결과는 하나의 polite 상태 영역으로 안내.</dd></div>
@@ -334,7 +339,9 @@
         &lt;div class="case-copy"&gt;
           &lt;h3 id="title-new-case"&gt;프로젝트 제목&lt;/h3&gt;
           &lt;p class="case-summary"&gt;한두 문장 요약&lt;/p&gt;
-          &lt;ul class="chips chips-sm" role="list" aria-label="사용 기술"&gt;&lt;li&gt;기술&lt;/li&gt;&lt;/ul&gt;
+          &lt;dl class="stack-list"&gt;
+            &lt;div&gt;&lt;dt&gt;프론트엔드&lt;/dt&gt;&lt;dd&gt;&lt;ul class="chips chips-sm" role="list"&gt;&lt;li&gt;기술&lt;/li&gt;&lt;/ul&gt;&lt;/dd&gt;&lt;/div&gt;
+          &lt;/dl&gt;
           &lt;details class="case-details"&gt;
             &lt;summary aria-label="프로젝트 제목 구현 내용"&gt;구현 내용&lt;span class="details-toggle" aria-hidden="true"&gt;&lt;/span&gt;&lt;/summary&gt;
             &lt;ul class="detail-list" role="list"&gt;&lt;li&gt;구현 항목&lt;/li&gt;&lt;/ul&gt;

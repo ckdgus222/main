@@ -25,7 +25,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `design-system.html`과 `assets/css/design-system.css`는 가이드의 구성과 배치를 담당합니다.
 - `assets/js/design-system.js`는 현재 화면의 토큰 값 표시, 예제 복사, 모션 다시 보기를 담당합니다. JavaScript 없이도 가이드 본문과 컴포넌트 예시는 읽을 수 있습니다.
 - 홈페이지 동작도 같은 모션 토큰(`--dur-reveal`, `--reveal-distance`, `--stagger`, `--ease-out`)을 사용합니다. JavaScript에서 읽는 시간은 `ms`, 거리는 `px` 단위로 작성합니다. 형식이 잘못되면 등장 효과를 생략하고 본문을 바로 표시합니다.
-- 미디어 쿼리의 경계(1199/1023/767/359px)는 CSS 변수로 바꿀 수 없으므로 `tokens.css`, `portfolio.css`, `design-system.css`와 가이드 설명을 함께 관리합니다. 경력 카드는 카드 너비 760px를 기준으로 하는 컨테이너 쿼리를 사용합니다.
+- 미디어 쿼리의 경계(1199/1023/767/359px)는 CSS 변수로 바꿀 수 없으므로 `tokens.css`, `portfolio.css`, `design-system.css`와 가이드 설명을 함께 관리합니다. 경력 카드는 카드 너비 760px(본문·개념도 2열)와 480px(기술 분야 이름을 태그 위로)를 기준으로 하는 컨테이너 쿼리를 사용합니다.
 - 업무 개념도의 고유 좌표·그라데이션·장식 색상은 `experience-visuals.css`에 둡니다. 공통 선(`--line`)과 개념도 잉크·강조색(`--color-illustration-*`)만 토큰을 공유합니다.
 - 공유 CSS·JS를 수정하면 사용하는 두 HTML의 `?v=` 값을 해당 파일의 SHA-256 앞 10자리로 함께 갱신합니다.
 

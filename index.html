@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=d487904bb6">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=c7ffbc84b4">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ffd79bfee7">
   <script>document.documentElement.classList.add('js');</script>
   <script src="./assets/js/portfolio.js?v=db18ec6af3" defer></script>
 </head>
@@ -96,12 +96,17 @@
                   <h3 id="title-care">CARE 의료 병동 모니터링 시스템</h3>
                   <p class="case-highlight">실시간 데이터 갱신</p>
                   <p class="case-summary">WebSocket으로 받은 초기 전체 데이터(snapshot)를 관제 화면에 표시하고, 이후 변경 데이터(delta)를 반영해 화면을 갱신했습니다.</p>
-                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>React</li><li>TypeScript</li><li>WebSocket</li></ul>
+                  <dl class="stack-list">
+                    <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>React</li><li>TypeScript</li><li>Axios</li><li>WebSocket</li></ul></dd></div>
+                    <div><dt>스타일링</dt><dd><ul class="chips chips-sm" role="list"><li>MUI</li><li>styled-components</li></ul></dd></div>
+                    <div><dt>상태 관리</dt><dd><ul class="chips chips-sm" role="list"><li>TanStack Query</li><li>Zustand</li></ul></dd></div>
+                    <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Vite</li></ul></dd></div>
+                  </dl>
                   <details class="case-details">
                     <summary aria-label="CARE 의료 병동 모니터링 시스템 세부 담당 업무">세부 담당 업무<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
                       <li>React·TypeScript 기반 의료 병동 모니터링 프론트엔드 개발 및 유지보수</li>
-                      <li>React Query·Axios 기반 API 연동 및 의료 데이터 타입·예외 처리 개선</li>
+                      <li>TanStack Query·Axios 기반 API 연동 및 의료 데이터 타입·예외 처리 개선</li>
                     </ul>
                     <ul class="detail-list" role="list">
                       <li>Dashboard, Actingboard, Tableboard 등 실시간 병동 관제 화면 개발</li>
@@ -145,13 +150,19 @@
                   <h3 id="title-support">고객지원 서비스</h3>
                   <p class="case-subtitle">복합기 고객지원 웹페이지 및 관리자 페이지 개발</p>
                   <p class="case-summary">복합기 모델별 드라이버·영상 안내와 관리자용 자료·통계 기능을 단독 개발·배포했습니다.</p>
-                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li></ul>
+                  <dl class="stack-list">
+                    <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>Next.js</li><li>TypeScript</li></ul></dd></div>
+                    <div><dt>스타일링</dt><dd><ul class="chips chips-sm" role="list"><li>Tailwind CSS</li><li>shadcn/ui</li></ul></dd></div>
+                    <div><dt>데이터·스토리지</dt><dd><ul class="chips chips-sm" role="list"><li>Supabase</li><li>Supabase Storage</li><li>PostgreSQL</li></ul></dd></div>
+                    <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Netlify</li></ul></dd></div>
+                  </dl>
                   <details class="case-details">
                     <summary aria-label="고객지원 서비스 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
-                      <li>Next.js 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
+                      <li>Next.js·TypeScript 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
                       <li>자료·영상 관리 및 다운로드 통계 조회를 위한 관리자 페이지 개발</li>
-                      <li>Supabase Storage·PostgreSQL 활용 및 Netlify 배포</li>
+                      <li>Tailwind CSS·shadcn/ui 기반 고객용·관리자 반응형 화면 구성</li>
+                      <li>Supabase Auth 기반 관리자 로그인, Supabase Storage·PostgreSQL 자료 관리 및 Netlify 배포</li>
                     </ul>
                   </details>
                 </div>
@@ -181,7 +192,11 @@
                   <h3 id="title-automation">알림·업무 자동화</h3>
                   <p class="case-subtitle">고객 알림 및 A/S 고객 명단 자동화 구축</p>
                   <p class="case-summary">고객 알림·명단 정리를 자동화하고 Node.js·Express 서버를 구축했습니다.</p>
-                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>Node.js</li><li>Express</li><li>Apps Script</li></ul>
+                  <dl class="stack-list">
+                    <div><dt>백엔드·자동화</dt><dd><ul class="chips chips-sm" role="list"><li>Node.js</li><li>Express</li><li>Google Apps Script</li><li>monday.com</li><li>Webhook</li></ul></dd></div>
+                    <div><dt>데이터·스토리지</dt><dd><ul class="chips chips-sm" role="list"><li>Google Sheets</li></ul></dd></div>
+                    <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>카페24</li></ul></dd></div>
+                  </dl>
                   <details class="case-details">
                     <summary aria-label="알림·업무 자동화 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
@@ -218,7 +233,10 @@
                   <h3 id="title-repair">사내 수리 이력 공유</h3>
                   <p class="case-subtitle">CS 부서 수리 이력 공유 웹페이지 개발</p>
                   <p class="case-summary">장비 수리 내역·사진·영상 공유와 직원 댓글 기능을 갖춘 사내 웹페이지를 개발·배포했습니다.</p>
-                  <ul class="chips chips-sm" role="list" aria-label="사용 기술"><li>React</li><li>Cloudflare</li></ul>
+                  <dl class="stack-list">
+                    <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>React</li></ul></dd></div>
+                    <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Cloudflare</li></ul></dd></div>
+                  </dl>
                   <details class="case-details">
                     <summary aria-label="사내 수리 이력 공유 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
@@ -254,25 +272,25 @@
         <div class="skill-card-heading"><div><p class="eyebrow" lang="en">FRONTEND</p><h3 id="skill-frontend">프론트엔드</h3></div><span class="skill-number" aria-hidden="true">01</span></div>
         <ul class="chips" role="list"><li>React</li><li>TypeScript</li><li>Next.js</li><li>Axios</li><li>WebSocket</li></ul>
       </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-styling" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">STYLING</p><h3 id="skill-styling">스타일링</h3></div><span class="skill-number" aria-hidden="true">02</span></div>
+        <ul class="chips" role="list"><li>CSS</li><li>Tailwind CSS</li><li>styled-components</li><li>MUI</li><li>shadcn/ui</li></ul>
+      </article>
+      <article class="skill-card glass glass-interactive" aria-labelledby="skill-state" data-reveal>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">STATE MANAGEMENT</p><h3 id="skill-state">상태 관리</h3></div><span class="skill-number" aria-hidden="true">03</span></div>
+        <ul class="chips" role="list"><li>TanStack Query</li><li>Zustand</li><li>Redux</li></ul>
+      </article>
       <article class="skill-card glass glass-interactive" aria-labelledby="skill-backend" data-reveal>
-        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">BACKEND &amp; AUTOMATION</p><h3 id="skill-backend">백엔드·자동화</h3></div><span class="skill-number" aria-hidden="true">02</span></div>
-        <ul class="chips" role="list"><li>Node.js</li><li>Express</li><li>NestJS</li></ul>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">BACKEND &amp; AUTOMATION</p><h3 id="skill-backend">백엔드·자동화</h3></div><span class="skill-number" aria-hidden="true">04</span></div>
+        <ul class="chips" role="list"><li>Node.js</li><li>Express</li><li>NestJS</li><li>Google Apps Script</li></ul>
       </article>
       <article class="skill-card glass glass-interactive" aria-labelledby="skill-data" data-reveal>
-        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">DATA &amp; STORAGE</p><h3 id="skill-data">데이터·스토리지</h3></div><span class="skill-number" aria-hidden="true">03</span></div>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">DATA &amp; STORAGE</p><h3 id="skill-data">데이터·스토리지</h3></div><span class="skill-number" aria-hidden="true">05</span></div>
         <ul class="chips" role="list"><li>Supabase</li><li>PostgreSQL</li><li>Prisma</li><li>PostGIS</li><li>MongoDB</li><li>TypeORM</li></ul>
       </article>
       <article class="skill-card glass glass-interactive" aria-labelledby="skill-delivery" data-reveal>
-        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">BUILD &amp; DEPLOYMENT</p><h3 id="skill-delivery">빌드·배포</h3></div><span class="skill-number" aria-hidden="true">04</span></div>
+        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">BUILD &amp; DEPLOYMENT</p><h3 id="skill-delivery">빌드·배포</h3></div><span class="skill-number" aria-hidden="true">06</span></div>
         <ul class="chips" role="list"><li>Vite</li><li>Vercel</li><li>Netlify</li><li>Cloudflare</li><li>Docker Compose</li><li>Nginx</li><li>GitHub Actions</li></ul>
-      </article>
-      <article class="skill-card glass glass-interactive" aria-labelledby="skill-styling" data-reveal>
-        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">STYLING</p><h3 id="skill-styling">스타일링</h3></div><span class="skill-number" aria-hidden="true">05</span></div>
-        <ul class="chips" role="list"><li>CSS</li><li>styled-components</li><li>MUI</li></ul>
-      </article>
-      <article class="skill-card glass glass-interactive" aria-labelledby="skill-state" data-reveal>
-        <div class="skill-card-heading"><div><p class="eyebrow" lang="en">STATE MANAGEMENT</p><h3 id="skill-state">상태 관리</h3></div><span class="skill-number" aria-hidden="true">06</span></div>
-        <ul class="chips" role="list"><li>TanStack Query</li><li>Zustand</li><li>Redux</li></ul>
       </article>
     </div>
   </div>
@@ -290,7 +308,7 @@
         <span class="project-status">개발 중</span>
         <h3 id="dog-walk-title">강아지 산책 커뮤니티</h3>
         <p class="project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
-        <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL/PostGIS</li></ul>
+        <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>PostGIS</li></ul>
       </div>
       <figure class="project-visual">
         <img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="네이비와 라벤더 색감의 공원에서 보호자와 강아지가 함께 산책하는 일러스트" loading="lazy" decoding="async">
