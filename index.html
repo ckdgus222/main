@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=6353ec7f68">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=0654ce34cc">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ee06222c02">
   <script>document.documentElement.classList.add('js');</script>
   <script src="./assets/js/portfolio.js?v=7481fd4a86" defer></script>
 </head>
@@ -55,7 +55,7 @@
       <dl class="facts">
         <div><dt>회사 경력</dt><dd>1년 11개월<small>모어다임 · 프론트엔드 개발</small></dd></div>
         <div><dt>외주 개발</dt><dd>3건<small>고객지원 · 자동화 · 수리 이력</small></dd></div>
-        <div><dt>개발 중</dt><dd>강아지 산책 커뮤니티<small>Next.js · NestJS · PostGIS</small></dd></div>
+        <div><dt>운영 중</dt><dd>강아지 산책<small>Next.js · NestJS · PostGIS</small></dd></div>
       </dl>
     </aside>
   </div>
@@ -301,17 +301,56 @@
     <div class="section-head" data-reveal>
       <p class="eyebrow" lang="en">MAIN PROJECT</p>
       <h2 id="portfolio-heading">메인 프로젝트</h2>
-      <p>현재 개발하고 있는 대표 프로젝트입니다.</p>
+      <p>기획부터 배포·운영까지 혼자 진행한 개인 프로젝트입니다.</p>
     </div>
     <article class="project-card glass glass-interactive" aria-labelledby="dog-walk-title" data-reveal>
       <div class="project-copy">
-        <span class="project-status">개발 중</span>
-        <h3 id="dog-walk-title">강아지 산책 커뮤니티</h3>
-        <p class="project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
-        <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>PostGIS</li></ul>
+        <span class="project-status">운영 중</span>
+        <h3 id="dog-walk-title">강아지 산책</h3>
+        <p class="project-description">동네 반려인과 산책 친구를 이어 주는 서비스입니다. 지도에서 1km 안의 이웃을 찾아 산책을 요청하고, 수락되면 실시간으로 대화합니다.</p>
+        <p class="case-highlight">기획·디자인·개발부터 집 데스크톱 서버 배포와 운영까지 혼자 진행했습니다.</p>
+        <dl class="stack-list">
+          <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Kakao 지도</li></ul></dd></div>
+          <div><dt>상태 관리</dt><dd><ul class="chips chips-sm" role="list"><li>TanStack Query</li><li>Zustand</li></ul></dd></div>
+          <div><dt>스타일링</dt><dd><ul class="chips chips-sm" role="list"><li>CSS Modules</li></ul></dd></div>
+          <div><dt>백엔드</dt><dd><ul class="chips chips-sm" role="list"><li>NestJS</li><li>Prisma</li><li>Socket.IO</li><li>JWT</li></ul></dd></div>
+          <div><dt>데이터</dt><dd><ul class="chips chips-sm" role="list"><li>PostgreSQL</li><li>PostGIS</li></ul></dd></div>
+          <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Docker Compose</li><li>nginx</li><li>Let's Encrypt</li></ul></dd></div>
+          <div><dt>테스트</dt><dd><ul class="chips chips-sm" role="list"><li>Vitest</li><li>Playwright</li></ul></dd></div>
+        </dl>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://dogwalk.changhyon.dev/" target="_blank" rel="noopener noreferrer">서비스 보기 <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+          <a class="btn btn-ghost" href="https://github.com/ckdgus222/Dog-walk" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+        </div>
+        <p class="project-note">로그인 화면의 ‘가입 없이 둘러보기’로 데모 계정에 바로 들어가 볼 수 있습니다. 데모는 방문자 모두가 함께 쓰는 공용 계정이라 일기도 공유되며, 사진 업로드는 막혀 있습니다.</p>
+        <details class="case-details">
+          <summary aria-label="강아지 산책 주요 기능">주요 기능<span class="details-toggle" aria-hidden="true"></span></summary>
+          <ul class="detail-list" role="list">
+            <li>주변 산책 친구: 위치 공개에 동의하고 최근 5분 안에 위치를 보낸 1km 안의 이웃을 지도와 목록으로 표시합니다. 데모 지도는 미리 저장한 위치를 써서 5분 제한이 없습니다.</li>
+            <li>산책 요청: 이웃과 반려견 정보를 보고 요청하면 받은 사람이 실시간 알림을 받고 수락하거나 거절합니다.</li>
+            <li>채팅: 수락된 요청의 두 사람만 Socket.IO로 대화하고, 다시 연결되면 최근 50개 메시지를 다시 불러옵니다.</li>
+            <li>산책 일기: 반려견별로 사진(최대 5장)과 글을 남기는 기록입니다. 일반 계정은 나만 볼 수 있고, 데모 계정은 공용입니다.</li>
+            <li>게시판: 이웃과 글·댓글을 공유합니다.</li>
+          </ul>
+        </details>
+        <details class="case-details">
+          <summary aria-label="강아지 산책 신경 쓴 점">신경 쓴 점<span class="details-toggle" aria-hidden="true"></span></summary>
+          <ul class="detail-list" role="list">
+            <li>동시성: 같은 두 사람의 대기 중인 산책 요청을 DB 부분 유니크 인덱스로 하나만 허용하고, 반려견 삭제·사진 교체는 행 잠금으로 순서를 보장합니다.</li>
+            <li>개인정보: 위치를 약 200m 단위로 흐려 저장하고, 사진의 촬영 위치 메타데이터를 제거합니다. 일기 사진은 인증된 API로만 제공합니다.</li>
+            <li>인증: 접속 토큰은 메모리에만, 리프레시 토큰은 HttpOnly·SameSite=Strict 쿠키에 담고 DB에는 해시만 저장합니다. IP별 로그인 시도를 제한합니다.</li>
+            <li>배포: 집 데스크톱(Ubuntu Server)에 Docker Compose로 nginx·web·api·db를 띄우고 HTTPS를 적용했습니다. 부팅 때 USB 백업과 데모 데이터 초기화를 실행합니다.</li>
+            <li>테스트: API 단위·e2e, 웹 단위, Playwright 브라우저 테스트 약 940개를 작성했습니다.</li>
+          </ul>
+        </details>
       </div>
       <figure class="project-visual">
-        <img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="네이비와 라벤더 색감의 공원에서 보호자와 강아지가 함께 산책하는 일러스트" loading="lazy" decoding="async">
+        <img src="./assets/images/dog-walk-map.jpg" width="1440" height="900" alt="강아지 산책 서비스의 주변 산책 친구 지도 화면" loading="lazy" decoding="async">
+        <div class="project-thumbnails">
+          <img src="./assets/images/dog-walk-chat.jpg" width="720" height="450" alt="산책 요청 상대와 나누는 실시간 채팅 화면" loading="lazy" decoding="async">
+          <img src="./assets/images/dog-walk-diary.jpg" width="720" height="450" alt="반려견별 산책 일기 목록 화면" loading="lazy" decoding="async">
+          <img src="./assets/images/dog-walk-home.jpg" width="720" height="450" alt="로그인 뒤 홈 화면" loading="lazy" decoding="async">
+        </div>
       </figure>
     </article>
   </div>

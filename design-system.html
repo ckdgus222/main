@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=6353ec7f68">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=0654ce34cc">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ee06222c02">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=5449c240a0">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -166,7 +166,7 @@
 
         <p class="ds-example-label">칩·배지·상태 · <code>.chips</code> / <code>.chips-sm</code> / <code>.badge</code> / <code>.badge-accent</code> / <code>.project-status</code></p>
         <div class="ds-demo-row"><ul class="chips" role="list" aria-label="기술 예시"><li>React</li><li>TypeScript</li><li>Next.js</li></ul><ul class="chips chips-sm" role="list" aria-label="작은 기술 예시"><li>Node.js</li><li>Express</li></ul></div>
-        <div class="ds-demo-row"><span class="badge badge-accent">회사 경력</span><span class="badge">외주 개발</span><span class="project-status">개발 중</span></div>
+        <div class="ds-demo-row"><span class="badge badge-accent">회사 경력</span><span class="badge">외주 개발</span><span class="project-status">운영 중</span></div>
 
         <p class="ds-example-label">유리 표면 · <code>.glass</code> / <code>.glass-interactive</code></p>
         <div class="ds-demo-grid">
@@ -248,12 +248,12 @@
         <p class="ds-example-label">메인 프로젝트 · <code>.project-card</code></p>
         <article class="project-card glass glass-interactive" aria-labelledby="example-dog-walk">
           <div class="project-copy">
-            <span class="project-status">개발 중</span>
-            <h3 id="example-dog-walk">강아지 산책 커뮤니티</h3>
-            <p class="project-description">동네에서 함께 산책할 반려견과 보호자를 연결하는 커뮤니티를 개발하고 있습니다.</p>
+            <span class="project-status">운영 중</span>
+            <h3 id="example-dog-walk">강아지 산책</h3>
+            <p class="project-description">동네 반려인과 산책 친구를 이어 주는 서비스입니다. 지도에서 1km 안의 이웃을 찾아 산책을 요청하고, 수락되면 실시간으로 대화합니다.</p>
             <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>PostGIS</li></ul>
           </div>
-          <figure class="project-visual"><img src="./assets/images/dog-walk-concept.png" width="1536" height="1024" alt="보호자와 강아지가 함께 산책하는 AI 콘셉트 일러스트" loading="lazy" decoding="async"></figure>
+          <figure class="project-visual"><img src="./assets/images/dog-walk-map.jpg" width="1440" height="900" alt="강아지 산책 서비스의 주변 산책 친구 지도 화면" loading="lazy" decoding="async"></figure>
         </article>
 
         <p class="ds-example-label">하단 탭바 · <code>.tabbar</code> (홈페이지에서는 767px 이하에서 화면 아래에 고정)</p>
@@ -279,7 +279,7 @@
           <div><dt><code>.rail / .rail-item</code></dt><dd><strong>역할·구성</strong> 경력 바로가기 / 번호, 제목, 구분·기간.<br><strong>상태·작성 기준</strong> 화면 45% 지점을 지난 사례에 <code>.is-active</code>. 767px 이하에서 가로 스크롤.<br><strong>접근성</strong> 사례 article의 id로 이동하는 일반 링크.</dd></div>
           <div><dt><code>.timeline / .timeline-node</code></dt><dd><strong>역할·구성</strong> 경력 순서 / 회사 경력·외주 개발 묶음, 점, 기간·구분(<code>.timeline-meta</code>), 카드.<br><strong>상태·작성 기준</strong> JS가 <code>.is-live</code>를 붙이면 선이 스크롤만큼 채워지고 지나간 사례에 <code>.is-passed</code>.<br><strong>접근성</strong> 묶음마다 이름 있는 목록. 동작 줄이기·JS 없음에서는 선 전체와 점을 모두 표시.</dd></div>
           <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 분야별 기술(<code>.stack-list</code>), 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 닫힘·열림. 카드 760px 이상 2열(개념도 sticky), 미만 1열. 기술 분야 이름과 순서는 기술 스택 섹션과 같게 쓰고, 쓰지 않은 분야는 생략. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
-          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(상태, 제목, 설명, 기술, 이미지).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
+          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(상태, 제목, 설명, 분야별 기술, 링크, 펼치기, 화면 캡처).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
           <div><dt><code>.tabbar</code></dt><dd><strong>역할·구성</strong> 767px 이하 하단 메뉴 / 아이콘과 이름 5개.<br><strong>상태·작성 기준</strong> 현재 섹션에 <code>aria-current</code>. 기기 하단 안전 영역만큼 띄우고, 푸터 아래에 같은 높이의 여백을 둡니다.<br><strong>접근성</strong> 헤더 메뉴와 같은 이름의 nav, 아이콘은 장식.</dd></div>
           <div><dt>링크·복사 버튼(가이드)</dt><dd><strong>역할·구성</strong> 이동 / href, 링크명. 복사 / 대상 ID.<br><strong>상태·작성 기준</strong> 기본·호버·포커스, 복사 성공·실패.<br><strong>접근성</strong> 보이는 포커스와 명확한 이름. 복사 결과는 하나의 polite 상태 영역으로 안내.</dd></div>
         </dl>
