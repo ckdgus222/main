@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=6353ec7f68">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=e2de8fe173">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ee06222c02">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=9fd140e2c0">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=5449c240a0">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -148,10 +148,10 @@
           <div><p class="eyebrow" lang="en">MOBILE · 767px 이하</p><div class="ds-wire"><span>헤더 · GitHub</span><span>소개 → 요약 카드</span><span>기간 · 구분 → 본문 → 개념도</span><span class="ds-wire-accent">하단 탭바</span></div></div>
         </div>
         <dl class="ds-facts">
-          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 헤더 아래 화면 높이를 채우고 [본문 | 요약 카드]를 세로 가운데에 둡니다. 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [본문 | 이미지]입니다.</dd></div>
+          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 헤더 아래 화면 높이를 채우고 [본문 | 요약 카드]를 세로 가운데에 둡니다. 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [화면 캡처(지도 | 작은 사진 3장)] 아래 [소개 | 기술], 그 아래 펼치기입니다.</dd></div>
           <div><dt>1199px 이하</dt><dd>타임라인 기간 열 160px, 선 간격 56px.</dd></div>
-          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 1열, 섹션 간격 64px.</dd></div>
-          <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열.</dd></div>
+          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 본문 1열, 섹션 간격 64px.</dd></div>
+          <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열. 메인 프로젝트 사진 1열, 작은 사진 가로 3장.</dd></div>
           <div><dt>359px 이하</dt><dd>좌우 여백 16px. 개념도가 좁아지지 않도록 타임라인 선과 점을 숨기고 카드를 전체 너비로 씁니다.</dd></div>
           <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다. 480px보다 좁으면 기술 분야 이름을 태그 위에 둡니다.</dd></div>
         </dl>
@@ -247,13 +247,15 @@
 
         <p class="ds-example-label">메인 프로젝트 · <code>.project-card</code></p>
         <article class="project-card glass glass-interactive" aria-labelledby="example-dog-walk">
-          <div class="project-copy">
-            <span class="project-status">운영 중</span>
-            <h3 id="example-dog-walk">강아지 산책</h3>
-            <p class="project-description">동네 반려인과 산책 친구를 이어 주는 서비스입니다. 지도에서 1km 안의 이웃을 찾아 산책을 요청하고, 수락되면 실시간으로 대화합니다.</p>
-            <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>PostGIS</li></ul>
-          </div>
           <figure class="project-visual"><img src="./assets/images/dog-walk-map.jpg" width="1440" height="900" alt="강아지 산책 서비스의 주변 산책 친구 지도 화면" loading="lazy" decoding="async"></figure>
+          <div class="project-copy">
+            <div class="project-intro">
+              <span class="project-status">운영 중</span>
+              <h3 id="example-dog-walk">강아지 산책</h3>
+              <p class="project-description">동네 반려인과 산책 친구를 이어 주는 서비스입니다. 지도에서 1km 안의 이웃을 찾아 산책을 요청하고, 수락되면 실시간으로 대화합니다.</p>
+              <ul class="chips" role="list" aria-label="주요 기술"><li>Next.js</li><li>TypeScript</li><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>PostGIS</li></ul>
+            </div>
+          </div>
         </article>
 
         <p class="ds-example-label">하단 탭바 · <code>.tabbar</code> (홈페이지에서는 767px 이하에서 화면 아래에 고정)</p>
@@ -279,7 +281,7 @@
           <div><dt><code>.rail / .rail-item</code></dt><dd><strong>역할·구성</strong> 경력 바로가기 / 번호, 제목, 구분·기간.<br><strong>상태·작성 기준</strong> 화면 45% 지점을 지난 사례에 <code>.is-active</code>. 767px 이하에서 가로 스크롤.<br><strong>접근성</strong> 사례 article의 id로 이동하는 일반 링크.</dd></div>
           <div><dt><code>.timeline / .timeline-node</code></dt><dd><strong>역할·구성</strong> 경력 순서 / 회사 경력·외주 개발 묶음, 점, 기간·구분(<code>.timeline-meta</code>), 카드.<br><strong>상태·작성 기준</strong> JS가 <code>.is-live</code>를 붙이면 선이 스크롤만큼 채워지고 지나간 사례에 <code>.is-passed</code>.<br><strong>접근성</strong> 묶음마다 이름 있는 목록. 동작 줄이기·JS 없음에서는 선 전체와 점을 모두 표시.</dd></div>
           <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 분야별 기술(<code>.stack-list</code>), 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 닫힘·열림. 카드 760px 이상 2열(개념도 sticky), 미만 1열. 기술 분야 이름과 순서는 기술 스택 섹션과 같게 쓰고, 쓰지 않은 분야는 생략. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
-          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(상태, 제목, 설명, 분야별 기술, 링크, 펼치기, 화면 캡처).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
+          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(화면 캡처, 상태, 제목, 설명, 링크, 분야별 기술, 펼치기).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
           <div><dt><code>.tabbar</code></dt><dd><strong>역할·구성</strong> 767px 이하 하단 메뉴 / 아이콘과 이름 5개.<br><strong>상태·작성 기준</strong> 현재 섹션에 <code>aria-current</code>. 기기 하단 안전 영역만큼 띄우고, 푸터 아래에 같은 높이의 여백을 둡니다.<br><strong>접근성</strong> 헤더 메뉴와 같은 이름의 nav, 아이콘은 장식.</dd></div>
           <div><dt>링크·복사 버튼(가이드)</dt><dd><strong>역할·구성</strong> 이동 / href, 링크명. 복사 / 대상 ID.<br><strong>상태·작성 기준</strong> 기본·호버·포커스, 복사 성공·실패.<br><strong>접근성</strong> 보이는 포커스와 명확한 이름. 복사 결과는 하나의 polite 상태 영역으로 안내.</dd></div>
         </dl>
