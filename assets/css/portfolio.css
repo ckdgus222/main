@@ -288,6 +288,9 @@ body::after {
   max-width: 700px;
   justify-self: center;
   aspect-ratio: 100 / 82;
+  /* Beside the text, shift right by the empty side margin of the box so the outermost chip path meets
+     the content's right edge. 5% of at most 700px is 35px, inside the 40px page gutter: no scrollbar. */
+  left: 5%;
 }
 .orbit-ring, .orbit-sat, .orbit-core { position: absolute; left: 50%; top: 50%; }
 .orbit-ring, .orbit-core {
@@ -714,6 +717,7 @@ body::after {
 @media (max-width: 1023px) {
   .site-nav a { padding-inline: 10px; }
   .hero-inner { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-16); align-items: start; min-height: 0; padding-block: var(--space-16) var(--space-12); }
+  .hero-orbit { left: 0; }
   .hero-orb { top: 18%; width: min(560px, 90%); transform: none; }
   .section { padding-block: var(--space-16); }
   .timeline { --tl-meta: 140px; --tl-gap: 48px; }
