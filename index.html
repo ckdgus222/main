@@ -14,9 +14,9 @@
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
-  <link rel="stylesheet" href="./assets/css/tokens.css?v=79dc3f687b">
+  <link rel="stylesheet" href="./assets/css/tokens.css?v=c9ef483519">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=c36e6baba4">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ce7592c4a6">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=faf2d03fcc">
   <script>document.documentElement.classList.add('js');</script>
   <script src="./assets/js/portfolio.js?v=7481fd4a86" defer></script>
   <script src="/_vercel/insights/script.js" defer></script>
@@ -50,15 +50,31 @@
         <a class="btn btn-primary" href="#work">실무 경험 보기 <span class="arrow" aria-hidden="true">↓</span></a>
         <a class="btn btn-ghost" href="mailto:ckdgus1308@naver.com">이메일 <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
+      <ul class="hero-facts" role="list" data-hero-part>
+        <li><strong>1년 11개월</strong> 회사 경력</li>
+        <li><strong>3건</strong> 외주 개발</li>
+        <li><strong>1개</strong> 운영 중인 서비스</li>
+      </ul>
     </div>
-    <aside class="hero-card glass" aria-label="한눈에 보기" data-hero-part>
-      <p class="eyebrow" lang="en">AT A GLANCE</p>
-      <dl class="facts">
-        <div><dt>회사 경력</dt><dd>1년 11개월<small>모어다임 · 프론트엔드 개발</small></dd></div>
-        <div><dt>외주 개발</dt><dd>3건<small>고객지원 · 자동화 · 수리 이력</small></dd></div>
-        <div><dt>운영 중</dt><dd>강아지 산책<small>Next.js · NestJS · PostGIS</small></dd></div>
-      </dl>
-    </aside>
+    <div class="hero-orbit" aria-hidden="true" data-hero-part>
+      <div class="orbit-ring orbit-ring-3">
+        <span class="orbit-sat" style="--a: 0deg"><span class="orbit-chip">Docker</span></span>
+        <span class="orbit-sat" style="--a: 72deg"><span class="orbit-chip">PostgreSQL</span></span>
+        <span class="orbit-sat" style="--a: 144deg"><span class="orbit-chip">Apps Script</span></span>
+        <span class="orbit-sat" style="--a: 216deg"><span class="orbit-chip">Supabase</span></span>
+        <span class="orbit-sat" style="--a: 288deg"><span class="orbit-chip">Vercel</span></span>
+      </div>
+      <div class="orbit-ring orbit-ring-2">
+        <span class="orbit-sat" style="--a: 36deg"><span class="orbit-chip orbit-chip-dark">Next.js</span></span>
+        <span class="orbit-sat" style="--a: 180deg"><span class="orbit-chip">NestJS</span></span>
+        <span class="orbit-sat" style="--a: 324deg"><span class="orbit-chip">WebSocket</span></span>
+      </div>
+      <div class="orbit-ring orbit-ring-1">
+        <span class="orbit-sat" style="--a: 108deg"><span class="orbit-chip orbit-chip-accent">React</span></span>
+        <span class="orbit-sat" style="--a: 252deg"><span class="orbit-chip orbit-chip-accent">TypeScript</span></span>
+      </div>
+      <div class="orbit-core">C<span>.</span></div>
+    </div>
   </div>
 </section>
 
@@ -103,7 +119,7 @@
                     <div><dt>상태 관리</dt><dd><ul class="chips chips-sm" role="list"><li>TanStack Query</li><li>Zustand</li></ul></dd></div>
                     <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Vite</li></ul></dd></div>
                   </dl>
-                  <details class="case-details">
+                  <details class="case-details" open>
                     <summary aria-label="CARE 의료 병동 모니터링 시스템 세부 담당 업무">세부 담당 업무<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
                       <li>React·TypeScript 기반 의료 병동 모니터링 프론트엔드 개발 및 유지보수</li>
@@ -157,7 +173,7 @@
                     <div><dt>데이터·스토리지</dt><dd><ul class="chips chips-sm" role="list"><li>Supabase</li><li>Supabase Storage</li><li>PostgreSQL</li></ul></dd></div>
                     <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Netlify</li></ul></dd></div>
                   </dl>
-                  <details class="case-details">
+                  <details class="case-details" open>
                     <summary aria-label="고객지원 서비스 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
                       <li>Next.js·TypeScript 기반 복합기 모델별 드라이버·영상 가이드 제공 페이지 개발</li>
@@ -198,7 +214,7 @@
                     <div><dt>데이터·스토리지</dt><dd><ul class="chips chips-sm" role="list"><li>Google Sheets</li></ul></dd></div>
                     <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>카페24</li></ul></dd></div>
                   </dl>
-                  <details class="case-details">
+                  <details class="case-details" open>
                     <summary aria-label="알림·업무 자동화 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
                       <li>monday.com 상태 변경 웹훅을 활용한 고객 문자·카카오톡 발송 자동화</li>
@@ -238,7 +254,7 @@
                     <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>React</li></ul></dd></div>
                     <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Cloudflare</li></ul></dd></div>
                   </dl>
-                  <details class="case-details">
+                  <details class="case-details" open>
                     <summary aria-label="사내 수리 이력 공유 구현 내용">구현 내용<span class="details-toggle" aria-hidden="true"></span></summary>
                     <ul class="detail-list" role="list">
                       <li>React 기반 장비 수리 내역·사진·영상 공유 및 직원 댓글 기능 구현</li>
@@ -334,7 +350,7 @@
           <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Docker Compose</li><li>nginx</li><li>Let's Encrypt</li></ul></dd></div>
           <div><dt>테스트</dt><dd><ul class="chips chips-sm" role="list"><li>Vitest</li><li>Playwright</li></ul></dd></div>
         </dl>
-        <details class="case-details">
+        <details class="case-details" open>
           <summary aria-label="강아지 산책 주요 기능">주요 기능<span class="details-toggle" aria-hidden="true"></span></summary>
           <ul class="detail-list" role="list">
             <li>주변 산책 친구: 위치 공개에 동의하고 최근 5분 안에 위치를 보낸 1km 안의 이웃을 지도와 목록으로 표시합니다. 데모 지도는 미리 저장한 위치를 써서 5분 제한이 없습니다.</li>
@@ -344,7 +360,7 @@
             <li>게시판: 이웃과 글·댓글을 공유합니다.</li>
           </ul>
         </details>
-        <details class="case-details">
+        <details class="case-details" open>
           <summary aria-label="강아지 산책 신경 쓴 점">신경 쓴 점<span class="details-toggle" aria-hidden="true"></span></summary>
           <ul class="detail-list" role="list">
             <li>동시성: 같은 두 사람의 대기 중인 산책 요청을 DB 부분 유니크 인덱스로 하나만 허용하고, 반려견 삭제·사진 교체는 행 잠금으로 순서를 보장합니다.</li>

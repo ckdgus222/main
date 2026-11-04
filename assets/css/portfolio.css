@@ -1,6 +1,13 @@
 /* Portfolio layout and components ("Night Glass"). Load tokens.css and experience-visuals.css first.
    Breakpoints: 1199 / 1023 / 767 / 359px (see tokens.css). */
 
+/* Registered so the hero orbit angle can animate smoothly (an unregistered variable only flips). */
+@property --orbit-spin {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
 /* Base */
 *, *::before, *::after { box-sizing: border-box; }
 html {
@@ -63,7 +70,7 @@ body::before {
     linear-gradient(180deg, var(--bg-deep), var(--bg-mid) 52%, var(--bg-end));
 }
 body::after {
-  background-image: radial-gradient(var(--glass-sheen) .8px, transparent .9px);
+  background-image: radial-gradient(var(--dot-grid) .8px, transparent .9px);
   background-size: 22px 22px;
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 10%, transparent 72%);
   mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 10%, transparent 72%);
@@ -206,14 +213,14 @@ body::after {
 .site-nav a[aria-current]::after { transform: scaleX(1); }
 
 /* Hero: fills the screen below the header with the content centered vertically;
-   the summary card's bottom stays aligned with the buttons. */
+   the introduction and orbit share equal columns and align at their centers. */
 .hero-inner {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-content: center;
-  align-items: end;
+  align-items: center;
   gap: var(--space-12);
   min-height: max(560px, calc(100svh - var(--header-h)));
   padding-block: var(--space-16);
@@ -255,14 +262,76 @@ body::after {
 .hero-word { display: inline-block; }
 .hero-detail { max-width: 34em; margin-top: var(--space-4); color: var(--text-soft); font-size: var(--text-body); line-height: var(--leading-relaxed); word-break: keep-all; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
-.hero-card { padding: var(--space-6); }
-.facts { display: grid; margin-top: var(--space-2); }
-.facts > div { display: grid; gap: 2px; padding-block: var(--space-4); border-top: 1px solid var(--line); }
-.facts > div:first-child { border-top: 0; }
-.facts > div:last-child { padding-bottom: 0; }
-.facts dt { color: var(--text-soft); font-size: var(--text-xs); }
-.facts dd { font-size: 22px; font-weight: var(--weight-bold); line-height: 1.35; letter-spacing: -.03em; word-break: keep-all; }
-.facts dd small { display: block; margin-top: 2px; color: var(--text-soft); font-size: var(--text-xs); font-weight: var(--weight-regular); letter-spacing: 0; }
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-8);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+.hero-facts li { display: flex; align-items: baseline; gap: var(--space-2); }
+.hero-facts li + li { padding-left: var(--space-5); border-left: 1px solid var(--line); }
+.hero-facts strong { color: var(--text); font-size: var(--text-lg); font-weight: var(--weight-bold); }
+
+/* Hero orbit (decorative): every chip moves by one shared angle, --orbit-spin, instead of rotating
+   the rings. A rotated square ring box sticks out of the graphic and adds horizontal scroll on phones,
+   and a shared angle keeps the distance between chips fixed. The chip angles (in index.html), ring
+   radii, core size and chip size were measured together so no chip touches another chip or the core
+   at any angle, down to 320px and with the fallback font: change them together and re-measure. */
+.hero-orbit {
+  --orbit-spin: 0deg; /* without @property support the angle would be empty and void every chip transform */
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 600px;
+  justify-self: center;
+  aspect-ratio: 100 / 82;
+}
+.orbit-ring, .orbit-sat, .orbit-core { position: absolute; left: 50%; top: 50%; }
+.orbit-ring, .orbit-core {
+  width: calc(2 * var(--r));
+  height: calc(2 * var(--r));
+  margin: calc(-1 * var(--r));
+  border-radius: 50%;
+}
+.orbit-ring { border: 1px dashed color-mix(in srgb, var(--accent) 35%, transparent); }
+.orbit-ring-1 { --r: 20cqw; }
+.orbit-ring-2 { --r: 28cqw; }
+.orbit-ring-3 { --r: 38cqw; }
+/* Net effect is a plain move onto the ring, so chips stay upright and their boxes never tilt. */
+.orbit-sat {
+  transform: rotate(calc(var(--a) + var(--orbit-spin))) translateX(var(--r)) rotate(calc(-1 * (var(--a) + var(--orbit-spin)))) translate(-50%, -50%);
+}
+.orbit-chip {
+  display: block;
+  padding: .3em .75em;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  background: var(--glass-strong);
+  font-size: max(9px, 1.9cqw);
+  font-weight: var(--weight-semibold);
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: var(--shadow-glass);
+}
+.orbit-chip-dark { border-color: transparent; background: var(--text); color: var(--bg-deep); }
+.orbit-chip-accent { border-color: transparent; background: var(--accent); color: var(--accent-fg); }
+/* Flex, not grid: grid would put the "C" text and the dot span on separate rows. */
+.orbit-core {
+  --r: 7.5cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-strong);
+  box-shadow: var(--shadow-lift);
+  font-size: 7cqw;
+  font-weight: var(--weight-heavy);
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+.orbit-core span { color: var(--accent); }
 
 /* Sections */
 .section { position: relative; padding-block: var(--space-24); }
@@ -596,6 +665,8 @@ body::after {
 
 /* Interaction — color and movement only where hover and motion make sense. */
 @media (prefers-reduced-motion: no-preference) {
+  .hero-orbit { animation: orbit-turn 90s linear infinite; }
+  @keyframes orbit-turn { to { --orbit-spin: 360deg; } }
   .site-nav a, .site-footer a, .case-details summary, .contact-address, .tabbar a {
     transition: color var(--dur-fast) var(--ease-standard), background-color var(--dur-fast) var(--ease-standard), text-decoration-color var(--dur-fast) var(--ease-standard);
   }
@@ -637,11 +708,8 @@ body::after {
 }
 @media (max-width: 1023px) {
   .site-nav a { padding-inline: 10px; }
-  .hero-inner { grid-template-columns: minmax(0, 1fr); align-items: start; min-height: 0; padding-block: var(--space-16) var(--space-12); }
+  .hero-inner { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-16); align-items: start; min-height: 0; padding-block: var(--space-16) var(--space-12); }
   .hero-orb { top: 18%; width: min(560px, 90%); transform: none; }
-  .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
-  .facts > div { padding-block: var(--space-2) 0; border-top: 0; }
-  .facts > div + div { padding-left: var(--space-6); border-left: 1px solid var(--line); }
   .section { padding-block: var(--space-16); }
   .timeline { --tl-meta: 140px; --tl-gap: 48px; }
   .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
@@ -652,10 +720,8 @@ body::after {
   .site-header-inner { justify-content: space-between; }
   .hero-inner { padding-block: var(--space-12) var(--space-10); }
   .hero-actions .btn { flex: 1 1 auto; }
-  .facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .facts > div { padding-block: var(--space-3); }
-  .facts > div + div { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
-  .facts > div:last-child { padding-bottom: 0; }
+  .hero-facts { flex-direction: column; }
+  .hero-facts li + li { padding-left: 0; border-left: 0; }
   .section-head { margin-bottom: var(--space-8); }
   .rail {
     display: flex;
@@ -714,7 +780,7 @@ body::after {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 @media (forced-colors: active) {
-  .glass, .rail-item, .chips li, .badge { border-color: CanvasText; }
+  .glass, .rail-item, .chips li, .badge, .orbit-chip { border-color: CanvasText; }
   .timeline-dot { forced-color-adjust: none; }
 }
 @media print {

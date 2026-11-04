@@ -115,7 +115,6 @@ html:has(body.design-system) { scroll-padding-top: var(--space-6); }
 .design-system .ds-glass-demo { padding: var(--space-6); }
 .design-system .ds-demo-title { margin-top: var(--space-2); font-size: var(--text-lg); font-weight: var(--weight-bold); }
 .design-system .rail.ds-rail-demo { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 0; }
-.design-system .ds-hero-card-demo { max-width: 360px; }
 .design-system .ds-tabbar-demo .tabbar { position: static; display: flex; max-width: 420px; }
 
 /* Motion demo and buttons inside the guide */

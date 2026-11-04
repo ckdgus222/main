@@ -9,10 +9,10 @@
   <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
-  <link rel="stylesheet" href="./assets/css/tokens.css?v=79dc3f687b">
+  <link rel="stylesheet" href="./assets/css/tokens.css?v=c9ef483519">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=c36e6baba4">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=ce7592c4a6">
-  <link rel="stylesheet" href="./assets/css/design-system.css?v=d318dfe881">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=faf2d03fcc">
+  <link rel="stylesheet" href="./assets/css/design-system.css?v=2c3e51c1aa">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
 <body class="portfolio design-system">
@@ -75,6 +75,7 @@
           <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-border)" aria-hidden="true"></div><div><code>--glass-border</code><span data-token-value="--glass-border">#0f172a1f</span><p>유리·칩 테두리</p></div></div>
           <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-highlight)" aria-hidden="true"></div><div><code>--glass-highlight</code><span data-token-value="--glass-highlight">#ffffff</span><p>유리 윗면 반사선</p></div></div>
           <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-sheen)" aria-hidden="true"></div><div><code>--glass-sheen</code><span data-token-value="--glass-sheen">#ffffff99</span><p>포인터를 따라가는 반사광</p></div></div>
+          <div class="ds-color"><div class="ds-swatch" style="background:var(--dot-grid)" aria-hidden="true"></div><div><code>--dot-grid</code><span data-token-value="--dot-grid">#0f172a2e</span><p>배경 점무늬</p></div></div>
           <div class="ds-color"><div class="ds-swatch" style="background:var(--glass-tint)" aria-hidden="true"></div><div><code>--glass-tint</code><span data-token-value="--glass-tint">color-mix(in srgb, var(--bg-deep) 40%, transparent)</span><p>유리 아래 바탕색 틴트 · 대비 보호</p></div></div>
           <div class="ds-color"><div class="ds-swatch" style="background:var(--chip-bg)" aria-hidden="true"></div><div><code>--chip-bg</code><span data-token-value="--chip-bg">#0f172a08</span><p>칩·토글 배경</p></div></div>
           <div class="ds-color"><div class="ds-swatch" style="background:var(--line)" aria-hidden="true"></div><div><code>--line</code><span data-token-value="--line">#0f172a1a</span><p>구분선·타임라인 기본선</p></div></div>
@@ -144,14 +145,14 @@
       <section class="ds-section" id="layout" aria-labelledby="layout-title">
         <div class="section-head"><p class="eyebrow" lang="en">05 / LAYOUT &amp; RESPONSIVE</p><h2 id="layout-title">레이아웃·반응형</h2><p>홈페이지는 소개 → 실무 경험 → 기술 스택 → 메인 프로젝트 → 연락 순서입니다. 경력 카드는 화면 너비가 아니라 카드 너비에 반응합니다.</p></div>
         <div class="ds-layout-preview" aria-hidden="true">
-          <div><p class="eyebrow" lang="en">DESKTOP · 1200px 이상</p><div class="ds-wire ds-wire-desktop"><span>유리 헤더 · 메뉴</span><span class="ds-wire-row"><span>소개 · 이름</span><span class="ds-wire-accent">요약 카드</span></span><span class="ds-wire-row"><span>기간 · 구분</span><span>본문 | 개념도</span></span></div></div>
-          <div><p class="eyebrow" lang="en">MOBILE · 767px 이하</p><div class="ds-wire"><span>헤더 · GitHub</span><span>소개 → 요약 카드</span><span>기간 · 구분 → 본문 → 개념도</span><span class="ds-wire-accent">하단 탭바</span></div></div>
+          <div><p class="eyebrow" lang="en">DESKTOP · 1200px 이상</p><div class="ds-wire ds-wire-desktop"><span>유리 헤더 · 메뉴</span><span class="ds-wire-row"><span>소개 · 이름 · 요약 숫자</span><span class="ds-wire-accent">기술 궤도 그림</span></span><span class="ds-wire-row"><span>기간 · 구분</span><span>본문 | 개념도</span></span></div></div>
+          <div><p class="eyebrow" lang="en">MOBILE · 767px 이하</p><div class="ds-wire"><span>헤더 · GitHub</span><span>소개 → 요약 숫자 → 궤도 그림</span><span>기간 · 구분 → 본문 → 개념도</span><span class="ds-wire-accent">하단 탭바</span></div></div>
         </div>
         <dl class="ds-facts">
-          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 헤더 아래 화면 높이를 채우고 [본문 | 요약 카드]를 세로 가운데에 둡니다. 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [화면 캡처(지도 | 작은 사진 3장)] 아래 [소개 | 기술], 그 아래 펼치기입니다.</dd></div>
+          <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 헤더 아래 화면 높이를 채우고 [본문·요약 숫자 | 기술 궤도 그림]을 세로 가운데에 둡니다. 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [화면 캡처(지도 | 작은 사진 3장)] 아래 [소개 | 기술], 그 아래 펼치기입니다.</dd></div>
           <div><dt>1199px 이하</dt><dd>타임라인 기간 열 160px, 선 간격 56px.</dd></div>
-          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 요약 카드는 세 항목을 가로로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 본문 1열, 섹션 간격 64px.</dd></div>
-          <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열. 메인 프로젝트 사진 1열, 작은 사진 가로 3장.</dd></div>
+          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 궤도 그림은 본문 아래 가운데에 최대 600px 너비로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 본문 1열, 섹션 간격 64px.</dd></div>
+          <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 요약 숫자는 세로 목록으로 놓습니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열. 메인 프로젝트 사진 1열, 작은 사진 가로 3장.</dd></div>
           <div><dt>359px 이하</dt><dd>좌우 여백 16px. 개념도가 좁아지지 않도록 타임라인 선과 점을 숨기고 카드를 전체 너비로 씁니다.</dd></div>
           <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다. 480px보다 좁으면 기술 분야 이름을 태그 위에 둡니다.</dd></div>
         </dl>
@@ -174,14 +175,12 @@
           <div class="glass glass-interactive ds-glass-demo"><p class="eyebrow" lang="en">INTERACTIVE</p><p class="ds-demo-title">호버하는 유리 카드</p><p class="ds-note">정밀 포인터에서 테두리·그림자가 바뀌고 2px 떠오릅니다. 기술 카드와 메인 프로젝트에 씁니다.</p></div>
         </div>
 
-        <p class="ds-example-label">요약 카드 · <code>.hero-card</code> / <code>.facts</code></p>
-        <aside class="hero-card glass ds-hero-card-demo" aria-label="요약 카드 예시">
-          <p class="eyebrow" lang="en">AT A GLANCE</p>
-          <dl class="facts">
-            <div><dt>회사 경력</dt><dd>1년 11개월<small>모어다임 · 프론트엔드 개발</small></dd></div>
-            <div><dt>외주 개발</dt><dd>3건<small>고객지원 · 자동화 · 수리 이력</small></dd></div>
-          </dl>
-        </aside>
+        <p class="ds-example-label">요약 숫자 · <code>.hero-facts</code></p>
+        <ul class="hero-facts" role="list">
+          <li><strong>1년 11개월</strong> 회사 경력</li>
+          <li><strong>3건</strong> 외주 개발</li>
+          <li><strong>1개</strong> 운영 중인 서비스</li>
+        </ul>
 
         <p class="ds-example-label">경력 레일 · <code>.rail</code> / <code>.rail-item</code> (현재 사례는 <code>.is-active</code>)</p>
         <div class="rail ds-rail-demo">
@@ -273,14 +272,14 @@
         <h3 class="ds-subtitle">컴포넌트 계약</h3>
         <dl class="ds-catalog">
           <div><dt><code>.site-header / .site-nav</code></dt><dd><strong>역할·구성</strong> 화면 위에 고정된 유리 헤더 / 브랜드, 섹션 메뉴, GitHub.<br><strong>상태·작성 기준</strong> 스크롤 위치의 섹션에 <code>aria-current="location"</code>과 밑줄. 767px 이하에서는 메뉴를 숨기고 <code>.tabbar</code>로 대체.<br><strong>접근성</strong> nav 이름 제공, 앵커 이동은 헤더 높이만큼 여백(<code>scroll-padding-top</code>).</dd></div>
-          <div><dt><code>.hero / .hero-card / .facts</code></dt><dd><strong>역할·구성</strong> 소개 / 이름, 소개 문구, 버튼 2개, 요약 카드.<br><strong>상태·작성 기준</strong> 요약에는 페이지에 있는 사실만 씁니다. JS가 있으면 단어 단위로 나타나고, 3초 안에 실행되지 않으면 CSS가 그대로 보여 줍니다.<br><strong>접근성</strong> 이름은 h1, 요약 카드는 이름 있는 aside.</dd></div>
+          <div><dt><code>.hero / .hero-orbit / .hero-facts</code></dt><dd><strong>역할·구성</strong> 소개 / 이름, 소개 문구, 버튼 2개, 요약 숫자 3개, 기술 궤도 그림.<br><strong>상태·작성 기준</strong> 요약에는 페이지에 있는 사실만, 궤도 칩에는 기술 스택 섹션에 있는 기술만 씁니다. 궤도는 천천히 돌고 동작 줄이기 설정에서는 멈춥니다. JS가 있으면 단어 단위로 나타나고, 3초 안에 실행되지 않으면 CSS가 그대로 보여 줍니다.<br><strong>접근성</strong> 이름은 h1, 요약 숫자는 목록, 궤도 그림은 장식이라 화면 낭독기에서 숨깁니다.</dd></div>
           <div><dt><code>.section-head</code></dt><dd><strong>역할·구성</strong> 섹션 시작 / eyebrow, h2, 설명.<br><strong>상태·작성 기준</strong> 정적. 제목·고유 ID 필수.<br><strong>접근성</strong> section의 aria-labelledby로 연결, h1 다음 h2 유지.</dd></div>
           <div><dt><code>.btn</code></dt><dd><strong>역할·구성</strong> 이동 / <code>.btn-primary</code>(채움), <code>.btn-ghost</code>(유리), <code>.btn-sm</code>(헤더).<br><strong>상태·작성 기준</strong> 기본·호버·포커스. 한 영역에 주요 버튼은 하나.<br><strong>접근성</strong> 44px 높이, 작은 버튼도 터치 기기에서는 44px. 새 탭은 화면 낭독용 안내 포함.</dd></div>
           <div><dt><code>.chips / .badge / .project-status</code></dt><dd><strong>역할·구성</strong> 기술 목록 / 경력 구분 / 진행 상태.<br><strong>상태·작성 기준</strong> 정적. 실제 기술·상태만 쓰고 빈 칩은 두지 않습니다. 회사 경력 배지만 강조색.<br><strong>접근성</strong> 칩은 버튼이 아닌 목록. 색과 점만으로 상태를 전달하지 않습니다.</dd></div>
           <div><dt><code>.glass / .glass-interactive</code></dt><dd><strong>역할·구성</strong> 카드 표면 / 반투명 그라데이션, 바탕색 틴트, 흐림, 윗면 반사선.<br><strong>상태·작성 기준</strong> 기본·호버. 반사광은 portfolio.js가 포인터 위치로 옮깁니다.<br><strong>접근성</strong> 글자 대비 4.5:1 이상. backdrop-filter가 없으면 불투명 표면으로 대체.</dd></div>
           <div><dt><code>.rail / .rail-item</code></dt><dd><strong>역할·구성</strong> 경력 바로가기 / 번호, 제목, 구분·기간.<br><strong>상태·작성 기준</strong> 화면 45% 지점을 지난 사례에 <code>.is-active</code>. 767px 이하에서 가로 스크롤.<br><strong>접근성</strong> 사례 article의 id로 이동하는 일반 링크.</dd></div>
           <div><dt><code>.timeline / .timeline-node</code></dt><dd><strong>역할·구성</strong> 경력 순서 / 회사 경력·외주 개발 묶음, 점, 기간·구분(<code>.timeline-meta</code>), 카드.<br><strong>상태·작성 기준</strong> JS가 <code>.is-live</code>를 붙이면 선이 스크롤만큼 채워지고 지나간 사례에 <code>.is-passed</code>.<br><strong>접근성</strong> 묶음마다 이름 있는 목록. 동작 줄이기·JS 없음에서는 선 전체와 점을 모두 표시.</dd></div>
-          <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 분야별 기술(<code>.stack-list</code>), 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 닫힘·열림. 카드 760px 이상 2열(개념도 sticky), 미만 1열. 기술 분야 이름과 순서는 기술 스택 섹션과 같게 쓰고, 쓰지 않은 분야는 생략. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
+          <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 분야별 기술(<code>.stack-list</code>), 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 처음부터 열림(접을 수 있음). 카드 760px 이상 2열(개념도 sticky), 미만 1열. 기술 분야 이름과 순서는 기술 스택 섹션과 같게 쓰고, 쓰지 않은 분야는 생략. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
           <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(화면 캡처, 상태, 제목, 설명, 링크, 분야별 기술, 펼치기).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
           <div><dt><code>.tabbar</code></dt><dd><strong>역할·구성</strong> 767px 이하 하단 메뉴 / 아이콘과 이름 5개.<br><strong>상태·작성 기준</strong> 현재 섹션에 <code>aria-current</code>. 기기 하단 안전 영역만큼 띄우고, 푸터 아래에 같은 높이의 여백을 둡니다.<br><strong>접근성</strong> 헤더 메뉴와 같은 이름의 nav, 아이콘은 장식.</dd></div>
           <div><dt>링크·복사 버튼(가이드)</dt><dd><strong>역할·구성</strong> 이동 / href, 링크명. 복사 / 대상 ID.<br><strong>상태·작성 기준</strong> 기본·호버·포커스, 복사 성공·실패.<br><strong>접근성</strong> 보이는 포커스와 명확한 이름. 복사 결과는 하나의 polite 상태 영역으로 안내.</dd></div>
@@ -345,7 +344,7 @@
           &lt;dl class="stack-list"&gt;
             &lt;div&gt;&lt;dt&gt;프론트엔드&lt;/dt&gt;&lt;dd&gt;&lt;ul class="chips chips-sm" role="list"&gt;&lt;li&gt;기술&lt;/li&gt;&lt;/ul&gt;&lt;/dd&gt;&lt;/div&gt;
           &lt;/dl&gt;
-          &lt;details class="case-details"&gt;
+          &lt;details class="case-details" open&gt;
             &lt;summary aria-label="프로젝트 제목 구현 내용"&gt;구현 내용&lt;span class="details-toggle" aria-hidden="true"&gt;&lt;/span&gt;&lt;/summary&gt;
             &lt;ul class="detail-list" role="list"&gt;&lt;li&gt;구현 항목&lt;/li&gt;&lt;/ul&gt;
           &lt;/details&gt;

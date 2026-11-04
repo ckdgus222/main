@@ -32,6 +32,7 @@
   --glass-border: #0f172a1f;
   --glass-highlight: #ffffff;
   --glass-sheen: #ffffff99;
+  --dot-grid: #0f172a2e; /* Faint background dot grid; dark dots so it shows on the light background. */
   --glass-blur: 20px;
   --glass-tint: color-mix(in srgb, var(--bg-deep) 40%, transparent);
   --chip-bg: #0f172a08;
