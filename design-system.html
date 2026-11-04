@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=c9ef483519">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=c36e6baba4">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=faf2d03fcc">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=fb9e28b4b7">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=2c3e51c1aa">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -272,7 +272,7 @@
         <h3 class="ds-subtitle">컴포넌트 계약</h3>
         <dl class="ds-catalog">
           <div><dt><code>.site-header / .site-nav</code></dt><dd><strong>역할·구성</strong> 화면 위에 고정된 유리 헤더 / 브랜드, 섹션 메뉴, GitHub.<br><strong>상태·작성 기준</strong> 스크롤 위치의 섹션에 <code>aria-current="location"</code>과 밑줄. 767px 이하에서는 메뉴를 숨기고 <code>.tabbar</code>로 대체.<br><strong>접근성</strong> nav 이름 제공, 앵커 이동은 헤더 높이만큼 여백(<code>scroll-padding-top</code>).</dd></div>
-          <div><dt><code>.hero / .hero-orbit / .hero-facts</code></dt><dd><strong>역할·구성</strong> 소개 / 이름, 소개 문구, 버튼 2개, 요약 숫자 3개, 기술 궤도 그림.<br><strong>상태·작성 기준</strong> 요약에는 페이지에 있는 사실만, 궤도 칩에는 기술 스택 섹션에 있는 기술만 씁니다. 궤도는 천천히 돌고 동작 줄이기 설정에서는 멈춥니다. JS가 있으면 단어 단위로 나타나고, 3초 안에 실행되지 않으면 CSS가 그대로 보여 줍니다.<br><strong>접근성</strong> 이름은 h1, 요약 숫자는 목록, 궤도 그림은 장식이라 화면 낭독기에서 숨깁니다.</dd></div>
+          <div><dt><code>.hero / .hero-orbit / .hero-facts</code></dt><dd><strong>역할·구성</strong> 소개 / 이름, 소개 문구, 버튼 2개, 요약 숫자 3개, 기술 궤도 그림.<br><strong>상태·작성 기준</strong> 요약에는 페이지에 있는 사실만, 궤도 칩에는 기술 스택 섹션에 있는 기술만 씁니다. 칩은 10개이고, 그림 너비가 440px 이상이면 <code>.orbit-sat-wide</code> 칩 4개를 더 보여 줍니다. 궤도는 천천히 돌고 동작 줄이기 설정에서는 멈춥니다. JS가 있으면 단어 단위로 나타나고, 3초 안에 실행되지 않으면 CSS가 그대로 보여 줍니다.<br><strong>접근성</strong> 이름은 h1, 요약 숫자는 목록, 궤도 그림은 장식이라 화면 낭독기에서 숨깁니다.</dd></div>
           <div><dt><code>.section-head</code></dt><dd><strong>역할·구성</strong> 섹션 시작 / eyebrow, h2, 설명.<br><strong>상태·작성 기준</strong> 정적. 제목·고유 ID 필수.<br><strong>접근성</strong> section의 aria-labelledby로 연결, h1 다음 h2 유지.</dd></div>
           <div><dt><code>.btn</code></dt><dd><strong>역할·구성</strong> 이동 / <code>.btn-primary</code>(채움), <code>.btn-ghost</code>(유리), <code>.btn-sm</code>(헤더).<br><strong>상태·작성 기준</strong> 기본·호버·포커스. 한 영역에 주요 버튼은 하나.<br><strong>접근성</strong> 44px 높이, 작은 버튼도 터치 기기에서는 44px. 새 탭은 화면 낭독용 안내 포함.</dd></div>
           <div><dt><code>.chips / .badge / .project-status</code></dt><dd><strong>역할·구성</strong> 기술 목록 / 경력 구분 / 진행 상태.<br><strong>상태·작성 기준</strong> 정적. 실제 기술·상태만 쓰고 빈 칩은 두지 않습니다. 회사 경력 배지만 강조색.<br><strong>접근성</strong> 칩은 버튼이 아닌 목록. 색과 점만으로 상태를 전달하지 않습니다.</dd></div>

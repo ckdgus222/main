@@ -303,6 +303,10 @@ body::after {
 .orbit-sat {
   transform: rotate(calc(var(--a) + var(--orbit-spin))) translateX(var(--r)) rotate(calc(-1 * (var(--a) + var(--orbit-spin)))) translate(-50%, -50%);
 }
+/* Four extra chips fit only on a wide graphic: below 440px the 9px font floor makes chips relatively
+   larger and they would overlap. 440px is the narrowest width their angles were measured at. */
+.orbit-sat-wide { display: none; }
+@container (min-width: 440px) { .orbit-sat-wide { display: block; } }
 .orbit-chip {
   display: block;
   padding: .3em .75em;
