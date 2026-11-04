@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=c9ef483519">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=c36e6baba4">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=1adeb13cb6">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=1060cd20aa">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=2c3e51c1aa">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -280,7 +280,7 @@
           <div><dt><code>.rail / .rail-item</code></dt><dd><strong>역할·구성</strong> 경력 바로가기 / 번호, 제목, 구분·기간.<br><strong>상태·작성 기준</strong> 화면 45% 지점을 지난 사례에 <code>.is-active</code>. 767px 이하에서 가로 스크롤.<br><strong>접근성</strong> 사례 article의 id로 이동하는 일반 링크.</dd></div>
           <div><dt><code>.timeline / .timeline-node</code></dt><dd><strong>역할·구성</strong> 경력 순서 / 회사 경력·외주 개발 묶음, 점, 기간·구분(<code>.timeline-meta</code>), 카드.<br><strong>상태·작성 기준</strong> JS가 <code>.is-live</code>를 붙이면 선이 스크롤만큼 채워지고 지나간 사례에 <code>.is-passed</code>.<br><strong>접근성</strong> 묶음마다 이름 있는 목록. 동작 줄이기·JS 없음에서는 선 전체와 점을 모두 표시.</dd></div>
           <div><dt><code>.case-card / .case-details</code></dt><dd><strong>역할·구성</strong> 사례 / 제목, 부제, 요약, 분야별 기술(<code>.stack-list</code>), 세부 업무, 개념도.<br><strong>상태·작성 기준</strong> 처음부터 열림(접을 수 있음). 카드 760px 이상 2열(개념도 sticky), 미만 1열. 기술 분야 이름과 순서는 기술 스택 섹션과 같게 쓰고, 쓰지 않은 분야는 생략. 빈 목록이면 details를 생략.<br><strong>접근성</strong> native details/summary로 Enter·Space 조작, summary에 사례명을 포함한 이름. 개념도는 대체 설명.</dd></div>
-          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(화면 캡처, 상태, 제목, 설명, 링크, 분야별 기술, 펼치기).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
+          <div><dt><code>.skill-card / .project-card</code></dt><dd><strong>역할·구성</strong> 기술 묶음 / 대표 프로젝트(화면 캡처, 상태, 제목, 설명, 링크, 분야별 기술, 펼치기).<br><strong>상태·작성 기준</strong> 기본·호버. 기술 카드에는 기술 이름만 씁니다. 시안 이미지는 아래 <code>figcaption</code>으로 시안임을 밝힙니다.<br><strong>접근성</strong> 제목 ID로 article 연결, 장식 번호 숨김, 이미지 대체 설명.</dd></div>
           <div><dt><code>.tabbar</code></dt><dd><strong>역할·구성</strong> 767px 이하 하단 메뉴 / 아이콘과 이름 5개.<br><strong>상태·작성 기준</strong> 현재 섹션에 <code>aria-current</code>. 기기 하단 안전 영역만큼 띄우고, 푸터 아래에 같은 높이의 여백을 둡니다.<br><strong>접근성</strong> 헤더 메뉴와 같은 이름의 nav, 아이콘은 장식.</dd></div>
           <div><dt>링크·복사 버튼(가이드)</dt><dd><strong>역할·구성</strong> 이동 / href, 링크명. 복사 / 대상 ID.<br><strong>상태·작성 기준</strong> 기본·호버·포커스, 복사 성공·실패.<br><strong>접근성</strong> 보이는 포커스와 명확한 이름. 복사 결과는 하나의 polite 상태 영역으로 안내.</dd></div>
         </dl>

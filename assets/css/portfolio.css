@@ -566,6 +566,7 @@ body::after {
 
 /* Main project */
 .project-card { container-type: inline-size; padding: var(--space-3); }
+.project-card + .project-card { margin-top: var(--space-8); }
 .project-copy { display: grid; align-items: start; padding: var(--space-8); }
 /* Intro and tech list sit side by side only when the card itself is wide, like the case card. */
 @container (min-width: 900px) {
@@ -574,6 +575,8 @@ body::after {
 }
 .project-copy > .case-details { grid-column: 1 / -1; }
 .project-visual > :only-child,
+.project-visual > img:has(+ figcaption),
+.project-visual > figcaption,
 .project-copy > :only-child { grid-column: 1 / -1; }
 .project-status {
   display: inline-flex;
@@ -595,6 +598,7 @@ body::after {
 .project-note { margin-top: var(--space-3); color: var(--text-muted); font-size: var(--text-xs); line-height: var(--leading-relaxed); word-break: keep-all; }
 .project-visual { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: var(--space-3); min-width: 0; }
 .project-visual img { border: 1px solid var(--line); border-radius: var(--radius-inner); }
+.project-visual > figcaption { color: var(--text-muted); font-size: var(--text-xs); line-height: var(--leading-relaxed); word-break: keep-all; }
 .project-thumbnails { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
 
 /* Contact */
