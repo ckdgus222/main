@@ -38,6 +38,7 @@ html:has(body.design-system) { scroll-padding-top: var(--space-6); }
 .design-system .ds-nav a span { color: var(--accent); font-size: var(--text-label); font-variant-numeric: tabular-nums; }
 .design-system .ds-nav a:hover { background: var(--glass); color: var(--text); }
 .design-system .ds-nav a[aria-current] { background: var(--accent-soft); color: var(--accent-strong); }
+.design-system .ds-nav a[aria-current] span { color: var(--accent-strong); }
 .design-system .ds-sidebar-note { margin-top: var(--space-8); padding-inline: var(--space-3); color: var(--text-muted); font-size: var(--text-xs); }
 
 /* Intro and sections. Korean text wraps between words; long code still breaks anywhere. */

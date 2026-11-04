@@ -1,7 +1,7 @@
 # 최창현 포트폴리오
 
 "Night Glass" 디자인과 업무 개념도를 적용한 정적 HTML 포트폴리오입니다.
-깊은 남색 바탕에 연보라 빛이 번지고, 경력은 반투명 유리 카드와 세로 타임라인으로 보여줍니다.
+밝은 아이보리 바탕에 블루 강조색을 더하고, 경력은 반투명 유리 카드와 세로 타임라인으로 보여줍니다.
 
 ## 실행
 
@@ -21,7 +21,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - 스타일시트는 `font.css` → `tokens.css` → `experience-visuals.css` → `portfolio.css` 순서로 연결합니다. 카드 안 개념도의 테두리·위치는 `portfolio.css`가 정하므로 개념도 스타일 다음에 둡니다.
 - 토큰에는 사용 목적을 나타내는 이름을 사용합니다(`--text-soft`, `--glass-border`, `--accent-line`). 강조색의 투명도 변형은 `color-mix()`로 기본색에서 만들므로 `--accent`만 바꾸면 틴트·선·빛 번짐이 함께 바뀝니다.
 - 간격은 4px 단위 하나(`--space-1` 4px ~ `--space-32` 128px), 모서리는 `--radius-card` / `--radius-inner` / `--radius-pill` 세 가지입니다.
-- 유리 표면(`.glass`)에는 남색 틴트(`--glass-tint`)를 깔아 빛 번짐 위에서도 글자 대비 4.5:1 이상을 유지합니다. 대비는 실제 렌더링 화면에서 측정합니다.
+- 유리 표면(`.glass`)에는 바탕색 틴트(`--glass-tint`)를 깔아 빛 번짐 위에서도 글자 대비 4.5:1 이상을 유지합니다. 대비는 실제 렌더링 화면에서 측정합니다.
 - `design-system.html`과 `assets/css/design-system.css`는 가이드의 구성과 배치를 담당합니다.
 - `assets/js/design-system.js`는 현재 화면의 토큰 값 표시, 예제 복사, 모션 다시 보기를 담당합니다. JavaScript 없이도 가이드 본문과 컴포넌트 예시는 읽을 수 있습니다.
 - 홈페이지 동작도 같은 모션 토큰(`--dur-reveal`, `--dur-reveal-scroll`, `--reveal-distance`, `--stagger`, `--stagger-scroll`, `--ease-out`)을 사용합니다. 소개는 `--dur-reveal`, 스크롤로 들어오는 섹션·카드는 더 느린 `--dur-reveal-scroll`을 씁니다. JavaScript에서 읽는 시간은 `ms`, 거리는 `px` 단위로 작성합니다. 형식이 잘못되면 등장 효과를 생략하고 본문을 바로 표시합니다.
