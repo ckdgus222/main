@@ -213,12 +213,13 @@ body::after {
 .site-nav a[aria-current]::after { transform: scaleX(1); }
 
 /* Hero: fills the screen below the header with the content centered vertically;
-   the introduction and orbit share equal columns and align at their centers. */
+   the orbit grows up to 700px while the introduction keeps at least 440px, enough for the name
+   and the facts row on one line. Both columns align at their centers. */
 .hero-inner {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(440px, 1fr) minmax(0, 700px);
   align-content: center;
   align-items: center;
   gap: var(--space-12);
@@ -284,7 +285,7 @@ body::after {
   position: relative;
   container-type: inline-size;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   justify-self: center;
   aspect-ratio: 100 / 82;
 }

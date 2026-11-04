@@ -6,12 +6,12 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#f6f4ef">
   <title>디자인 시스템 | 최창현 포트폴리오</title>
-  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/images/favicon.svg?v=52c7da7971" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./assets/css/font.css?v=7c026051d5">
   <link rel="stylesheet" href="./assets/css/tokens.css?v=c9ef483519">
   <link rel="stylesheet" href="./assets/css/experience-visuals.css?v=c36e6baba4">
-  <link rel="stylesheet" href="./assets/css/portfolio.css?v=fb9e28b4b7">
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=5338f8cd02">
   <link rel="stylesheet" href="./assets/css/design-system.css?v=2c3e51c1aa">
   <script src="./assets/js/design-system.js?v=530c47e124" defer></script>
 </head>
@@ -151,7 +151,7 @@
         <dl class="ds-facts">
           <div><dt>기본 · 1200px 이상</dt><dd>최대 너비 <code>--page-max</code> <span data-token-value="--page-max">1200px</span>, 좌우 여백 <code>--gutter</code> <span data-token-value="--gutter">40px</span>, 헤더 <code>--header-h</code> <span data-token-value="--header-h">64px</span>. 소개는 헤더 아래 화면 높이를 채우고 [본문·요약 숫자 | 기술 궤도 그림]을 세로 가운데에 둡니다. 타임라인은 [기간 176px | 선 | 카드], 기술 3열, 메인 프로젝트 [화면 캡처(지도 | 작은 사진 3장)] 아래 [소개 | 기술], 그 아래 펼치기입니다.</dd></div>
           <div><dt>1199px 이하</dt><dd>타임라인 기간 열 160px, 선 간격 56px.</dd></div>
-          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 궤도 그림은 본문 아래 가운데에 최대 600px 너비로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 본문 1열, 섹션 간격 64px.</dd></div>
+          <div><dt>1023px 이하</dt><dd>좌우 여백 24px. 소개는 내용 높이만큼의 1열이 되고 궤도 그림은 본문 아래 가운데에 최대 700px 너비로 놓습니다. 기간 열 140px, 기술 2열, 메인 프로젝트 본문 1열, 섹션 간격 64px.</dd></div>
           <div><dt>767px 이하</dt><dd>좌우 여백 20px, 헤더 56px, 카드 모서리 20px. 헤더 메뉴 대신 하단 탭바를 씁니다. 요약 숫자는 세로 목록으로 놓습니다. 레일은 가로 스크롤, 타임라인 선은 왼쪽으로 이동하고 기간·구분이 카드 위에 한 줄로 놓입니다. 기술 1열. 메인 프로젝트 사진 1열, 작은 사진 가로 3장.</dd></div>
           <div><dt>359px 이하</dt><dd>좌우 여백 16px. 개념도가 좁아지지 않도록 타임라인 선과 점을 숨기고 카드를 전체 너비로 씁니다.</dd></div>
           <div><dt>경력 카드 · 컨테이너 쿼리</dt><dd>카드 너비가 760px 이상이면 [본문 | 개념도] 2열이고, 긴 세부 업무를 읽는 동안 개념도가 헤더 아래에 머뭅니다. 그보다 좁으면 본문 → 개념도 순서로 쌓입니다. 480px보다 좁으면 기술 분야 이름을 태그 위에 둡니다.</dd></div>
@@ -362,7 +362,7 @@
           <div><dt>portfolio.css</dt><dd>홈페이지와 가이드가 함께 쓰는 컴포넌트와 반응형 규칙. 개념도 스타일 다음에 불러와 카드 안 개념도의 테두리·위치를 정합니다.</dd></div>
           <div><dt>portfolio.js</dt><dd>현재 메뉴·레일 표시, 소개·섹션 등장, 타임라인 진행선, 유리 반사광. 없어도 모든 내용이 보입니다.</dd></div>
           <div><dt>design-system.css / .js</dt><dd>가이드 배치와 목차·토큰 값 표시·코드 복사·모션 데모.</dd></div>
-          <div><dt>?v= 버전</dt><dd>공유 CSS·JS를 수정하면 두 HTML의 <code>?v=</code> 값을 해당 파일 SHA-256 앞 10자리로 갱신합니다.</dd></div>
+          <div><dt>?v= 버전</dt><dd>공유 CSS·JS나 파비콘을 수정하면 두 HTML의 <code>?v=</code> 값을 해당 파일 SHA-256 앞 10자리로 갱신합니다.</dd></div>
         </dl>
         <h3 class="ds-subtitle">UI 적용 체크리스트</h3>
         <ul class="ds-checklist">
