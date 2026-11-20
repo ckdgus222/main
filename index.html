@@ -45,9 +45,9 @@
       <p class="eyebrow" lang="en" data-hero-part>CHOI CHANGHYEON</p>
       <h1 class="hero-name" id="hero-name" data-hero-part>최창현<span class="hero-dot" aria-hidden="true">.</span></h1>
       <p class="hero-intro"><span class="hero-word" data-hero-part>React·TypeScript로</span> <span class="hero-word" data-hero-part>1년 11개월간</span><br><span class="hero-accent"><span class="hero-word" data-hero-part>실시간 병동</span> <span class="hero-word" data-hero-part>관제 화면을</span> <span class="hero-word" data-hero-part>개발했습니다.</span></span></p>
-      <p class="hero-detail" data-hero-part>모어다임 연구소 개발팀에서 프론트엔드를 맡았습니다.<br>외주로는 한 고객사의 수리 이력 공유 도구, 고객 알림 자동화, 고객지원 서비스를 단독으로 개발했습니다.</p>
+      <p class="hero-detail" data-hero-part>모어다임의 CARE 관제 화면에는 처음에 병동 전체 상태(snapshot)를 표시하고, 이후에는 변경분(delta)만 반영했습니다.<br>외주로는 한 고객사의 수리 이력 공유 도구, 고객 알림 자동화, 고객지원 서비스를 단독으로 개발했습니다.</p>
       <div class="hero-actions" data-hero-part>
-        <a class="btn btn-primary" href="#care">CARE 실무 사례 보기 <span class="arrow" aria-hidden="true">↓</span></a>
+        <a class="btn btn-primary" href="#work">실무 사례 보기 <span class="arrow" aria-hidden="true">↓</span></a>
         <a class="btn btn-ghost" href="https://dogwalk.changhyon.dev/" target="_blank" rel="noopener noreferrer">옆집 강아지 체험하기 <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
       </div>
       <ul class="hero-facts" role="list" data-hero-part>
@@ -116,7 +116,7 @@
                 <div class="case-copy">
                   <h3 id="title-care">CARE 의료 병동 모니터링 시스템</h3>
                   <p class="case-highlight">환자·병상·장치 상태를 실시간으로 보여주는 화면</p>
-                  <p class="case-summary">병동에서는 환자 배정과 장치 상태가 수시로 바뀝니다. 관제 화면을 처음 열면 전체 상태를 표시하고, 이후에는 WebSocket으로 받은 변경분만 화면에 반영하도록 구현했습니다.</p>
+                  <p class="case-summary">병동에서는 환자 배정과 장치 상태가 수시로 바뀝니다. 관제 화면을 처음 열면 전체 상태(snapshot)를 표시하고, 이후에는 WebSocket으로 받은 변경분(delta)만 화면에 반영하도록 구현했습니다.</p>
                   <dl class="stack-list">
                     <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>React</li><li>TypeScript</li><li>Axios</li><li>WebSocket</li></ul></dd></div>
                     <div><dt>스타일링</dt><dd><ul class="chips chips-sm" role="list"><li>MUI</li><li>styled-components</li></ul></dd></div>
