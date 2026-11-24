@@ -343,7 +343,7 @@
             <a class="btn btn-primary" href="https://dogwalk.changhyon.dev/" target="_blank" rel="noopener noreferrer">서비스 보기 <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
             <a class="btn btn-ghost" href="https://github.com/ckdgus222/Dog-walk" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
           </div>
-          <p class="project-note">로그인 화면의 ‘가입 없이 둘러보기’로 데모 계정에 바로 들어가 볼 수 있습니다. 데모는 방문자 모두가 함께 쓰는 공용 계정이라 일기도 공유되며, 사진 업로드는 막혀 있습니다.</p>
+          <p class="project-note">로그인 화면의 ‘가입 없이 둘러보기’로 데모 계정에 바로 들어가 볼 수 있습니다. 데모는 방문자 모두가 함께 쓰는 공용 계정이라 일기도 공유되며, 사진 업로드는 막혀 있습니다. 개인 홈서버로 운영해 야간에는 접속이 어려울 수 있습니다.</p>
         </div>
         <dl class="stack-list">
           <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Kakao 지도</li></ul></dd></div>
@@ -370,7 +370,7 @@
             <li>동시성: 같은 두 사람의 대기 중인 산책 요청을 DB 부분 유니크 인덱스로 하나만 허용하고, 반려견 삭제·사진 교체는 행 잠금으로 순서를 보장합니다.</li>
             <li>개인정보: 위치를 약 200m 단위로 흐려 저장하고, 사진의 촬영 위치 메타데이터를 제거합니다. 일기 사진은 인증된 API로만 제공합니다.</li>
             <li>인증: 접속 토큰은 메모리에만, 리프레시 토큰은 HttpOnly·SameSite=Strict 쿠키에 담고 DB에는 해시만 저장합니다. IP별 로그인 시도를 제한합니다.</li>
-            <li>배포: 집 데스크톱(Ubuntu Server)에 Docker Compose로 nginx·web·api·db를 띄우고 HTTPS를 적용했습니다. 부팅 때 USB 백업과 데모 데이터 초기화를 실행합니다.</li>
+            <li>집에 있는 Ubuntu 서버에 nginx를 직접 설치해 옆집 강아지와 Client Review를 도메인별로 연결했습니다. 웹·API·DB는 Docker Compose로 운영하고 HTTPS 인증서는 자동 갱신합니다. 부팅 때 USB 백업과 데모 데이터 초기화를 실행합니다.</li>
           </ul>
         </details>
       </div>
@@ -435,20 +435,22 @@
       </figure>
       <div class="project-copy">
         <div class="project-intro">
-          <span class="project-status">검수·승인 기능 구현</span>
+          <span class="project-status">로그인 없이 데모 체험 가능</span>
           <h3 id="client-review-title">Client Review</h3>
           <p class="project-description">외주 작업의 수정 요청을 주고받는 검수 서비스입니다. 개발자가 화면 사진을 버전별로 올리면, 클라이언트가 사진 위 고칠 자리를 찍어 요청을 남기고, 고친 결과를 확인한 뒤 승인합니다.</p>
           <div class="project-links">
-            <a class="btn btn-primary" href="https://review.changhyon.dev/" target="_blank" rel="noopener noreferrer">서비스 보기 <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <a class="btn btn-primary" href="https://review.changhyon.dev/app/demo" target="_blank" rel="noopener noreferrer">데모 바로 체험 <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <a class="btn btn-ghost" href="https://review.changhyon.dev/" target="_blank" rel="noopener noreferrer">서비스 보기 <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
             <a class="btn btn-ghost" href="https://github.com/ckdgus222/client-review" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
           </div>
+          <p class="project-note">데모에서 고객과 개발자 역할을 바꿔 수정 요청부터 승인까지 체험할 수 있습니다. 개인 홈서버로 운영해 야간에는 접속이 어려울 수 있습니다.</p>
         </div>
         <dl class="stack-list">
           <div><dt>프론트엔드</dt><dd><ul class="chips chips-sm" role="list"><li>React</li><li>Vite</li><li>TypeScript</li><li>React Router</li></ul></dd></div>
           <div><dt>스타일링</dt><dd><ul class="chips chips-sm" role="list"><li>CSS Modules</li></ul></dd></div>
           <div><dt>백엔드</dt><dd><ul class="chips chips-sm" role="list"><li>NestJS</li><li>Prisma</li></ul></dd></div>
           <div><dt>데이터</dt><dd><ul class="chips chips-sm" role="list"><li>PostgreSQL</li></ul></dd></div>
-          <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Docker Compose</li><li>nginx</li></ul></dd></div>
+          <div><dt>빌드·배포</dt><dd><ul class="chips chips-sm" role="list"><li>Docker Compose</li><li>nginx</li><li>Let's Encrypt</li></ul></dd></div>
           <div><dt>테스트</dt><dd><ul class="chips chips-sm" role="list"><li>Vitest</li><li>Supertest</li><li>Testing Library</li></ul></dd></div>
         </dl>
         <details class="case-details" open>
@@ -462,7 +464,7 @@
         <details class="case-details" open>
           <summary aria-label="Client Review 구현 세부 사항">구현 세부 사항<span class="details-toggle" aria-hidden="true"></span></summary>
           <ul class="detail-list" role="list">
-            <li>실행 환경: Docker Compose로 nginx, API 서버, DB를 한 번에 띄웁니다. 화면과 API를 같은 주소로 묶어서 CORS 설정이 필요 없습니다.</li>
+            <li>Ubuntu 홈서버의 공용 nginx가 화면을 제공하고 API 요청을 전달합니다. API와 PostgreSQL은 Docker Compose로 운영하며 HTTPS 인증서는 자동 갱신합니다.</li>
             <li>이메일로 받은 6자리 코드로 로그인합니다. 코드는 10분 뒤 만료되고, 한 코드로 시도할 수 있는 횟수는 5회입니다.</li>
             <li>동시 요청: 같은 코드가 동시에 두 번 들어와도 세션은 하나만 생깁니다. 조건을 건 UPDATE 한 문장으로 막았습니다.</li>
             <li>보안: 쿠키는 SameSite=Lax로 두고, 쓰기 요청마다 Origin을 확인합니다. 세션 토큰은 DB에 해시로만 저장합니다.</li>
